@@ -5,7 +5,21 @@ using System.Text;
 
 namespace PetitMonde.Map.Cells
 {
-    public class Plains : Cell
+    public class Plains : CellImpl
     {
+
+
+        public Plains(int x, int y)
+            : base(x, y)
+        {
+            
+        }
+
+
+        CellType Cell.Type
+        {
+            get { return CellType.Plains; }
+        }
+
     }
 }

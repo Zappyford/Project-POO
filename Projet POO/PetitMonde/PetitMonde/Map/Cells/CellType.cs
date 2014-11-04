@@ -5,10 +5,11 @@ using System.Text;
 
 namespace PetitMonde.Map.Cells
 {
-    public interface Cell
+    public enum CellType
     {
-        int x { get; }
-        int y { get; }
-        public CellType Type { get; }
+        Plains,
+        Desert,
+        Forest,
+        Mountain,
     }
 }

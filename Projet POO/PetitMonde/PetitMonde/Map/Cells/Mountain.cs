@@ -5,7 +5,18 @@ using System.Text;
 
 namespace PetitMonde.Map.Cells
 {
-    public class Mountain : Cell
+    public class Mountain : CellImpl
     {
+        public Mountain(int x, int y)
+            : base(x, y)
+        {
+
+        }
+
+        CellType Cell.Type
+        {
+            get { return CellType.Mountain; }
+        }
+
     }
 }

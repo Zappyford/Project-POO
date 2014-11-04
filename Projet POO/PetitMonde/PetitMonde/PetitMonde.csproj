@@ -39,6 +39,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Map\Cells\CellFactory.cs" />
+    <Compile Include="Map\Cells\CellImpl.cs" />
+    <Compile Include="Map\Cells\CellType.cs" />
     <Compile Include="Game.cs" />
     <Compile Include="Map\Cells\Desert.cs" />
     <Compile Include="Map\Cells\Forest.cs" />

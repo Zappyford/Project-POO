@@ -104,39 +104,11 @@
     </TypeIdentifier>
     <Lollipop Position="0.2" />
   </Class>
-  <Class Name="PetitMonde.Map.Cells.Cell">
-    <Position X="3" Y="8.25" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>Map\Cells\Cell.cs</FileName>
-    </TypeIdentifier>
-  </Class>
-  <Class Name="PetitMonde.Map.Cells.Desert">
-    <Position X="2.5" Y="10" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>Map\Cells\Desert.cs</FileName>
-    </TypeIdentifier>
-  </Class>
-  <Class Name="PetitMonde.Map.Cells.Plains">
-    <Position X="0.75" Y="10" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>Map\Cells\Plains.cs</FileName>
-    </TypeIdentifier>
-  </Class>
   <Class Name="PetitMonde.Map.Cells.Forest">
-    <Position X="4.5" Y="10" Width="1.5" />
+    <Position X="1.5" Y="11.25" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAA=</HashCode>
       <FileName>Map\Cells\Forest.cs</FileName>
-    </TypeIdentifier>
-  </Class>
-  <Class Name="PetitMonde.Map.Cells.Mountain">
-    <Position X="6.25" Y="10" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>Map\Cells\Mountain.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="PetitMonde.Map.MapImpl" Collapsed="true">
@@ -146,6 +118,35 @@
       <FileName>Map\MapImpl.cs</FileName>
     </TypeIdentifier>
     <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="PetitMonde.Map.Cells.CellFactory">
+    <Position X="4.5" Y="8.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAICAAAAAIAAAA=</HashCode>
+      <FileName>Map\Cells\CellFactory.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PetitMonde.Map.Cells.Mountain">
+    <Position X="3.5" Y="11.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAA=</HashCode>
+      <FileName>Map\Cells\Mountain.cs</FileName>
+      <NewMemberFileName>Map\Cells\Desert.cs</NewMemberFileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PetitMonde.Map.Cells.Plains">
+    <Position X="5.5" Y="11.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAA=</HashCode>
+      <FileName>Map\Cells\Plains.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PetitMonde.Map.Cells.Desert">
+    <Position X="7.5" Y="11.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAA=</HashCode>
+      <FileName>Map\Cells\Desert.cs</FileName>
+    </TypeIdentifier>
   </Class>
   <Interface Name="PetitMonde.Units.Tribe">
     <Position X="12.5" Y="3.75" Width="1.5" />
@@ -193,5 +194,19 @@
       <FileName>Map\Map.cs</FileName>
     </TypeIdentifier>
   </Interface>
+  <Interface Name="PetitMonde.Map.Cells.Cell">
+    <Position X="7.75" Y="7.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQBgAAAAAAA=</HashCode>
+      <FileName>Map\Cells\Cell.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Enum Name="PetitMonde.Map.Cells.CellType">
+    <Position X="0.75" Y="9" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAIAAAAAACAAAAAAAAAAAAAEAAAAAAAgAAAAAAAAA=</HashCode>
+      <FileName>Map\Cells\CellType.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
   <Font Name="Segoe UI" Size="9" />
 </ClassDiagram>
