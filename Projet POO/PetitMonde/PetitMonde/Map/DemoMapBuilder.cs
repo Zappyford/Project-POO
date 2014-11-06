@@ -5,10 +5,10 @@ using System.Text;
 
 namespace PetitMonde.Map
 {
-    public class DemoMapBuilder : MapBuilder
+    public class DemoMapBuilder : MapBuilderImpl
     {    
 
-        public override Map buildMap()
+        public override Map BuildMap()
         {
             throw new NotImplementedException();
         }

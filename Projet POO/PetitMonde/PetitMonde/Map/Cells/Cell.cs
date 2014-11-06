@@ -5,10 +5,12 @@ using System.Text;
 
 namespace PetitMonde.Map.Cells
 {
-    public interface Cell
+     public interface Cell
     {
-        int x { get; }
-        int y { get; }
-        public CellType Type { get; }
+
+        public abstract float GetMovingCost(Faction faction);
+
     }
+       
+ 
 }

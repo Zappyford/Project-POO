@@ -5,9 +5,9 @@ using System.Text;
 
 namespace PetitMonde
 {
-    public class NewGame : GameBuilder
+    public class NewGame : GameBuilderImpl
     {
-        public override Game buildGame()
+        public override Game BuildGame()
         {
             throw new NotImplementedException();
         }

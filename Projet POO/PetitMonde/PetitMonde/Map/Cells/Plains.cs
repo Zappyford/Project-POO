@@ -9,17 +9,9 @@ namespace PetitMonde.Map.Cells
     {
 
 
-        public Plains(int x, int y)
-            : base(x, y)
+        public override float GetMovingCost(Faction faction)
         {
-            
+            throw new NotImplementedException();
         }
-
-
-        CellType Cell.Type
-        {
-            get { return CellType.Plains; }
-        }
-
     }
 }

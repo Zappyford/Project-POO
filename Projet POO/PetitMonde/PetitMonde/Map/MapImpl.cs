@@ -19,7 +19,7 @@ namespace PetitMonde.Map
             }
         }
 
-        public Cell getCell(int x, int y)
+        public Cell GetCell(int x, int y)
         {
             throw new System.NotImplementedException();
         }

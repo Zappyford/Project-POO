@@ -3,9 +3,13 @@ namespace PetitMonde.Units
 {
     public interface Unit
     {
-        int Attack { get; set; }
-        int Coordinates { get; set; }
-        int Defense { get; set; }
-        int Health { get; set; }
+
+        void AttackUnit(string Unit);
+
+        bool Move(int x, int y);
+
+        void Die();
+
+        bool IsDead();
     }
 }

@@ -5,7 +5,17 @@ using System.Text;
 
 namespace PetitMonde.Units
 {
-    public class Elves : Tribe
+    public class Elves : TribeImpl
     {
+        public Faction FactionName
+        {
+            get
+            {
+                throw new System.NotImplementedException();
+            }
+            set
+            {
+            }
+        }
     }
 }

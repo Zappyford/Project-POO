@@ -5,9 +5,8 @@ using System.Text;
 
 namespace PetitMonde
 {
-    public interface GameBuilder
+    public abstract class GameBuilderImpl : GameBuilder
     {
-
-        public PetitMonde.Game BuildGame();
+        public abstract Game BuildGame();
     }
 }

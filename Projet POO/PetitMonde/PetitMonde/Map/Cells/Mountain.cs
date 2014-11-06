@@ -7,16 +7,11 @@ namespace PetitMonde.Map.Cells
 {
     public class Mountain : CellImpl
     {
-        public Mountain(int x, int y)
-            : base(x, y)
+
+
+        public override float GetMovingCost(Faction faction)
         {
-
+            throw new NotImplementedException();
         }
-
-        CellType Cell.Type
-        {
-            get { return CellType.Mountain; }
-        }
-
     }
 }

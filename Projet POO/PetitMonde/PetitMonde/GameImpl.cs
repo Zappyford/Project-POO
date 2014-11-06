@@ -41,5 +41,16 @@ namespace PetitMonde
                 throw new NotImplementedException();
             }
         }
+
+
+        public Player CurrentPlayer
+        {
+            get { throw new NotImplementedException(); }
+        }
+
+        public void AttackUnit(Units.Unit unit, Map.Cells.Cell dest)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

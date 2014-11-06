@@ -7,25 +7,16 @@ namespace PetitMonde.Units
 {
     public class UnitImpl : Unit
     {
-        public int Health
-        {
-            get
-            {
-                throw new System.NotImplementedException();
-            }
-            set
-            {
-            }
-        }
 
         public int Attack
         {
             get
             {
-                throw new System.NotImplementedException();
+                throw new NotImplementedException();
             }
             set
             {
+                throw new NotImplementedException();
             }
         }
 
@@ -33,22 +24,82 @@ namespace PetitMonde.Units
         {
             get
             {
-                throw new System.NotImplementedException();
+                throw new NotImplementedException();
             }
             set
             {
+                throw new NotImplementedException();
             }
         }
 
-        public int Coordinates
+        public int Health
         {
             get
             {
-                throw new System.NotImplementedException();
+                throw new NotImplementedException();
             }
             set
             {
+                throw new NotImplementedException();
             }
+        }
+
+        public Faction Faction
+        {
+            get
+            {
+                throw new NotImplementedException();
+            }
+            set
+            {
+                throw new NotImplementedException();
+            }
+        }
+
+        public int X
+        {
+            get
+            {
+                throw new NotImplementedException();
+            }
+            set
+            {
+                throw new NotImplementedException();
+            }
+        }
+
+        public int Y
+        {
+            get
+            {
+                throw new NotImplementedException();
+            }
+            set
+            {
+                throw new NotImplementedException();
+            }
+        }
+
+        public int MovingPoints
+        {
+            get
+            {
+                throw new NotImplementedException();
+            }
+            set
+            {
+                throw new NotImplementedException();
+            }
+        }
+
+        public void AttackUnit(string Unit)
+        {
+            throw new NotImplementedException();
+        }
+
+        public bool Move(int x, int y)
+        {
+            throw new NotImplementedException();
         }
     }
 }

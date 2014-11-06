@@ -5,7 +5,17 @@ using System.Text;
 
 namespace PetitMonde.Units
 {
-    public class Dwarves : Tribe
+    public class Dwarves : TribeImpl
     {
+        public Faction FactionName
+        {
+            get
+            {
+                throw new System.NotImplementedException();
+            }
+            set
+            {
+            }
+        }
     }
 }

@@ -5,9 +5,9 @@ using System.Text;
 
 namespace PetitMonde.Map
 {
-    public class MediumMapBuilder : MapBuilder
+    public class MediumMapBuilder : MapBuilderImpl
     {
-        public override Map buildMap()
+        public override Map BuildMap()
         {
             throw new NotImplementedException();
         }
