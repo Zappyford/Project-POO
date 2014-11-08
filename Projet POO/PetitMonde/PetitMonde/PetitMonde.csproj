@@ -42,6 +42,11 @@
     <Compile Include="Map\Cells\CellImpl.cs" />
     <Compile Include="Units\DwarfUnit.cs" />
     <Compile Include="Units\ElfUnit.cs" />
+    <Compile Include="DwarfUnit.cs" />
+    <Compile Include="ElfUnit.cs" />
+    <Compile Include="Map\Cells\CellImpl.cs" />
+    <Compile Include="OrcUnit.cs" />
+    <Compile Include="Units\Faction.cs" />
     <Compile Include="GameBuilderImpl.cs" />
     <Compile Include="Map\Cells\CellFactory.cs" />
     <Compile Include="Map\Cells\CellType.cs" />
@@ -54,6 +59,7 @@
     <Compile Include="Player.cs" />
     <Compile Include="Units\TribeImpl.cs" />
     <Compile Include="Units\Faction.cs" />
+    <Compile Include="TribeImpl.cs" />
     <Compile Include="Units\Unit.cs" />
     <Compile Include="Map\DemoMapBuilder.cs" />
     <Compile Include="Units\Dwarves.cs" />
