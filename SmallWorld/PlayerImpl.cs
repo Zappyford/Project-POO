@@ -1,8 +1,5 @@
-﻿using PetitMonde.Units;
+﻿using PetitMonde.Map.Cells;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 
 namespace PetitMonde
 {
@@ -12,7 +9,7 @@ namespace PetitMonde
         {
             throw new System.NotImplementedException();
         }
-    
+
         public PetitMonde.Units.TribeImpl Tribe
         {
             get
@@ -78,7 +75,12 @@ namespace PetitMonde
         }
 
 
-        public bool HasUnitsOnCell()
+        public bool HasUnitsOnCell(int x, int y)
+        {
+            throw new NotImplementedException();
+        }
+
+        public Unit GetBestDefensiveUnit(int x, int y)
         {
             throw new NotImplementedException();
         }

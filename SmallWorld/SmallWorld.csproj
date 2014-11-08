@@ -43,7 +43,6 @@
     <Compile Include="GameBuilder.cs" />
     <Compile Include="GameBuilderImpl.cs" />
     <Compile Include="GameImpl.cs" />
-    <Compile Include="Map\Cell.cs" />
     <Compile Include="Map\Cells\Cell.cs" />
     <Compile Include="Map\Cells\CellFactory.cs" />
     <Compile Include="Map\Cells\CellImpl.cs" />
@@ -64,8 +63,7 @@
     <Compile Include="PlayerImpl.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SavedGame.cs" />
-    <Compile Include="TypeCell.cs" />
-    <Compile Include="Unit.cs" />
+    <Compile Include="Map\Cells\TypeCell.cs" />
     <Compile Include="Units\DwarfUnit.cs" />
     <Compile Include="Units\Dwarves.cs" />
     <Compile Include="Units\ElfUnit.cs" />

@@ -1,4 +1,5 @@
-﻿using PetitMonde.Units;
+﻿using PetitMonde.Map.Cells;
+using PetitMonde.Units;
 using System;
 namespace PetitMonde
 {
@@ -17,7 +18,7 @@ namespace PetitMonde
 
         int GetScore();
 
-        bool HasUnitsOnCell();
+        bool HasUnitsOnCell(int x, int y);
 
         Unit GetBestDefensiveUnit(int x, int y);
     }

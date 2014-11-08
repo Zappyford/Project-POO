@@ -60,7 +60,7 @@
   <Class Name="PetitMonde.PlayerImpl">
     <Position X="10" Y="2.5" Width="4.75" />
     <TypeIdentifier>
-      <HashCode>AAAAACAAAAAIAAAQAAABAAQQAAAAAAkAEAAAgAAAAAA=</HashCode>
+      <HashCode>AAAAACAAAAAIAAAQAAABAAQSAAAAAAkAEAAAgAAAAAA=</HashCode>
       <FileName>PlayerImpl.cs</FileName>
     </TypeIdentifier>
     <ShowAsAssociation>
@@ -182,7 +182,7 @@
     <Lollipop Position="0.2" />
   </Class>
   <Class Name="PetitMonde.Units.TribeImpl">
-    <Position X="14.75" Y="5.75" Width="1.5" />
+    <Position X="15" Y="7.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Units\TribeImpl.cs</FileName>
@@ -226,21 +226,21 @@
     </TypeIdentifier>
   </Interface>
   <Interface Name="PetitMonde.Units.Unit">
-    <Position X="13.5" Y="0.5" Width="2.25" />
+    <Position X="14.25" Y="0.5" Width="2.25" />
     <TypeIdentifier>
       <HashCode>AAAAACAAAIAAAAAgAAAAEAAQAAAAAAEAAAAAAAAAAAA=</HashCode>
       <FileName>Units\Unit.cs</FileName>
     </TypeIdentifier>
   </Interface>
   <Interface Name="PetitMonde.Player">
-    <Position X="7.5" Y="0.5" Width="2.25" />
+    <Position X="7.25" Y="0.5" Width="2.75" />
     <TypeIdentifier>
       <HashCode>AAAAACAAAAAIAAAQAAABAAASAAAAAAEAAAAAgAAAAAA=</HashCode>
       <FileName>Player.cs</FileName>
     </TypeIdentifier>
   </Interface>
   <Interface Name="PetitMonde.Game">
-    <Position X="4.75" Y="1" Width="2.5" />
+    <Position X="4.5" Y="1" Width="2.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAA=</HashCode>
       <FileName>Game.cs</FileName>
