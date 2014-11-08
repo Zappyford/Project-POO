@@ -1,13 +1,10 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 
 namespace PetitMonde
 {
     public class GameImpl : PetitMonde.Game
     {
-        public Player Player2
+        public PetitMonde.PlayerImpl Player2
         {
             get
             {
@@ -18,7 +15,7 @@ namespace PetitMonde
             }
         }
 
-        public Player Player1
+        public PetitMonde.PlayerImpl Player1
         {
             get
             {
@@ -30,7 +27,7 @@ namespace PetitMonde
         }
 
 
-        public Map.Map Map
+        public PetitMonde.Map.MapImpl Map
         {
             get
             {
@@ -49,6 +46,12 @@ namespace PetitMonde
         }
 
         public void AttackUnit(Units.Unit unit, Map.Cells.Cell dest)
+        {
+            throw new NotImplementedException();
+        }
+
+
+        public Player GetCurrentPlayer()
         {
             throw new NotImplementedException();
         }

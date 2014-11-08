@@ -1,14 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using PetitMonde.Map.Cells;
+﻿using PetitMonde.Map.Cells;
+using System;
 
 namespace PetitMonde.Map
 {
-    public class MapImpl : PetitMonde.Map.Map
+    public class MapImpl : Map
     {
-        public Cell[] mapCells
+        public PetitMonde.Map.Cells.CellImpl[] mapCells
         {
             get
             {
@@ -22,6 +19,27 @@ namespace PetitMonde.Map
         public Cell GetCell(int x, int y)
         {
             throw new System.NotImplementedException();
+        }
+
+
+        public Cell CreatePlains(int x, int y)
+        {
+            throw new NotImplementedException();
+        }
+
+        public Cell CreateForest(int x, int y)
+        {
+            throw new NotImplementedException();
+        }
+
+        public Cell CreateMountain(int x, int y)
+        {
+            throw new NotImplementedException();
+        }
+
+        public Cell CreateDesert(int x, int y)
+        {
+            throw new NotImplementedException();
         }
     }
 }

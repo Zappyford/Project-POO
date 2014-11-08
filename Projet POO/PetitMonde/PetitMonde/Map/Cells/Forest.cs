@@ -1,7 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 
 namespace PetitMonde.Map.Cells
 {
@@ -10,6 +7,11 @@ namespace PetitMonde.Map.Cells
 
 
         public override float GetMovingCost(Faction faction)
+        {
+            throw new NotImplementedException();
+        }
+
+        public override int GetScore(Faction faction)
         {
             throw new NotImplementedException();
         }

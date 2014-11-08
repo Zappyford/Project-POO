@@ -10,6 +10,8 @@ namespace PetitMonde.Map.Cells
 
         public abstract float GetMovingCost(Faction faction);
 
+        int GetScore(Faction faction);
+
     }
        
  

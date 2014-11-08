@@ -29,6 +29,13 @@
       <SubType>Content</SubType>
       <DependentUpon>PetitMondeCasDUtilisation.usecasediagram</DependentUpon>
     </Content>
+    <Content Include="SdCombat.sequencediagram">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="SdCombat.sequencediagram.layout">
+      <SubType>Content</SubType>
+      <DependentUpon>SdCombat.sequencediagram</DependentUpon>
+    </Content>
     <Content Include="SdCréationPartie.sequencediagram">
       <SubType>Content</SubType>
     </Content>

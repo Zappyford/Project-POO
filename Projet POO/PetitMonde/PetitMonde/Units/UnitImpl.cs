@@ -1,7 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 
 namespace PetitMonde.Units
 {
@@ -92,14 +89,47 @@ namespace PetitMonde.Units
             }
         }
 
-        public void AttackUnit(string Unit)
+        public int UnitsKilled
         {
-            throw new NotImplementedException();
+            get
+            {
+                throw new System.NotImplementedException();
+            }
+            set
+            {
+            }
         }
 
         public bool Move(int x, int y)
         {
             throw new NotImplementedException();
+        }
+
+
+        public void Die()
+        {
+            throw new NotImplementedException();
+        }
+
+        public bool IsDead()
+        {
+            throw new NotImplementedException();
+        }
+
+        public bool CanMove(int x, int y)
+        {
+            throw new NotImplementedException();
+        }
+
+        public void AttackUnit(Unit unit)
+        {
+            throw new NotImplementedException();
+        }
+
+
+        public int GetBonusPoints()
+        {
+            return 0;
         }
     }
 }
