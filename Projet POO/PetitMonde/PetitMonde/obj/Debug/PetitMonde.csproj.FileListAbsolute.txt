@@ -1,5 +1,0 @@
-C:\Users\achenon\Documents\PetitMonde\PetitMonde\obj\Debug\PetitMonde.csprojResolveAssemblyReference.cache
-C:\Users\achenon\Documents\PetitMonde\PetitMonde\bin\Debug\PetitMonde.dll
-C:\Users\achenon\Documents\PetitMonde\PetitMonde\bin\Debug\PetitMonde.pdb
-C:\Users\achenon\Documents\PetitMonde\PetitMonde\obj\Debug\PetitMonde.dll
-C:\Users\achenon\Documents\PetitMonde\PetitMonde\obj\Debug\PetitMonde.pdb
