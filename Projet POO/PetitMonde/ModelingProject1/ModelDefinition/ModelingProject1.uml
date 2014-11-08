@@ -807,13 +807,8 @@
             </covered>
           </operandOccurrenceSpecification>
           <operandOccurrenceSpecification
-<<<<<<< HEAD
             Id="dcc738f8-f1d5-4a6e-a189-e977597d8cd6"
             name="OperandOccurrenceSpecification47">
-=======
-            Id="dae0d31d-b4d1-4230-8d18-c8a19dff5ceb"
-            name="OperandOccurrenceSpecification9">
->>>>>>> Mise à jour du diagramme de séquence du combat
             <covered>
               <lifelineMoniker
                 Id="64097b13-993c-49a4-8344-b7f643d54d7b"
@@ -822,13 +817,8 @@
             </covered>
           </operandOccurrenceSpecification>
           <operandOccurrenceSpecification
-<<<<<<< HEAD
             Id="9757be5a-d02c-40ed-b9f8-86fa5e9d8fdf"
             name="OperandOccurrenceSpecification45">
-=======
-            Id="809bb818-5e4b-4882-9e6d-0aaa62a03447"
-            name="OperandOccurrenceSpecification11">
->>>>>>> Mise à jour du diagramme de séquence du combat
             <covered>
               <lifelineMoniker
                 Id="6918c6ac-1e94-4cf0-acac-b8e02d236467"
@@ -1055,13 +1045,8 @@
             </covered>
           </messageOccurrenceSpecification>
           <messageOccurrenceSpecification
-<<<<<<< HEAD
-            Id="cbb3a8bc-6331-442b-b1d7-f3c2aac14e75"
-            name="MessageOccurrenceSpecification101">
-=======
             Id="271b11ed-ad90-4a71-8acc-09cad93a4ede"
             name="MessageOccurrenceSpecification102">
->>>>>>> Mise à jour du diagramme de séquence du combat
             <covered>
               <lifelineMoniker
                 Id="6918c6ac-1e94-4cf0-acac-b8e02d236467"
@@ -1070,13 +1055,8 @@
             </covered>
           </messageOccurrenceSpecification>
           <messageOccurrenceSpecification
-<<<<<<< HEAD
-            Id="9fa2ca4f-6808-4b97-8c85-76247b19e92c"
-            name="MessageOccurrenceSpecification102">
-=======
             Id="65872121-c4d0-429f-881b-0787b7f41522"
             name="MessageOccurrenceSpecification101">
->>>>>>> Mise à jour du diagramme de séquence du combat
             <covered>
               <lifelineMoniker
                 Id="64097b13-993c-49a4-8344-b7f643d54d7b"
@@ -1363,13 +1343,8 @@
             </covered>
           </messageOccurrenceSpecification>
           <messageOccurrenceSpecification
-<<<<<<< HEAD
-            Id="05ff0001-b411-4d20-a28c-2f571962a5b8"
-            name="MessageOccurrenceSpecification42">
-=======
             Id="aff3df75-56e0-43e2-a5a6-e8d6264aa008"
             name="MessageOccurrenceSpecification43">
->>>>>>> Mise à jour du diagramme de séquence du combat
             <covered>
               <lifelineMoniker
                 Id="65f1983e-9e2c-4ffd-92d4-ba31a0efe855"
@@ -1378,13 +1353,8 @@
             </covered>
           </messageOccurrenceSpecification>
           <messageOccurrenceSpecification
-<<<<<<< HEAD
-            Id="1890cf19-eaff-46eb-9425-f724fa205630"
-            name="MessageOccurrenceSpecification43">
-=======
             Id="7ab97ac2-f8a2-4324-bef5-53a13230f766"
             name="MessageOccurrenceSpecification44">
->>>>>>> Mise à jour du diagramme de séquence du combat
             <covered>
               <lifelineMoniker
                 Id="5f786b15-9402-47fc-bd23-f13a732428ab"
@@ -1687,11 +1657,7 @@
             </covered>
           </executionOccurrenceSpecification>
           <messageOccurrenceSpecification
-<<<<<<< HEAD
-            Id="35798ab2-f5c0-4854-9857-0fd71e65b76b"
-=======
             Id="813c4eb8-4a46-4fee-8b05-d91f1067820e"
->>>>>>> Mise à jour du diagramme de séquence du combat
             name="MessageOccurrenceSpecification53">
             <covered>
               <lifelineMoniker
@@ -1701,11 +1667,7 @@
             </covered>
           </messageOccurrenceSpecification>
           <messageOccurrenceSpecification
-<<<<<<< HEAD
-            Id="0b8758e5-1d90-49cb-b2ef-24b01fbc7b32"
-=======
             Id="d1fd7495-50cf-48aa-81b3-789c9c21dd9b"
->>>>>>> Mise à jour du diagramme de séquence du combat
             name="MessageOccurrenceSpecification54">
             <covered>
               <lifelineMoniker
@@ -2537,38 +2499,22 @@
             </covered>
           </executionOccurrenceSpecification>
           <messageOccurrenceSpecification
-<<<<<<< HEAD
-            Id="af70c96f-854b-4263-83d3-2400eca2594f"
-=======
             Id="fee2974d-4eba-4db4-8f02-56cff296fe41"
->>>>>>> Mise à jour du diagramme de séquence du combat
             name="MessageOccurrenceSpecification68">
             <covered>
               <lifelineMoniker
                 Id="c6aa6c4a-2c0c-4c8f-be24-344eef9de446"
-<<<<<<< HEAD
-                LastKnownName="Tribe : Tribe"
-=======
                 LastKnownName="Orcs : Tribe"
->>>>>>> Mise à jour du diagramme de séquence du combat
                 LastKnownLocation="ModelingProject1.uml" />
             </covered>
           </messageOccurrenceSpecification>
           <messageOccurrenceSpecification
-<<<<<<< HEAD
-            Id="df9efa08-60e7-4b7b-ae10-0eb4e6d3b155"
-=======
             Id="3c5c7afc-7d20-48a9-b9a4-5e54b624a447"
->>>>>>> Mise à jour du diagramme de séquence du combat
             name="MessageOccurrenceSpecification67">
             <covered>
               <lifelineMoniker
                 Id="5de05fcd-8dc1-40ae-b204-9da715aa4a83"
-<<<<<<< HEAD
-                LastKnownName="Player : Player"
-=======
                 LastKnownName="Player1 : Player"
->>>>>>> Mise à jour du diagramme de séquence du combat
                 LastKnownLocation="ModelingProject1.uml" />
             </covered>
           </messageOccurrenceSpecification>
@@ -3165,40 +3111,22 @@
             </covered>
           </executionOccurrenceSpecification>
           <messageOccurrenceSpecification
-<<<<<<< HEAD
             Id="2f17a326-ab0b-4313-9fd9-7ecb161cda9f"
             name="MessageOccurrenceSpecification75">
             <covered>
               <lifelineMoniker
                 Id="5de05fcd-8dc1-40ae-b204-9da715aa4a83"
                 LastKnownName="Player : Player"
-=======
-            Id="4b80d805-9106-42d8-b789-7096792e5371"
-            name="MessageOccurrenceSpecification84">
-            <covered>
-              <lifelineMoniker
-                Id="437e162e-3609-4f00-88d1-aea1b215831d"
-                LastKnownName="Unit5 : Unit"
->>>>>>> Mise à jour du diagramme de séquence du combat
                 LastKnownLocation="ModelingProject1.uml" />
             </covered>
           </messageOccurrenceSpecification>
           <messageOccurrenceSpecification
-<<<<<<< HEAD
             Id="3af4c61c-f39c-4380-9df3-77477c6c9c85"
             name="MessageOccurrenceSpecification76">
             <covered>
               <lifelineMoniker
                 Id="e0ec2528-5598-4a7f-8a99-2a56985cdf1e"
                 LastKnownName="Units : Unit"
-=======
-            Id="62eef76c-3910-4598-a03f-1a9ec4bedd55"
-            name="MessageOccurrenceSpecification83">
-            <covered>
-              <lifelineMoniker
-                Id="d70750d7-8743-4cbf-9c93-d3ba1cec1a0b"
-                LastKnownName="Player2 : Player"
->>>>>>> Mise à jour du diagramme de séquence du combat
                 LastKnownLocation="ModelingProject1.uml" />
             </covered>
           </messageOccurrenceSpecification>
