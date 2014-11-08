@@ -4,6 +4,10 @@ namespace PetitMonde.Map.Cells
 {
     public class Forest : CellImpl
     {
+        public Forest()
+        {
+            throw new System.NotImplementedException();
+        }
 
 
         public override float GetMovingCost(Faction faction)

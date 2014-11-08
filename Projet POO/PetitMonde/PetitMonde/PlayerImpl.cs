@@ -8,6 +8,11 @@ namespace PetitMonde
 {
     public class PlayerImpl : Player
     {
+        public PlayerImpl(Faction faction, int defaultX, int defaultY, int numberOfUnits)
+        {
+            throw new System.NotImplementedException();
+        }
+    
         public PetitMonde.Units.TribeImpl Tribe
         {
             get

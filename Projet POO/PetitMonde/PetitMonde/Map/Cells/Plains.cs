@@ -4,6 +4,10 @@ namespace PetitMonde.Map.Cells
 {
     public class Plains : CellImpl
     {
+        public Plains()
+        {
+            throw new System.NotImplementedException();
+        }
 
 
         public override float GetMovingCost(Faction faction)

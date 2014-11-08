@@ -2,8 +2,17 @@
 
 namespace PetitMonde.Units
 {
-    public class UnitImpl : Unit
+    public abstract class UnitImpl : Unit
     {
+        private const int DEFAULT_HEALTH = 5;
+        private const int DEFAULT_ATTACK = 2;
+        private const int DEFAULT_DEFENSE = 1;
+        private const int DEFAULT_MOVING_POINTS = 1;
+
+        public UnitImpl(int defaultX, int defaultY)
+        {
+            throw new System.NotImplementedException();
+        }
 
         public int Attack
         {
@@ -30,18 +39,6 @@ namespace PetitMonde.Units
         }
 
         public int Health
-        {
-            get
-            {
-                throw new NotImplementedException();
-            }
-            set
-            {
-                throw new NotImplementedException();
-            }
-        }
-
-        public Faction Faction
         {
             get
             {

@@ -5,6 +5,11 @@ namespace PetitMonde.Map
 {
     public class MapImpl : Map
     {
+        public MapImpl(int size)
+        {
+            throw new System.NotImplementedException();
+        }
+    
         public PetitMonde.Map.Cells.CellImpl[] mapCells
         {
             get

@@ -40,7 +40,7 @@ namespace PetitMonde
         }
 
 
-        public Player CurrentPlayer
+        public PetitMonde.PlayerImpl CurrentPlayer
         {
             get { throw new NotImplementedException(); }
         }

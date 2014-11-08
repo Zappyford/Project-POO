@@ -7,5 +7,9 @@ namespace PetitMonde
 {
     public class ElfUnit : PetitMonde.Units.UnitImpl
     {
+        public ElfUnit(int defaultX, int DefaultY)
+            : base(defaultX, DefaultY)
+        {
+        }
     }
 }

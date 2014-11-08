@@ -7,6 +7,11 @@ namespace PetitMonde.Units
 {
     public class Orcs : TribeImpl
     {
+        public Orcs()
+        {
+            throw new System.NotImplementedException();
+        }
+    
         public Faction FactionName
         {
             get

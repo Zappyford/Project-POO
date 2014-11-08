@@ -7,6 +7,10 @@ namespace PetitMonde
 {
     public class SavedGame : GameBuilderImpl
     {
+        public SavedGame()
+        {
+            throw new System.NotImplementedException();
+        }
 
         public override Game BuildGame()
         {

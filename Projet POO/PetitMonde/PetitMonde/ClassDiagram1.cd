@@ -1,25 +1,35 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <ClassDiagram MajorVersion="1" MinorVersion="1" MembersFormat="FullSignature">
   <Comment CommentText="Flyweight">
-    <Position X="2.344" Y="10.875" Height="0.323" Width="1.7" />
+    <Position X="3.914" Y="11.922" Height="0.323" Width="1.7" />
   </Comment>
   <Comment CommentText="Stratégie">
-    <Position X="4.652" Y="6.763" Height="0.291" Width="1.066" />
+    <Position X="5.327" Y="7.066" Height="0.291" Width="1.066" />
   </Comment>
   <Comment CommentText="Monteur">
-    <Position X="10.061" Y="7.749" Height="0.357" Width="0.965" />
+    <Position X="10.543" Y="7.956" Height="0.357" Width="0.965" />
   </Comment>
-  <Comment CommentText="Fabrique&#xD;&#xA;">
-    <Position X="18.29" Y="5.073" Height="0.291" Width="1.345" />
+  <Comment CommentText="Fabrique">
+    <Position X="19.544" Y="9.922" Height="0.319" Width="1.441" />
   </Comment>
   <Comment CommentText="Redéfinition du CanMove pour le nain, pour gérer le cas particulier du déplacement sur les cases montagne">
-    <Position X="23.056" Y="0.778" Height="1.016" Width="1.7" />
+    <Position X="23.593" Y="0.93" Height="1.016" Width="1.7" />
   </Comment>
   <Comment CommentText="Redéfinition de la méthode donnant le nombre de points bonus pour cette unité, pour gérer le cas particulier des points des orcs.">
-    <Position X="23.142" Y="2.396" Height="1.13" Width="1.7" />
+    <Position X="23.569" Y="2.41" Height="1.13" Width="1.7" />
   </Comment>
   <Class Name="PetitMonde.GameImpl">
     <Position X="4.75" Y="3" Width="2.5" />
+    <AssociationLine Name="Player2" Type="PetitMonde.PlayerImpl">
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="0.138" Y="0.032" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <AssociationLine Name="Player1" Type="PetitMonde.PlayerImpl">
+      <MemberNameLabel ManuallyPlaced="true" ManuallySized="true">
+        <Position X="0.096" Y="0.074" Height="0.182" Width="0.712" />
+      </MemberNameLabel>
+    </AssociationLine>
     <TypeIdentifier>
       <HashCode>AAAAAAAAAhAAAAAAwAAAAAAAAAAAAAEAAAAAgAAAAAA=</HashCode>
       <FileName>GameImpl.cs</FileName>
@@ -33,21 +43,21 @@
     <Lollipop Position="0.2" />
   </Class>
   <Class Name="PetitMonde.SavedGame">
-    <Position X="10.5" Y="8.25" Width="1.5" />
+    <Position X="9" Y="8.75" Width="2.25" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>SavedGame.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="PetitMonde.NewGame">
-    <Position X="12.5" Y="8.25" Width="1.5" />
+    <Position X="11.5" Y="8.75" Width="2.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>NewGame.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="PetitMonde.PlayerImpl">
-    <Position X="10.75" Y="1" Width="1.5" />
+    <Position X="9.75" Y="2.75" Width="4.75" />
     <TypeIdentifier>
       <HashCode>AAAAACAAAAAIAAAAAAABAAAQAAAAAAkAEAAAgAAAAAA=</HashCode>
       <FileName>PlayerImpl.cs</FileName>
@@ -61,35 +71,35 @@
     <Lollipop Position="0.2" />
   </Class>
   <Class Name="PetitMonde.Units.Orcs">
-    <Position X="15" Y="7" Width="1.25" />
+    <Position X="13.5" Y="11" Width="2.5" />
     <TypeIdentifier>
       <HashCode>AAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Units\Orcs.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="PetitMonde.Units.Elves">
-    <Position X="16.5" Y="7" Width="1.25" />
+    <Position X="16.25" Y="11" Width="2.5" />
     <TypeIdentifier>
       <HashCode>AAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Units\Elves.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="PetitMonde.Units.Dwarves">
-    <Position X="18" Y="7" Width="1.25" />
+    <Position X="19" Y="11" Width="2.5" />
     <TypeIdentifier>
       <HashCode>AAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Units\Dwarves.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="PetitMonde.Units.TribeFactory">
-    <Position X="19.5" Y="5.5" Width="2" />
+    <Position X="17" Y="8.5" Width="2.25" />
     <TypeIdentifier>
       <HashCode>ABAAAAAAAAAAAAAAAAAAAAAACQAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Units\TribeFactory.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="PetitMonde.Map.MapBuilderImpl">
-    <Position X="3" Y="5.75" Width="1.5" />
+    <Position X="3.5" Y="6.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAA=</HashCode>
       <FileName>Map\MapBuilderImpl.cs</FileName>
@@ -97,43 +107,43 @@
     <Lollipop Position="0.2" />
   </Class>
   <Class Name="PetitMonde.Map.DemoMapBuilder">
-    <Position X="0.5" Y="7.5" Width="1.5" />
+    <Position X="1.5" Y="8" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAA=</HashCode>
       <FileName>Map\DemoMapBuilder.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="PetitMonde.Map.SmallMapBuilder">
-    <Position X="2.25" Y="7.5" Width="1.5" />
+    <Position X="3.5" Y="8" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAA=</HashCode>
       <FileName>Map\SmallMapBuilder.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="PetitMonde.Map.MediumMapBuilder">
-    <Position X="4" Y="7.5" Width="1.75" />
+    <Position X="5.5" Y="8" Width="1.75" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAA=</HashCode>
       <FileName>Map\MediumMapBuilder.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="PetitMonde.Units.UnitImpl">
-    <Position X="16.5" Y="0.5" Width="2.25" />
+    <Position X="16.75" Y="0.5" Width="2.5" />
     <TypeIdentifier>
-      <HashCode>AAAACCAAAIQAAAAgAAAAEAARAIAAAAEAQAAAAgAAYAA=</HashCode>
+      <HashCode>AAAACCAAAIQAAAAgAAAAEAARAIAAABEEAAgAAgAAYAA=</HashCode>
       <FileName>Units\UnitImpl.cs</FileName>
     </TypeIdentifier>
     <Lollipop Position="0.2" />
   </Class>
   <Class Name="PetitMonde.Map.Cells.Forest">
-    <Position X="1.5" Y="12.75" Width="1.5" />
+    <Position X="0.75" Y="12.75" Width="2.75" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAAAAgAAAAAA=</HashCode>
       <FileName>Map\Cells\Forest.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="PetitMonde.Map.MapImpl">
-    <Position X="1.25" Y="3.25" Width="1.5" />
+    <Position X="1.25" Y="3.25" Width="2.5" />
     <TypeIdentifier>
       <HashCode>QABACAAAAAACAAAACAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Map\MapImpl.cs</FileName>
@@ -141,7 +151,7 @@
     <Lollipop Position="0.2" />
   </Class>
   <Class Name="PetitMonde.Map.Cells.Mountain">
-    <Position X="3.5" Y="12.75" Width="1.5" />
+    <Position X="3.75" Y="12.75" Width="2.75" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAAAAgAAAAAA=</HashCode>
       <FileName>Map\Cells\Mountain.cs</FileName>
@@ -149,21 +159,21 @@
     </TypeIdentifier>
   </Class>
   <Class Name="PetitMonde.Map.Cells.Plains">
-    <Position X="5.5" Y="12.75" Width="1.5" />
+    <Position X="6.75" Y="12.75" Width="2.75" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAAAAgAAAAAA=</HashCode>
       <FileName>Map\Cells\Plains.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="PetitMonde.Map.Cells.Desert">
-    <Position X="7.5" Y="12.75" Width="1.5" />
+    <Position X="9.75" Y="12.75" Width="2.75" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAAAAgAAAAAA=</HashCode>
       <FileName>Map\Cells\Desert.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="PetitMonde.GameBuilderImpl">
-    <Position X="11.25" Y="6.5" Width="2" />
+    <Position X="11.25" Y="6.75" Width="1.75" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>GameBuilderImpl.cs</FileName>
@@ -171,7 +181,7 @@
     <Lollipop Position="0.2" />
   </Class>
   <Class Name="PetitMonde.Units.TribeImpl">
-    <Position X="16.5" Y="5.5" Width="1.5" />
+    <Position X="14.75" Y="5.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Units\TribeImpl.cs</FileName>
@@ -179,28 +189,28 @@
     <Lollipop Position="0.2" />
   </Class>
   <Class Name="PetitMonde.Units.DwarfUnit">
-    <Position X="20.5" Y="0.75" Width="2.25" />
+    <Position X="20.5" Y="0.75" Width="2.75" />
     <TypeIdentifier>
       <HashCode>AAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Units\DwarfUnit.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="PetitMonde.Units.OrcUnit">
-    <Position X="20.5" Y="2.25" Width="2.25" />
+    <Position X="20.5" Y="2.25" Width="2.75" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Units\OrcUnit.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="PetitMonde.ElfUnit">
-    <Position X="20.5" Y="4" Width="2.25" />
+    <Position X="20.5" Y="4" Width="2.75" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Units\ElfUnit.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="PetitMonde.Map.Cells.CellImpl">
-    <Position X="5" Y="10.5" Width="2.25" />
+    <Position X="4.75" Y="10.5" Width="2.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAAAAgAAAAAA=</HashCode>
       <FileName>Map\Cells\CellImpl.cs</FileName>
@@ -208,42 +218,42 @@
     <Lollipop Position="0.2" />
   </Class>
   <Interface Name="PetitMonde.Units.Tribe">
-    <Position X="10.75" Y="3.75" Width="1.75" />
+    <Position X="14.75" Y="4.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Units\Tribe.cs</FileName>
     </TypeIdentifier>
   </Interface>
   <Interface Name="PetitMonde.Units.Unit">
-    <Position X="13.25" Y="0.5" Width="2.25" />
+    <Position X="13.5" Y="0.5" Width="2.25" />
     <TypeIdentifier>
       <HashCode>AAAAACAAAIAAAAAgAAAAEAAQAAAAAAEAAAAAAAAAAAA=</HashCode>
       <FileName>Units\Unit.cs</FileName>
     </TypeIdentifier>
   </Interface>
   <Interface Name="PetitMonde.Player">
-    <Position X="8.75" Y="3.75" Width="1.5" />
+    <Position X="7.5" Y="0.5" Width="2.25" />
     <TypeIdentifier>
       <HashCode>AAAAACAAAAAIAAAAAAABAAAQAAAAAAEAAAAAgAAAAAA=</HashCode>
       <FileName>Player.cs</FileName>
     </TypeIdentifier>
   </Interface>
   <Interface Name="PetitMonde.Game">
-    <Position X="3.25" Y="1.25" Width="2.5" />
+    <Position X="4.75" Y="1.5" Width="2.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Game.cs</FileName>
     </TypeIdentifier>
   </Interface>
   <Interface Name="PetitMonde.Map.Map">
-    <Position X="1.25" Y="1" Width="1.5" />
+    <Position X="1.25" Y="1" Width="2.5" />
     <TypeIdentifier>
       <HashCode>QABACAAAAAACAAAACAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Map\Map.cs</FileName>
     </TypeIdentifier>
   </Interface>
   <Interface Name="PetitMonde.Map.Cells.Cell">
-    <Position X="8.75" Y="10.25" Width="2.5" />
+    <Position X="7.75" Y="10.5" Width="2.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAAAAgAAAAAA=</HashCode>
       <FileName>Map\Cells\Cell.cs</FileName>
@@ -257,21 +267,21 @@
     </TypeIdentifier>
   </Interface>
   <Interface Name="PetitMonde.Map.MapBuilder">
-    <Position X="5" Y="4.75" Width="1.5" />
+    <Position X="4.75" Y="4.75" Width="2.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAA=</HashCode>
       <FileName>Map\MapBuilder.cs</FileName>
     </TypeIdentifier>
   </Interface>
   <Enum Name="PetitMonde.Map.Cells.CellType">
-    <Position X="0.5" Y="10" Width="1.5" />
+    <Position X="2.25" Y="10.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAIAAAAAACAAAAAAAAAAAAAEAAAAAAAgAAAAAAAAA=</HashCode>
       <FileName>Map\Cells\CellType.cs</FileName>
     </TypeIdentifier>
   </Enum>
   <Enum Name="PetitMonde.Faction">
-    <Position X="22" Y="6" Width="1.5" />
+    <Position X="19.5" Y="8.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAQAAAAAAAAAAAAAAAAAAAAAAACAAAAAAAQAAA=</HashCode>
       <FileName>Units\Faction.cs</FileName>

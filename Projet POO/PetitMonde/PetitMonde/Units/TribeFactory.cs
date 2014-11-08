@@ -7,6 +7,11 @@ namespace PetitMonde.Units
 {
     public class TribeFactory
     {
+        public TribeFactory()
+        {
+            throw new System.NotImplementedException();
+        }
+    
         public Tribe CreateOrcs()
         {
             throw new System.NotImplementedException();

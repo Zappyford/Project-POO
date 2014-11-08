@@ -7,6 +7,11 @@ namespace PetitMonde.Units
 {
     public class Elves : TribeImpl
     {
+        public Elves()
+        {
+            throw new System.NotImplementedException();
+        }
+    
         public Faction FactionName
         {
             get
