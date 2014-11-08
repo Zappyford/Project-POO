@@ -31,7 +31,7 @@
       </MemberNameLabel>
     </AssociationLine>
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAhAAAAAAwAAAAAAAAAAAAAEAAAAAgAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAhAAAAQAxAAAAAAAAAAAYAEAAAAAgAQAAAA=</HashCode>
       <FileName>GameImpl.cs</FileName>
     </TypeIdentifier>
     <ShowAsAssociation>
@@ -39,6 +39,7 @@
       <Property Name="Player1" />
       <Property Name="Map" />
       <Property Name="CurrentPlayer" />
+      <Property Name="SelectedUnit" />
     </ShowAsAssociation>
     <Lollipop Position="0.2" />
   </Class>
@@ -57,9 +58,9 @@
     </TypeIdentifier>
   </Class>
   <Class Name="PetitMonde.PlayerImpl">
-    <Position X="9.75" Y="2.75" Width="4.75" />
+    <Position X="10" Y="2.5" Width="4.75" />
     <TypeIdentifier>
-      <HashCode>AAAAACAAAAAIAAAAAAABAAAQAAAAAAkAEAAAgAAAAAA=</HashCode>
+      <HashCode>AAAAACAAAAAIAAAQAAABAAQQAAAAAAkAEAAAgAAAAAA=</HashCode>
       <FileName>PlayerImpl.cs</FileName>
     </TypeIdentifier>
     <ShowAsAssociation>
@@ -130,7 +131,7 @@
   <Class Name="PetitMonde.Units.UnitImpl">
     <Position X="16.75" Y="0.5" Width="2.5" />
     <TypeIdentifier>
-      <HashCode>AAAACCAAAIQAAAAgAAAAEAARAIAAABEEAAgAAgAAYAA=</HashCode>
+      <HashCode>AAAACCAAAIQAAAAgAAAAEAARAIAAABEEQAgAAgAAYAA=</HashCode>
       <FileName>Units\UnitImpl.cs</FileName>
     </TypeIdentifier>
     <Lollipop Position="0.2" />
@@ -203,7 +204,7 @@
     </TypeIdentifier>
   </Class>
   <Class Name="PetitMonde.ElfUnit">
-    <Position X="20.5" Y="4" Width="2.75" />
+    <Position X="20.5" Y="3.75" Width="2.75" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Units\ElfUnit.cs</FileName>
@@ -234,14 +235,14 @@
   <Interface Name="PetitMonde.Player">
     <Position X="7.5" Y="0.5" Width="2.25" />
     <TypeIdentifier>
-      <HashCode>AAAAACAAAAAIAAAAAAABAAAQAAAAAAEAAAAAgAAAAAA=</HashCode>
+      <HashCode>AAAAACAAAAAIAAAQAAABAAASAAAAAAEAAAAAgAAAAAA=</HashCode>
       <FileName>Player.cs</FileName>
     </TypeIdentifier>
   </Interface>
   <Interface Name="PetitMonde.Game">
-    <Position X="4.75" Y="1.5" Width="2.5" />
+    <Position X="4.75" Y="1" Width="2.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAA=</HashCode>
       <FileName>Game.cs</FileName>
     </TypeIdentifier>
   </Interface>
@@ -267,7 +268,7 @@
     </TypeIdentifier>
   </Interface>
   <Interface Name="PetitMonde.Map.MapBuilder">
-    <Position X="4.75" Y="4.75" Width="2.5" />
+    <Position X="5.5" Y="5.75" Width="2.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAA=</HashCode>
       <FileName>Map\MapBuilder.cs</FileName>

@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<useCaseModelRoot xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" xmlns:dm9="http://schemas.microsoft.com/VisualStudio/TeamArchitect/SequenceDesigner" xmlns:dm10="http://schemas.microsoft.com/dsltools/SimpleShapesModel" dslVersion="1.0.0.0" Id="1b7f1746-0760-486b-b6d7-4d13a7786ae3" name="PetitMondeCasDUtilisation" linkedPackageId="3a0c252c-9bcc-436e-8f60-988d2d98e25b" xmlns="http://schemas.microsoft.com/dsltools/UseCaseModel">
+<useCaseModelRoot xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" xmlns:dm9="http://schemas.microsoft.com/dsltools/SimpleShapesModel" dslVersion="1.0.0.0" Id="1b7f1746-0760-486b-b6d7-4d13a7786ae3" name="PetitMondeCasDUtilisation" linkedPackageId="3a0c252c-9bcc-436e-8f60-988d2d98e25b" xmlns="http://schemas.microsoft.com/dsltools/UseCaseModel">
   <packagedElements>
     <useCaseModelRootHasTypes>
       <actor Id="066af950-9b92-4663-8cdb-f88182d8366a" name="Player1" isAbstract="false" isLeaf="false">
@@ -86,6 +86,12 @@
     <useCaseModelRootHasTypes>
       <useCase Id="a2cc34d2-e02c-4711-a27b-281249141e84" name="Engager un combat" isAbstract="false" isLeaf="false">
         <elementDefinition Id="0938b0a2-6625-4b46-a944-bcfc781879df" />
+        <additions>
+          <include Id="62d47fdd-c4a9-474c-a237-60a163dcee93">
+            <useCaseMoniker Id="5cbb4172-0e79-4ef6-aec8-a5826374bf21" LastKnownName="Déplacer une unité" />
+            <elementDefinition Id="4a23bef8-f92e-4a0b-9472-3213f8a4dbc4" />
+          </include>
+        </additions>
         <subjects>
           <subsystemMoniker Id="8b130cfd-9f0c-484f-a59b-be77572dd830" LastKnownName="En Jeu" />
         </subjects>
