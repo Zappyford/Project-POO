@@ -39,8 +39,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="CellImpl.cs" />
-    <Compile Include="Faction.cs" />
+    <Compile Include="Map\Cells\CellImpl.cs" />
+    <Compile Include="Units\DwarfUnit.cs" />
+    <Compile Include="Units\ElfUnit.cs" />
     <Compile Include="GameBuilderImpl.cs" />
     <Compile Include="Map\Cells\CellFactory.cs" />
     <Compile Include="Map\Cells\CellType.cs" />
@@ -49,10 +50,10 @@
     <Compile Include="Map\Cells\Forest.cs" />
     <Compile Include="Map\Cells\Cell.cs" />
     <Compile Include="Map\MapBuilder.cs" />
+    <Compile Include="Units\OrcUnit.cs" />
     <Compile Include="Player.cs" />
-    <Compile Include="TribeImpl.cs" />
-    <Compile Include="UnitImpl.cs" />
-    <Compile Include="UnitState.cs" />
+    <Compile Include="Units\TribeImpl.cs" />
+    <Compile Include="Units\Faction.cs" />
     <Compile Include="Units\Unit.cs" />
     <Compile Include="Map\DemoMapBuilder.cs" />
     <Compile Include="Units\Dwarves.cs" />
