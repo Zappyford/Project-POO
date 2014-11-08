@@ -35,6 +35,17 @@ namespace PetitMonde
             }
         }
 
+        public string Name
+        {
+            get
+            {
+                throw new System.NotImplementedException();
+            }
+            set
+            {
+            }
+        }
+
         public void AttackUnit(Unit unit, Cell dest)
         {
             throw new NotImplementedException();
@@ -62,6 +73,12 @@ namespace PetitMonde
 
 
         public int GetScore()
+        {
+            throw new NotImplementedException();
+        }
+
+
+        public bool HasUnitsOnCell()
         {
             throw new NotImplementedException();
         }

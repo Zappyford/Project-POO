@@ -16,5 +16,9 @@ namespace PetitMonde
         bool HasLost();
 
         int GetScore();
+
+        bool HasUnitsOnCell();
+
+        Unit GetBestDefensiveUnit(int x, int y);
     }
 }

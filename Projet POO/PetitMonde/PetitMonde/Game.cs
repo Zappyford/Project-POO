@@ -7,5 +7,7 @@ namespace PetitMonde
     {
 
         Player GetCurrentPlayer();
+
+        Player GetOpponentPlayer();
     }
 }

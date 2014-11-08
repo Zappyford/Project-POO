@@ -97,6 +97,17 @@ namespace PetitMonde.Units
             }
         }
 
+        public Faction Faction
+        {
+            get
+            {
+                throw new System.NotImplementedException();
+            }
+            set
+            {
+            }
+        }
+
         public bool Move(int x, int y)
         {
             throw new NotImplementedException();
