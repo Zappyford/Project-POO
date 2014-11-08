@@ -2388,5 +2388,19 @@
   </packagedElements>
   <package Id="27e5c8a9-358c-4822-b8f3-0f5aaba55de3" name="DiagrammeSeqNewGame">
     <elementDefinition Id="1f509861-98bc-4cc7-84c6-08dba477ec3c" />
+    <profileInstances>
+      <packageHasProfileInstances Id="e7e8e115-e6f1-4c7d-a407-2ed53f309175">
+        <profileInstance Id="ba0c264d-50b7-4df4-8221-6c7ca0445c70" name="StandardProfileL2">
+          <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
+        </profileInstance>
+        <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
+      </packageHasProfileInstances>
+      <packageHasProfileInstances Id="7702a21b-f589-4cb6-9dba-aa8d1d6dd730">
+        <profileInstance Id="5308a207-3425-4e29-9eba-453844f4daac" name="StandardProfileL3">
+          <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
+        </profileInstance>
+        <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
+      </packageHasProfileInstances>
+    </profileInstances>
   </package>
 </SequenceDesignerModel>

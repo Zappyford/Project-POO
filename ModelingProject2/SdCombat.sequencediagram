@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<SequenceDesignerModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" dslVersion="1.0.0.0" Id="763c2037-ffce-4673-9340-5a076b7a5c13" name="SdCombat" linkedPackageId="011945c7-f71c-4e09-94b8-8d9532e1074f" xmlns="http://schemas.microsoft.com/VisualStudio/TeamArchitect/SequenceDesigner">
+  <profileInstances>
+    <packageHasProfileInstances Id="bf8482d1-f91e-4289-b623-5fc25c0501a1">
+      <profileInstance Id="f81fcb34-bf28-4529-bd3d-369d344d0c16" name="StandardProfileL2">
+        <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
+      </profileInstance>
+      <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
+    </packageHasProfileInstances>
+    <packageHasProfileInstances Id="c1a8da65-3dd6-4303-a062-bafcd6fabcd9">
+      <profileInstance Id="4c7e2f95-f824-42bc-a0e5-824c99b9cf70" name="StandardProfileL3">
+        <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
+      </profileInstance>
+      <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
+    </packageHasProfileInstances>
+  </profileInstances>
+  <package Id="011945c7-f71c-4e09-94b8-8d9532e1074f" name="ModelingProject2">
+    <elementDefinition Id="593a21de-1cb7-4d7b-870a-16f9f2e6c605" />
+  </package>
+</SequenceDesignerModel>
