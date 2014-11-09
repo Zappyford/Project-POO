@@ -9,7 +9,7 @@ namespace PetitMonde.Map
         {
             throw new System.NotImplementedException();
         }
-    
+
         public PetitMonde.Map.Cells.CellImpl[] mapCells
         {
             get
@@ -45,6 +45,11 @@ namespace PetitMonde.Map
         public Cell CreateDesert(int x, int y)
         {
             throw new NotImplementedException();
+        }
+
+        public bool CellIsAdjacentTo(int x, int y, int xTarget, int yTarget)
+        {
+            throw new System.NotImplementedException();
         }
     }
 }

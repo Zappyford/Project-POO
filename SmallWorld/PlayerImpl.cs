@@ -1,5 +1,7 @@
 ﻿using PetitMonde.Map.Cells;
+using PetitMonde.Units;
 using System;
+using System.Collections.Generic;
 
 namespace PetitMonde
 {
@@ -43,22 +45,12 @@ namespace PetitMonde
             }
         }
 
-        public void AttackUnit(Unit unit, Cell dest)
-        {
-            throw new NotImplementedException();
-        }
-
         public void EndTurn()
         {
             throw new NotImplementedException();
         }
 
         public void Fight(Unit unit1, Unit unit2)
-        {
-            throw new NotImplementedException();
-        }
-
-        public void MoveUnit(Unit unit, int x, int y)
         {
             throw new NotImplementedException();
         }
@@ -75,7 +67,7 @@ namespace PetitMonde
         }
 
 
-        public bool HasUnitsOnCell(int x, int y)
+        public List<Unit> GetUnitsOnCell(int x, int y)
         {
             throw new NotImplementedException();
         }

@@ -19,7 +19,7 @@
     <Position X="23.569" Y="2.41" Height="1.13" Width="1.7" />
   </Comment>
   <Class Name="PetitMonde.GameImpl">
-    <Position X="4.75" Y="3" Width="2.5" />
+    <Position X="4.5" Y="3" Width="2.5" />
     <AssociationLine Name="Player2" Type="PetitMonde.PlayerImpl">
       <MemberNameLabel ManuallyPlaced="true">
         <Position X="0.138" Y="0.032" />
@@ -44,14 +44,14 @@
     <Lollipop Position="0.2" />
   </Class>
   <Class Name="PetitMonde.SavedGame">
-    <Position X="9" Y="8.75" Width="2.25" />
+    <Position X="9.25" Y="8.75" Width="2.25" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>SavedGame.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="PetitMonde.NewGame">
-    <Position X="11.5" Y="8.75" Width="2.5" />
+    <Position X="12" Y="8.75" Width="2.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>NewGame.cs</FileName>
@@ -60,7 +60,7 @@
   <Class Name="PetitMonde.PlayerImpl">
     <Position X="10" Y="2.5" Width="4.75" />
     <TypeIdentifier>
-      <HashCode>AAAAACAAAAAIAAAQAAABAAQSAAAAAAkAEAAAgAAAAAA=</HashCode>
+      <HashCode>AAAAACAAAAAIAAAAAAABAAQSAAAAAAgIEAAAgAAAAAA=</HashCode>
       <FileName>PlayerImpl.cs</FileName>
     </TypeIdentifier>
     <ShowAsAssociation>
@@ -146,7 +146,7 @@
   <Class Name="PetitMonde.Map.MapImpl">
     <Position X="1.25" Y="3.25" Width="2.5" />
     <TypeIdentifier>
-      <HashCode>QABACAAAAAACAAAACAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>QABICAAAAAACAAAACAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Map\MapImpl.cs</FileName>
     </TypeIdentifier>
     <Lollipop Position="0.2" />
@@ -235,21 +235,21 @@
   <Interface Name="PetitMonde.Player">
     <Position X="7.25" Y="0.5" Width="2.75" />
     <TypeIdentifier>
-      <HashCode>AAAAACAAAAAIAAAQAAABAAASAAAAAAEAAAAAgAAAAAA=</HashCode>
+      <HashCode>AAAAACAAAAAIAAAAAAABAAASAAAAAAAIAAAAgAAAAAA=</HashCode>
       <FileName>Player.cs</FileName>
     </TypeIdentifier>
   </Interface>
   <Interface Name="PetitMonde.Game">
     <Position X="4.5" Y="1" Width="2.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAA=</HashCode>
+      <HashCode>AAAAAAAAAgAAAAAAAAAAAAAAAAAAAAEAAAAAAAQAAAA=</HashCode>
       <FileName>Game.cs</FileName>
     </TypeIdentifier>
   </Interface>
   <Interface Name="PetitMonde.Map.Map">
-    <Position X="1.25" Y="1" Width="2.5" />
+    <Position X="1.25" Y="0.75" Width="2.5" />
     <TypeIdentifier>
-      <HashCode>QABACAAAAAACAAAACAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>QABICAAAAAACAAAACAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Map\Map.cs</FileName>
     </TypeIdentifier>
   </Interface>

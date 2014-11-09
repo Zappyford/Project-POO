@@ -1,7 +1,4 @@
-﻿using PetitMonde.Map.Cells;
-using PetitMonde.Units;
-using System;
-namespace PetitMonde
+﻿namespace PetitMonde
 {
     public interface Game
     {
@@ -9,5 +6,7 @@ namespace PetitMonde
         Player GetCurrentPlayer();
 
         Player GetOpponentPlayer();
+
+        public void AttackUnit(Units.Unit unit, Map.Cells.Cell dest);
     }
 }
