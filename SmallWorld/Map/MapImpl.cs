@@ -1,10 +1,11 @@
 ﻿using PetitMonde.Map.Cells;
-using System;
 
 namespace PetitMonde.Map
 {
     public class MapImpl : Map
     {
+        private CellFactory cellFactory = new CellFactory();
+
         public MapImpl(int size)
         {
             throw new System.NotImplementedException();
@@ -27,25 +28,7 @@ namespace PetitMonde.Map
         }
 
 
-        public Cell CreatePlains(int x, int y)
-        {
-            throw new NotImplementedException();
-        }
 
-        public Cell CreateForest(int x, int y)
-        {
-            throw new NotImplementedException();
-        }
-
-        public Cell CreateMountain(int x, int y)
-        {
-            throw new NotImplementedException();
-        }
-
-        public Cell CreateDesert(int x, int y)
-        {
-            throw new NotImplementedException();
-        }
 
         public bool CellIsAdjacentTo(int x, int y, int xTarget, int yTarget)
         {

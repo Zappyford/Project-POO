@@ -308,6 +308,21 @@
               </controlFlow>
             </flowNodeTargets>
           </opaqueAction>
+          <initialNode
+            Id="73c73add-ba19-4465-8a9d-c29750da84d5"
+            name="Initial1"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="122335f4-abe2-4f09-9db5-bfca14f3e3bb"
+                isLeaf="false">
+                <opaqueActionMoniker
+                  Id="8c370f33-ce54-41d5-bc55-0e19015be9f7"
+                  LastKnownName="Choisir meilleure unité défensive"
+                  LastKnownLocation="DiagrammeActiviteCombat.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </initialNode>
         </nodes>
       </activity>
     </packageHasNamedElement>

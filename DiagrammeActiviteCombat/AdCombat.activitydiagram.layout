@@ -215,5 +215,16 @@
         <activityFinalNodeShapeMoniker Id="fc45f79b-ed2b-4835-9670-61b5eb4afe5b" />
       </nodes>
     </controlFlowConnector>
+    <initialNodeShape Id="f6146c86-4a93-412a-a3a8-839c43014a3e" absoluteBounds="1.875, 0.625, 0.125, 0.125" customColor="89, 89, 89">
+      <initialNodeMoniker Id="52805fca-6ad8-4255-8527-7d7b21ba790a" LastKnownName="Initial1" />
+    </initialNodeShape>
+    <controlFlowConnector edgePoints="[(2 : 0.6875); (3.25 : 0.6875)]" fixedFrom="Algorithm" fixedTo="Algorithm" customColor="Black">
+      <controlFlowMoniker Id="62a78adc-519f-4f11-b6fa-e58a757fba32" />
+      <relativeChildShapes />
+      <nodes>
+        <initialNodeShapeMoniker Id="f6146c86-4a93-412a-a3a8-839c43014a3e" />
+        <actionShapeMoniker Id="35682c56-a91c-40bd-8f03-d65076d26ce3" />
+      </nodes>
+    </controlFlowConnector>
   </nestedChildShapes>
 </activityDiagram>

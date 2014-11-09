@@ -177,6 +177,15 @@
               </controlFlow>
             </flowNodeTargets>
           </opaqueAction>
+          <initialNode Id="52805fca-6ad8-4255-8527-7d7b21ba790a" name="Initial1" isLeaf="false">
+            <elementDefinition Id="73c73add-ba19-4465-8a9d-c29750da84d5" />
+            <flowNodeTargets>
+              <controlFlow Id="62a78adc-519f-4f11-b6fa-e58a757fba32" isLeaf="false">
+                <opaqueActionMoniker Id="b235471c-24d9-4023-a347-5985cea43b14" LastKnownName="Choisir meilleure unité défensive" />
+                <elementDefinition Id="122335f4-abe2-4f09-9db5-bfca14f3e3bb" />
+              </controlFlow>
+            </flowNodeTargets>
+          </initialNode>
         </nodes>
       </activity>
     </activityRootModelHasActivity>

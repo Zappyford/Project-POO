@@ -4,7 +4,7 @@
     <Position X="3.914" Y="11.922" Height="0.323" Width="1.7" />
   </Comment>
   <Comment CommentText="Stratégie">
-    <Position X="5.327" Y="7.066" Height="0.291" Width="1.066" />
+    <Position X="5.652" Y="7.058" Height="0.291" Width="1.066" />
   </Comment>
   <Comment CommentText="Monteur">
     <Position X="10.543" Y="7.956" Height="0.357" Width="0.965" />
@@ -60,7 +60,7 @@
   <Class Name="PetitMonde.PlayerImpl">
     <Position X="10" Y="2.5" Width="4.75" />
     <TypeIdentifier>
-      <HashCode>AAAAACAAAAAIAAAAAAABAAQSAAAAAAgIEAAAgAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAIAAAAAAABAAQSAAAAAAgIEAAAgAAAAAA=</HashCode>
       <FileName>PlayerImpl.cs</FileName>
     </TypeIdentifier>
     <ShowAsAssociation>
@@ -100,7 +100,7 @@
     </TypeIdentifier>
   </Class>
   <Class Name="PetitMonde.Map.MapBuilderImpl">
-    <Position X="3.5" Y="6.25" Width="1.5" />
+    <Position X="4" Y="6.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAA=</HashCode>
       <FileName>Map\MapBuilderImpl.cs</FileName>
@@ -146,10 +146,9 @@
   <Class Name="PetitMonde.Map.MapImpl">
     <Position X="1.25" Y="3.25" Width="2.5" />
     <TypeIdentifier>
-      <HashCode>QABICAAAAAACAAAACAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>QAAIAAAAAAACAAAAAAAAAABAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Map\MapImpl.cs</FileName>
     </TypeIdentifier>
-    <Lollipop Position="0.2" />
   </Class>
   <Class Name="PetitMonde.Map.Cells.Mountain">
     <Position X="3.75" Y="12.75" Width="2.75" />
@@ -218,8 +217,15 @@
     </TypeIdentifier>
     <Lollipop Position="0.2" />
   </Class>
+  <Class Name="PetitMonde.Map.Cells.CellFactory">
+    <Position X="1" Y="9.25" Width="2.75" />
+    <TypeIdentifier>
+      <HashCode>AABAKAAAAAACAAAACAAAAAAAAEAAAAAAAgAAAAAAAAA=</HashCode>
+      <FileName>Map\Cells\CellFactory.cs</FileName>
+    </TypeIdentifier>
+  </Class>
   <Interface Name="PetitMonde.Units.Tribe">
-    <Position X="14.75" Y="4.5" Width="1.5" />
+    <Position X="15" Y="6.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Units\Tribe.cs</FileName>
@@ -235,7 +241,7 @@
   <Interface Name="PetitMonde.Player">
     <Position X="7.25" Y="0.5" Width="2.75" />
     <TypeIdentifier>
-      <HashCode>AAAAACAAAAAIAAAAAAABAAASAAAAAAAIAAAAgAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAIAAAAAAABAAASAAAAAAAIAAAAgAAAAAA=</HashCode>
       <FileName>Player.cs</FileName>
     </TypeIdentifier>
   </Interface>
@@ -249,7 +255,7 @@
   <Interface Name="PetitMonde.Map.Map">
     <Position X="1.25" Y="0.75" Width="2.5" />
     <TypeIdentifier>
-      <HashCode>QABICAAAAAACAAAACAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>QAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Map\Map.cs</FileName>
     </TypeIdentifier>
   </Interface>
@@ -268,14 +274,14 @@
     </TypeIdentifier>
   </Interface>
   <Interface Name="PetitMonde.Map.MapBuilder">
-    <Position X="5.5" Y="5.75" Width="2.5" />
+    <Position X="5.75" Y="5.75" Width="2.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAA=</HashCode>
       <FileName>Map\MapBuilder.cs</FileName>
     </TypeIdentifier>
   </Interface>
-  <Enum Name="PetitMonde.Map.Cells.CellType">
-    <Position X="2.25" Y="10.5" Width="1.5" />
+  <Enum Name="PetitMonde.Map.Cells.CellType" Collapsed="true">
+    <Position X="7" Y="9.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAIAAAAAACAAAAAAAAAAAAAEAAAAAAAgAAAAAAAAA=</HashCode>
       <FileName>Map\Cells\CellType.cs</FileName>

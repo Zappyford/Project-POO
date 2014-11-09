@@ -7,14 +7,6 @@ namespace PetitMonde.Map
 
         Cell GetCell(int x, int y);
 
-        public Cell CreatePlains(int x, int y);
-
-        public Cell CreateForest(int x, int y);
-
-        public Cell CreateMountain(int x, int y);
-
-        public Cell CreateDesert(int x, int y);
-
         public bool CellIsAdjacentTo(int x, int y, int xTarget, int yTarget);
 
     }
