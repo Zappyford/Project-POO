@@ -5,91 +5,62 @@ namespace PetitMonde
 {
     public class GameImpl : PetitMonde.Game
     {
+        public static readonly GameImpl INSTANCE = new GameImpl();
+
         public PetitMonde.PlayerImpl Player2
         {
-            get
-            {
-                throw new System.NotImplementedException();
-            }
-            set
-            {
-            }
+            get;
+            set;
         }
 
         public PetitMonde.PlayerImpl Player1
         {
-            get
-            {
-                throw new System.NotImplementedException();
-            }
-            set
-            {
-            }
+            get;
+            set;
         }
 
 
         public PetitMonde.Map.MapImpl Map
         {
-            get
-            {
-                throw new NotImplementedException();
-            }
-            set
-            {
-                throw new NotImplementedException();
-            }
+            get;
+            set;
         }
 
 
         public PetitMonde.PlayerImpl CurrentPlayer
         {
-            get { throw new NotImplementedException(); }
+            get;
+            protected set;
         }
 
-        public UnitImpl SelectedUnit
+        public Unit SelectedUnit
         {
-            get
-            {
-                throw new System.NotImplementedException();
-            }
-            set
-            {
-            }
+            get;
+            set;
         }
 
         public int XSelected
         {
-            get
-            {
-                throw new System.NotImplementedException();
-            }
-            set
-            {
-            }
+            get;
+            set;
         }
 
         public int YSelected
         {
-            get
-            {
-                throw new System.NotImplementedException();
-            }
-            set
-            {
-            }
+            get;
+            set;
         }
 
         public PlayerImpl OpponentPlayer
         {
-            get
-            {
-                throw new System.NotImplementedException();
-            }
-            set
-            {
-            }
+            get;
+            set;
         }
 
+        private GameImpl()
+        {
+
+        }
         public void AttackUnit(Units.Unit unit, Map.Cells.Cell dest)
         {
             throw new NotImplementedException();

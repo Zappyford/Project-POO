@@ -6,18 +6,23 @@ namespace PetitMonde.Map.Cells
     {
         public Mountain()
         {
-            throw new System.NotImplementedException();
+            
         }
 
 
         public override float GetMovingCost(Faction faction)
         {
-            throw new NotImplementedException();
+            return BaseMovingCost;
         }
 
         public override int GetScore(Faction faction)
         {
-            throw new NotImplementedException();
+            return 1;
+        }
+
+        public override CellType getType()
+        {
+            return CellType.Mountain;
         }
     }
 }

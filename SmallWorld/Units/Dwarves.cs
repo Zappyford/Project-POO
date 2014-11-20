@@ -9,18 +9,13 @@ namespace PetitMonde.Units
     {
         public Dwarves()
         {
-            throw new System.NotImplementedException();
+            FactionName = Faction.Dwarves;
         }
-    
+
         public Faction FactionName
         {
-            get
-            {
-                throw new System.NotImplementedException();
-            }
-            set
-            {
-            }
+            get;
+            private set;
         }
     }
 }

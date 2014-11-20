@@ -3,14 +3,13 @@ namespace PetitMonde.Map.Cells
 {
     public class CellFactory
     {
-        private const CellImpl Plain = new Plains();
-        private const CellImpl Forest = new Forest();
-        private const CellImpl Mountain = new Mountain();
-        private const CellImpl Desert = new Desert();
+        private readonly CellImpl Plain = new Plains();
+        private readonly CellImpl Forest = new Forest();
+        private readonly CellImpl Mountain = new Mountain();
+        private readonly CellImpl Desert = new Desert();
 
         public CellFactory()
         {
-            throw new System.NotImplementedException();
         }
 
         public Cell CreatePlains(int x, int y)

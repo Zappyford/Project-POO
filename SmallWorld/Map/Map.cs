@@ -7,7 +7,7 @@ namespace PetitMonde.Map
 
         Cell GetCell(int x, int y);
 
-        public bool CellIsAdjacentTo(int x, int y, int xTarget, int yTarget);
+        bool CellIsAdjacentTo(int x, int y, int xTarget, int yTarget);
 
     }
 }

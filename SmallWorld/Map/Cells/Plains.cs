@@ -6,18 +6,32 @@ namespace PetitMonde.Map.Cells
     {
         public Plains()
         {
-            throw new System.NotImplementedException();
+           
         }
-
 
         public override float GetMovingCost(Faction faction)
         {
-            throw new NotImplementedException();
+            if (faction == Faction.Orcs || faction == Faction.Dwarves)
+            {
+                return BaseMovingCost / 2;
+            }
+            else
+            {
+                return BaseMovingCost;
+            }
         }
 
         public override int GetScore(Faction faction)
         {
-            throw new NotImplementedException();
+            if (faction == Faction.Dwarves)
+                return 0;
+            else
+                return BaseScore;
+        }
+
+        public override CellType getType()
+        {
+            return CellType.Plains;
         }
     }
 }

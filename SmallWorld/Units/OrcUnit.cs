@@ -6,6 +6,7 @@ namespace PetitMonde.Units
         public OrcUnit(int defaultX, int DefaultY)
             : base(defaultX, DefaultY)
         {
+            Faction = PetitMonde.Faction.Orcs;
         }
     
         public override int GetBonusPoints()

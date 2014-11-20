@@ -9,22 +9,22 @@ namespace PetitMonde.Units
     {
         public TribeFactory()
         {
-            throw new System.NotImplementedException();
+            
         }
     
         public Tribe CreateOrcs()
         {
-            throw new System.NotImplementedException();
+            return new Orcs();
         }
 
         public Tribe CreateElves()
         {
-            throw new System.NotImplementedException();
+            return new Elves();
         }
 
         public Tribe CreateDwarves()
         {
-            throw new System.NotImplementedException();
+            return new Dwarves();
         }
     }
 }

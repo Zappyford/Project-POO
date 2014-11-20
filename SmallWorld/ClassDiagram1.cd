@@ -31,13 +31,12 @@
       </MemberNameLabel>
     </AssociationLine>
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAhAAAAQAxAAAAAAAAAAAYAEAAAAAgAQAAAA=</HashCode>
+      <HashCode>AAAAAAAAAhAAAAQAxAAAAAAAAAQAYAEAAAAAgAQAAAA=</HashCode>
       <FileName>GameImpl.cs</FileName>
     </TypeIdentifier>
     <ShowAsAssociation>
       <Property Name="Player2" />
       <Property Name="Player1" />
-      <Property Name="Map" />
       <Property Name="CurrentPlayer" />
       <Property Name="SelectedUnit" />
     </ShowAsAssociation>
@@ -131,7 +130,7 @@
   <Class Name="PetitMonde.Units.UnitImpl">
     <Position X="16.75" Y="0.5" Width="2.5" />
     <TypeIdentifier>
-      <HashCode>AAAACCAAAIQAAAAgAAAAEAARAIAAABEEQAgAAgAAYAA=</HashCode>
+      <HashCode>AAAACCAAAIUAAAAgAAAAEAARAIAAABEEQAgAAgAAYAA=</HashCode>
       <FileName>Units\UnitImpl.cs</FileName>
     </TypeIdentifier>
     <Lollipop Position="0.2" />
@@ -139,21 +138,14 @@
   <Class Name="PetitMonde.Map.Cells.Forest">
     <Position X="0.75" Y="12.75" Width="2.75" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAAAAgAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAAAAAAAAIAAAAAAQAAAAAAAAAAgAAAAAA=</HashCode>
       <FileName>Map\Cells\Forest.cs</FileName>
-    </TypeIdentifier>
-  </Class>
-  <Class Name="PetitMonde.Map.MapImpl">
-    <Position X="1.25" Y="3.25" Width="2.5" />
-    <TypeIdentifier>
-      <HashCode>QAAIAAAAAAACAAAAAAAAAABAAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>Map\MapImpl.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="PetitMonde.Map.Cells.Mountain">
     <Position X="3.75" Y="12.75" Width="2.75" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAAAAgAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAAAAAAAAIAAAAAAQAAAAAAAAAAgAAAAAA=</HashCode>
       <FileName>Map\Cells\Mountain.cs</FileName>
       <NewMemberFileName>Map\Cells\Desert.cs</NewMemberFileName>
     </TypeIdentifier>
@@ -161,14 +153,14 @@
   <Class Name="PetitMonde.Map.Cells.Plains">
     <Position X="6.75" Y="12.75" Width="2.75" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAAAAgAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAAAAAAAAIAAAAAAQAAAAAAAAAAgAAAAAA=</HashCode>
       <FileName>Map\Cells\Plains.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="PetitMonde.Map.Cells.Desert">
     <Position X="9.75" Y="12.75" Width="2.75" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAAAAgAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAAAAAAAAIAAAAAAQAAAAAAAAAAgAAAAAA=</HashCode>
       <FileName>Map\Cells\Desert.cs</FileName>
     </TypeIdentifier>
   </Class>
@@ -212,7 +204,7 @@
   <Class Name="PetitMonde.Map.Cells.CellImpl">
     <Position X="4.75" Y="10.5" Width="2.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAAAAgAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAAIAAAAAIAAAAAAQAAAAAAAAAAgAAAAAQ=</HashCode>
       <FileName>Map\Cells\CellImpl.cs</FileName>
     </TypeIdentifier>
     <Lollipop Position="0.2" />
@@ -223,6 +215,14 @@
       <HashCode>AABAKAAAAAACAAAACAAAAAAAAEAAAAAAAgAAAAAAAAA=</HashCode>
       <FileName>Map\Cells\CellFactory.cs</FileName>
     </TypeIdentifier>
+  </Class>
+  <Class Name="PetitMonde.Map.MapImpl">
+    <Position X="1.25" Y="3.25" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>QAAIAAAAAAACAAAAAAAAAABAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Map\MapImpl.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
   </Class>
   <Interface Name="PetitMonde.Units.Tribe">
     <Position X="15" Y="6.25" Width="1.5" />
@@ -262,7 +262,7 @@
   <Interface Name="PetitMonde.Map.Cells.Cell">
     <Position X="7.75" Y="10.5" Width="2.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAAAAgAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAAAAAAAAIAAAAAAQAAAAAAAAAAgAAAAAA=</HashCode>
       <FileName>Map\Cells\Cell.cs</FileName>
     </TypeIdentifier>
   </Interface>
@@ -274,7 +274,7 @@
     </TypeIdentifier>
   </Interface>
   <Interface Name="PetitMonde.Map.MapBuilder">
-    <Position X="5.75" Y="5.75" Width="2.5" />
+    <Position X="1" Y="6.25" Width="2.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAA=</HashCode>
       <FileName>Map\MapBuilder.cs</FileName>

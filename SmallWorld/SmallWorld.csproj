@@ -63,7 +63,6 @@
     <Compile Include="PlayerImpl.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SavedGame.cs" />
-    <Compile Include="Map\Cells\TypeCell.cs" />
     <Compile Include="Units\DwarfUnit.cs" />
     <Compile Include="Units\Dwarves.cs" />
     <Compile Include="Units\ElfUnit.cs" />

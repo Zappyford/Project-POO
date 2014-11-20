@@ -5,7 +5,7 @@ namespace PetitMonde.Map
     public class MapImpl : Map
     {
         private CellFactory cellFactory = new CellFactory();
-
+       
         public MapImpl(int size)
         {
             throw new System.NotImplementedException();

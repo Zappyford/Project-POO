@@ -10,6 +10,7 @@ namespace PetitMonde
         public ElfUnit(int defaultX, int DefaultY)
             : base(defaultX, DefaultY)
         {
+            Faction = PetitMonde.Faction.Elves;
         }
     }
 }

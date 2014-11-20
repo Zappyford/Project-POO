@@ -1,4 +1,5 @@
-﻿using System;
+﻿using PetitMonde.Map.Cells;
+using System;
 
 namespace PetitMonde.Units
 {
@@ -11,122 +12,106 @@ namespace PetitMonde.Units
 
         public UnitImpl(int defaultX, int defaultY)
         {
-            throw new System.NotImplementedException();
+            Attack = DEFAULT_ATTACK;
+            Health = DEFAULT_HEALTH;
+            Defense = DEFAULT_DEFENSE;
+            MovingPoints = DEFAULT_MOVING_POINTS;
+            X = defaultX;
+            Y = defaultY;
         }
 
         public int Attack
         {
-            get
-            {
-                throw new NotImplementedException();
-            }
-            set
-            {
-                throw new NotImplementedException();
-            }
+            get;
+            set;
         }
 
         public int Defense
         {
-            get
-            {
-                throw new NotImplementedException();
-            }
-            set
-            {
-                throw new NotImplementedException();
-            }
+            get;
+            set;
         }
 
+        private int _health;
         public int Health
         {
             get
             {
-                throw new NotImplementedException();
+                return _health;
             }
             set
             {
-                throw new NotImplementedException();
+                if (value >= 0)
+                {
+                    _health = value;
+                }
+                else
+                {
+                    _health = 0;
+                }
             }
         }
 
         public int X
         {
-            get
-            {
-                throw new NotImplementedException();
-            }
-            set
-            {
-                throw new NotImplementedException();
-            }
+            get;
+            set;
         }
 
         public int Y
         {
-            get
-            {
-                throw new NotImplementedException();
-            }
-            set
-            {
-                throw new NotImplementedException();
-            }
+            get;
+            set;
         }
 
-        public int MovingPoints
+        public float MovingPoints
         {
-            get
-            {
-                throw new NotImplementedException();
-            }
-            set
-            {
-                throw new NotImplementedException();
-            }
+            get;
+            set;
         }
 
         public int UnitsKilled
         {
-            get
-            {
-                throw new System.NotImplementedException();
-            }
-            set
-            {
-            }
+            get;
+            set;
         }
 
         public Faction Faction
         {
-            get
-            {
-                throw new System.NotImplementedException();
-            }
-            set
-            {
-            }
+            get;
+            set;
         }
 
         public bool Move(int x, int y)
         {
-            throw new NotImplementedException();
+            if (CanMove(x, y))
+            {
+                X = x;
+                Y = y;
+                MovingPoints -= GameImpl.INSTANCE.Map.GetCell(x, y).GetMovingCost(Faction);
+                return true;
+            }
+            else
+            {
+                return false;
+            }
         }
 
 
         public void Die()
         {
-            throw new NotImplementedException();
+            Health = 0;
         }
 
         public bool IsDead()
         {
-            throw new NotImplementedException();
+            return Health == 0;
         }
 
-        public bool CanMove(int x, int y)
+        public virtual bool CanMove(int x, int y)
         {
-            throw new NotImplementedException();
+            Cell cell =  GameImpl.INSTANCE.Map.GetCell(x, y);
+            return cell.GetMovingCost(this.Faction) <= MovingPoints && GameImpl.INSTANCE.Map.CellIsAdjacentTo(X,Y,x,y);
         }
 
         public void AttackUnit(Unit unit)
@@ -135,7 +120,7 @@ namespace PetitMonde.Units
         }
 
 
-        public int GetBonusPoints()
+        public virtual int GetBonusPoints()
         {
             return 0;
         }

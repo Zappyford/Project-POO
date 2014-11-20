@@ -9,18 +9,13 @@ namespace PetitMonde.Units
     {
         public Orcs()
         {
-            throw new System.NotImplementedException();
+            FactionName = Faction.Orcs;
         }
-    
+
         public Faction FactionName
         {
-            get
-            {
-                throw new System.NotImplementedException();
-            }
-            set
-            {
-            }
+            get;
+            private set;
         }
     }
 }

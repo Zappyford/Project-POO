@@ -8,6 +8,6 @@ namespace PetitMonde
     public interface GameBuilder
     {
 
-        public PetitMonde.Game BuildGame();
+        PetitMonde.Game BuildGame();
     }
 }

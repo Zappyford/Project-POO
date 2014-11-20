@@ -19,5 +19,10 @@ namespace PetitMonde.Map.Cells
         {
             throw new NotImplementedException();
         }
+
+        public override CellType getType()
+        {
+            return CellType.Forest;
+        }
     }
 }
