@@ -30,7 +30,7 @@ namespace PetitMonde
         public PetitMonde.PlayerImpl CurrentPlayer
         {
             get;
-            protected set;
+            set;
         }
 
         public Unit SelectedUnit

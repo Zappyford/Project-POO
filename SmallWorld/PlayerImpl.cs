@@ -2,52 +2,45 @@
 using PetitMonde.Units;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace PetitMonde
 {
     public class PlayerImpl : Player
     {
-        public PlayerImpl(Faction faction, int defaultX, int defaultY, int numberOfUnits)
+        public PlayerImpl(Tribe tribe, int defaultX, int defaultY, int numberOfUnits, String name)
         {
-            throw new System.NotImplementedException();
-        }
-
-        public PetitMonde.Units.TribeImpl Tribe
-        {
-            get
+            Tribe = tribe;
+            Name = name;
+            Units = new List<Unit>(numberOfUnits);
+            for (int i = 0; i < numberOfUnits; i++)
             {
-                throw new System.NotImplementedException();
-            }
-            set
-            {
+                Units.Add(Tribe.createUnit(defaultX,defaultY));
             }
         }
 
-        public System.Collections.Generic.List<PetitMonde.Units.UnitImpl> Units
+        public PetitMonde.Units.Tribe Tribe
         {
-            get
-            {
-                throw new System.NotImplementedException();
-            }
-            set
-            {
-            }
+            get;
+            private set;
+        }
+
+        public System.Collections.Generic.List<PetitMonde.Units.Unit> Units
+        {
+            get;
+            private set;
         }
 
         public string Name
         {
-            get
-            {
-                throw new System.NotImplementedException();
-            }
-            set
-            {
-            }
+            get;
+            private set;
         }
 
         public void EndTurn()
         {
-            throw new NotImplementedException();
+            GameImpl.INSTANCE.CurrentPlayer = GameImpl.INSTANCE.OpponentPlayer;
+            GameImpl.INSTANCE.OpponentPlayer = this;
         }
 
         public void Fight(Unit unit1, Unit unit2)
@@ -55,26 +48,53 @@ namespace PetitMonde
             throw new NotImplementedException();
         }
 
-        public bool HasLost()
-        {
-            throw new NotImplementedException();
-        }
-
-
-        public int GetScore()
-        {
-            throw new NotImplementedException();
-        }
-
 
         public List<Unit> GetUnitsOnCell(int x, int y)
         {
-            throw new NotImplementedException();
+            return Units.FindAll(u => u.X == x && u.Y == y);
         }
 
         public Unit GetBestDefensiveUnit(int x, int y)
         {
-            throw new NotImplementedException();
+            List<Unit> unitsOnCell = GetUnitsOnCell(x, y);
+            unitsOnCell.Sort();
+            return unitsOnCell.Last();
+        }
+
+
+        bool Player.HasLost
+        {
+            get { return Units.Count == 0; }
+        }
+
+        public int Score
+        {
+            get { 
+                int bonusPoints = 0;
+                foreach (Unit u in Units)
+                    bonusPoints += u.BonusPoints;
+
+                int basePoints = 0;
+                IEnumerable<Unit> distinctUnits = Units.Distinct(new UnitsOnSameCellComparer()); // Sélection des unités sur des cases différentes
+                foreach (Unit u in distinctUnits)
+                {
+                    basePoints += GameImpl.INSTANCE.Map.GetCell(u.X, u.Y).GetScore(Tribe.FactionName);
+                }
+                return basePoints + bonusPoints;
+            }
+        }
+    }
+
+    class UnitsOnSameCellComparer : EqualityComparer<Unit>
+    {
+        public bool Equals(Unit x, Unit y)
+        {
+            return x.X == y.X && x.Y == y.Y;
+        }
+
+        public int GetHashCode(Unit obj)
+        {
+            return obj.X * 50 + obj.Y;
         }
     }
 }

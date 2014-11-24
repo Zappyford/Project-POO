@@ -17,5 +17,10 @@ namespace PetitMonde.Units
             get;
             private set;
         }
+
+        public override Unit createUnit(int defaultX, int defaultY)
+        {
+            return new ElfUnit(defaultX, defaultY);
+        }
     }
 }

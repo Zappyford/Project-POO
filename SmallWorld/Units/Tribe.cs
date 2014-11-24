@@ -7,5 +7,10 @@ namespace PetitMonde.Units
 {
     public interface Tribe
     {
+        Faction FactionName
+        {
+            get;
+        }
+        Unit createUnit(int defaultX, int defaultY);
     }
 }

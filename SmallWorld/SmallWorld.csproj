@@ -52,6 +52,7 @@
     <Compile Include="Map\Cells\Mountain.cs" />
     <Compile Include="Map\Cells\Plains.cs" />
     <Compile Include="Map\DemoMapBuilder.cs" />
+    <Compile Include="Map\InvalidCellException.cs" />
     <Compile Include="Map\Map.cs" />
     <Compile Include="Map\MapBuilder.cs" />
     <Compile Include="Map\MapBuilderImpl.cs" />

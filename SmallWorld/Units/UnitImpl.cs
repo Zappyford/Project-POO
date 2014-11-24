@@ -70,17 +70,16 @@ namespace PetitMonde.Units
             set;
         }
 
-        public int UnitsKilled
-        {
-            get;
-            set;
-        }
 
         public Faction Faction
         {
             get;
             set;
         }
+
+        protected int UnitsKilled = 0;
+
+
 
         public bool Move(int x, int y)
         {
@@ -97,15 +96,26 @@ namespace PetitMonde.Units
             }
         }
 
+        public Boolean IsDead
+        {
+            get
+            {
+                return Health == 0;
+            }
+        }
+
+
+        public virtual int BonusPoints
+        {
+            get
+            {
+                return 0;
+            }
+        }
 
         public void Die()
         {
             Health = 0;
-        }
-
-        public bool IsDead()
-        {
-            return Health == 0;
         }
 
         public virtual bool CanMove(int x, int y)
@@ -120,9 +130,9 @@ namespace PetitMonde.Units
         }
 
 
-        public virtual int GetBonusPoints()
+        public int CompareTo(Unit other)
         {
-            return 0;
+            return this.Health - other.Health;
         }
     }
 }

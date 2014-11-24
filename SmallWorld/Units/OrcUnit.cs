@@ -9,12 +9,15 @@ namespace PetitMonde.Units
             Faction = PetitMonde.Faction.Orcs;
         }
     
-        public override int GetBonusPoints()
+        public override int BonusPoints
         {
-            if (!IsDead())
-                return UnitsKilled;
-            else
-                return 0;
+            get
+            {
+                if (!IsDead)
+                    return UnitsKilled;
+                else
+                    return 0;
+            }
         }
     }
 }
