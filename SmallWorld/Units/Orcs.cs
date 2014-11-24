@@ -9,13 +9,12 @@ namespace PetitMonde.Units
     {
         public Orcs()
         {
-            FactionName = Faction.Orcs;
+            
         }
 
-        public Faction FactionName
+        public override Faction FactionName
         {
-            get;
-            private set;
+            get { return Faction.Orcs; }
         }
 
         public override Unit createUnit(int defaultX, int defaultY)

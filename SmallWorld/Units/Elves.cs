@@ -9,14 +9,14 @@ namespace PetitMonde.Units
     {
         public Elves()
         {
-            FactionName = Faction.Elves;
+           
         }
 
-        public Faction FactionName
+        public override Faction FactionName
         {
-            get;
-            private set;
+            get { return Faction.Elves; }
         }
+
 
         public override Unit createUnit(int defaultX, int defaultY)
         {

@@ -38,6 +38,7 @@ namespace PetitMonde.Map
 
         public bool CellIsAdjacentTo(int x, int y, int xTarget, int yTarget)
         {
+            throw new NotImplementedException();
             if (ValidCoordinates(x,y) && ValidCoordinates(xTarget,yTarget))
             {
                /// TODO: if (Math.Abs(x - xTarget) <= 1 && )

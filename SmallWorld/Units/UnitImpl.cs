@@ -5,9 +5,24 @@ namespace PetitMonde.Units
 {
     public abstract class UnitImpl : Unit
     {
+        /// <summary>
+        /// Health points by default
+        /// </summary>
         private const int DEFAULT_HEALTH = 5;
+
+        /// <summary>
+        /// Attack points by default 
+        /// </summary>
         private const int DEFAULT_ATTACK = 2;
+
+        /// <summary>
+        /// Defense points by default
+        /// </summary>
         private const int DEFAULT_DEFENSE = 1;
+
+        /// <summary>
+        /// Moving points by default
+        /// </summary>
         private const int DEFAULT_MOVING_POINTS = 1;
 
         public UnitImpl(int defaultX, int defaultY)
@@ -77,6 +92,10 @@ namespace PetitMonde.Units
             set;
         }
 
+        /// <summary>
+        /// Number of units killeds by this unit
+        /// Used to calculate bonus points
+        /// </summary>
         protected int UnitsKilled = 0;
 
 
@@ -129,10 +148,5 @@ namespace PetitMonde.Units
             throw new NotImplementedException();
         }
 
-
-        public int CompareTo(Unit other)
-        {
-            return this.Health - other.Health;
-        }
     }
 }

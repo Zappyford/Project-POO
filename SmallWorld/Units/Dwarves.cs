@@ -9,13 +9,11 @@ namespace PetitMonde.Units
     {
         public Dwarves()
         {
-            FactionName = Faction.Dwarves;
         }
 
-        public Faction FactionName
+        public override Faction FactionName
         {
-            get;
-            private set;
+            get { return Faction.Dwarves; }
         }
 
         public override Unit createUnit(int defaultX, int defaultY)

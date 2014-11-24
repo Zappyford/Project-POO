@@ -1,7 +1,7 @@
 ﻿using System;
 namespace PetitMonde.Units
 {
-    public interface Unit: IComparable<Unit>
+    public interface Unit
     {
         int Attack
         {

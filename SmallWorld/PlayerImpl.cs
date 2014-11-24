@@ -54,13 +54,16 @@ namespace PetitMonde
             return Units.FindAll(u => u.X == x && u.Y == y);
         }
 
+        /// <summary>
+        /// Returns the best defensive unit on the cell given
+        /// </summary>
+        /// <param name="x">X coordinate</param>
+        /// <param name="y">Y coordinate</param>
+        /// <returns>The best defensive unit, if exists</returns>
         public Unit GetBestDefensiveUnit(int x, int y)
         {
-            List<Unit> unitsOnCell = GetUnitsOnCell(x, y);
-            unitsOnCell.Sort();
-            return unitsOnCell.Last();
+            return Units.OrderByDescending(u => u.Health).First();
         }
-
 
         bool Player.HasLost
         {
@@ -87,12 +90,12 @@ namespace PetitMonde
 
     class UnitsOnSameCellComparer : EqualityComparer<Unit>
     {
-        public bool Equals(Unit x, Unit y)
+        public override bool Equals(Unit x, Unit y)
         {
             return x.X == y.X && x.Y == y.Y;
         }
 
-        public int GetHashCode(Unit obj)
+        public override int GetHashCode(Unit obj)
         {
             return obj.X * 50 + obj.Y;
         }
