@@ -44,19 +44,13 @@ namespace PetitMonde.Map
                 int rand = randomGenerator.Next(0, 4);
                 bool canPlace = false;
 
-                int debugCounter = 0;
                 // Vérification de la possibilité de placer ce type de case
                 while (!canPlace)
                 {
-                    debugCounter++;
                     if (tabCellTypeLeft[rand] > 0) // Si au moins une case de ce type est disponible, on peut placer
                         canPlace = true;
                     else // Sinon on regénère un nombre, jusqu'à tomber sur un valide
                         rand = randomGenerator.Next(0, 4);
-                    if (debugCounter > 5)
-                    {
-                        debugCounter++;
-                    }
                 }
 
                 switch (rand)
