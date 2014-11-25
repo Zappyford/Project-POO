@@ -7,5 +7,8 @@ namespace SmallWorld.Map
 {
     class InvalidCellException : Exception
     {
+        public InvalidCellException() 
+            : base("Invalid coordinates were given.") 
+        { }
     }
 }

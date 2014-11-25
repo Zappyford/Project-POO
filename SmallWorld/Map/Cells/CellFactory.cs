@@ -12,22 +12,22 @@ namespace PetitMonde.Map.Cells
         {
         }
 
-        public Cell CreatePlains(int x, int y)
+        public Cell CreatePlains()
         {
             return Plain;
         }
 
-        public Cell CreateForest(int x, int y)
+        public Cell CreateForest()
         {
             return Forest;
         }
 
-        public Cell CreateMountain(int x, int y)
+        public Cell CreateMountain()
         {
             return Mountain;
         }
 
-        public Cell CreateDesert(int x, int y)
+        public Cell CreateDesert()
         {
             return Desert;
         }

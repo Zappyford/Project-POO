@@ -7,14 +7,12 @@ namespace PetitMonde.Map
 {
     public class MediumMapBuilder : MapBuilderImpl
     {
+        private const int DEFAULT_SIZE = 14;
+
         public MediumMapBuilder()
         {
-            throw new System.NotImplementedException();
+            this.size = DEFAULT_SIZE;
         }
     
-        public override Map BuildMap()
-        {
-            throw new NotImplementedException();
-        }
     }
 }

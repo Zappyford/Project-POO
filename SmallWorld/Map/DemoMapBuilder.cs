@@ -4,14 +4,10 @@ namespace PetitMonde.Map
 {
     public class DemoMapBuilder : MapBuilderImpl
     {
+        private const int DEFAULT_SIZE = 6;
         public DemoMapBuilder()
         {
-            throw new System.NotImplementedException();
-        }
-
-        public override Map BuildMap()
-        {
-            throw new NotImplementedException();
+            this.size = DEFAULT_SIZE;
         }
     }
 }

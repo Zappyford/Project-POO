@@ -1,7 +1,7 @@
 ﻿using System;
 namespace PetitMonde.Map
 {
-    interface MapBuilder
+    public interface MapBuilder
     {
         Map BuildMap();
     }

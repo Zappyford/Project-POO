@@ -6,7 +6,7 @@ namespace PetitMonde.Map.Cells
     {
         public Desert()
         {
-            throw new System.NotImplementedException();
+           
         }
 
 

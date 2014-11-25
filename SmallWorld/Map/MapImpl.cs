@@ -6,26 +6,37 @@ namespace PetitMonde.Map
 {
     public class MapImpl : Map
     {
-        private CellFactory cellFactory = new CellFactory();
+        
+
+        /// <summary>
+        /// The size of the map
+        /// </summary>
         private int size;
 
         public MapImpl(int size)
         {
             this.size = size;
-            throw new System.NotImplementedException();
+           
         }
 
-        public PetitMonde.Map.Cells.CellImpl[] mapCells
+        public PetitMonde.Map.Cells.Cell[] mapCells
         {
             get;
             set;
         }
 
+        /// <summary>
+        /// Check if the coordinates are valid on this map
+        /// </summary>
+        /// <param name="x">X coordinate</param>
+        /// <param name="y">Y coordinate</param>
+        /// <returns>True if the given coordinates are correct</returns>
         private bool ValidCoordinates(int x, int y)
         {
             return x >= 0 && y >= 0 && x <= size && y <= size;
         }
 
+        
         public Cell GetCell(int x, int y)
         {
             if (ValidCoordinates(x, y))
@@ -35,16 +46,13 @@ namespace PetitMonde.Map
         }
 
 
-
+        
         public bool CellIsAdjacentTo(int x, int y, int xTarget, int yTarget)
         {
-            throw new NotImplementedException();
             if (ValidCoordinates(x,y) && ValidCoordinates(xTarget,yTarget))
             {
                /// TODO: if (Math.Abs(x - xTarget) <= 1 && )
-                {
-
-                }
+                return (x == xTarget && Math.Abs(y - yTarget) == 1) || (Math.Abs(x - xTarget) == 1 && (yTarget == y || yTarget == y - 1));
             }
             else
             {

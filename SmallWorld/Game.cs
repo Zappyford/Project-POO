@@ -49,12 +49,7 @@ namespace PetitMonde
         PlayerImpl OpponentPlayer
         {
             get;
-            set;
         }
-
-        Player GetCurrentPlayer();
-
-        Player GetOpponentPlayer();
 
         void AttackUnit(Units.Unit unit, Map.Cells.Cell dest);
     }

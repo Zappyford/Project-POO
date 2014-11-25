@@ -57,25 +57,19 @@ namespace PetitMonde
             set;
         }
 
+        /// <summary>
+        /// Private constructor (singleton)
+        /// </summary>
         private GameImpl()
         {
 
         }
+
+
         public void AttackUnit(Units.Unit unit, Map.Cells.Cell dest)
         {
             throw new NotImplementedException();
         }
 
-
-        public Player GetCurrentPlayer()
-        {
-            throw new NotImplementedException();
-        }
-
-
-        public Player GetOpponentPlayer()
-        {
-            throw new NotImplementedException();
-        }
     }
 }

@@ -6,7 +6,7 @@ namespace PetitMonde.Map.Cells
     {
         public Forest()
         {
-            throw new System.NotImplementedException();
+           
         }
 
 
