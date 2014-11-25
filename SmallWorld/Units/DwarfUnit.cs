@@ -13,6 +13,7 @@ namespace PetitMonde.Units
 
         public override bool CanMove(int x, int y)
         {
+            /// Dwarves can move on all the map, if the cell and the Targeted cell are both Mountains
             Cell targetedCell =  GameImpl.INSTANCE.Map.GetCell(x, y);
             Cell cell = GameImpl.INSTANCE.Map.GetCell(X,Y);
 

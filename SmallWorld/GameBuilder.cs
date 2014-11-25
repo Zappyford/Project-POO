@@ -7,7 +7,10 @@ namespace PetitMonde
 {
     public interface GameBuilder
     {
-
+        /// <summary>
+        /// Builds the game
+        /// </summary>
+        /// <returns>The game</returns>
         PetitMonde.Game BuildGame();
     }
 }

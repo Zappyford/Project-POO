@@ -5,6 +5,9 @@ using System.Text;
 
 namespace PetitMonde
 {
+    /// <summary>
+    /// Game builder for a prevously saved game
+    /// </summary>
     public class SavedGame : GameBuilderImpl
     {
         public SavedGame()

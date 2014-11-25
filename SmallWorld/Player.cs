@@ -5,19 +5,19 @@ namespace PetitMonde
     public interface Player
     {
         /// <summary>
-        /// 
+        /// Ends this player's turn
         /// </summary>
         void EndTurn();
 
         /// <summary>
-        /// 
+        /// Starts a fight between the two units given
         /// </summary>
-        /// <param name="unit1"></param>
-        /// <param name="unit2"></param>
+        /// <param name="unit1">The first unit</param>
+        /// <param name="unit2">The second unit</param>
         void Fight(Unit unit1, Unit unit2);
 
         /// <summary>
-        /// 
+        /// True if this player lost the game
         /// </summary>
         bool HasLost
         {
@@ -25,7 +25,7 @@ namespace PetitMonde
         }
 
         /// <summary>
-        /// 
+        /// The current score of this player
         /// </summary>
         int Score
         {
@@ -33,19 +33,19 @@ namespace PetitMonde
         }
 
         /// <summary>
-        /// 
+        /// Returns a list containing all the units owned by this player on the cell at the given coordinates
         /// </summary>
-        /// <param name="x"></param>
-        /// <param name="y"></param>
-        /// <returns></returns>
+        /// <param name="x">X coordinate of the cell</param>
+        /// <param name="y">Y coordinate of the cell</param>
+        /// <returns>A list containing all the units owned by this player on the cell at the given coordinates</returns>
         List<Unit> GetUnitsOnCell(int x, int y);
 
         /// <summary>
-        /// 
+        /// Select the best defensive unit on the given cell
         /// </summary>
-        /// <param name="x"></param>
-        /// <param name="y"></param>
-        /// <returns></returns>
+        /// <param name="x">X coordinate of the cell</param>
+        /// <param name="y">Y coordinate of the cell</param>
+        /// <returns>The best defensive unit on the cell</returns>
         Unit GetBestDefensiveUnit(int x, int y);
     }
 }

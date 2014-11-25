@@ -6,6 +6,9 @@ using System.Text;
 
 namespace PetitMonde
 {
+    /// <summary>
+    /// GameBuilder for a new game
+    /// </summary>
     public class NewGame : GameBuilderImpl
     {
     

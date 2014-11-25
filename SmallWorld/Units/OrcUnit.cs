@@ -11,6 +11,7 @@ namespace PetitMonde.Units
     
         public override int BonusPoints
         {
+            // Orcs get bonus point for each unit killed, only if the killer unit is not dead
             get
             {
                 if (!IsDead)

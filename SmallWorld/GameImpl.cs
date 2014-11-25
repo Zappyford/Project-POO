@@ -66,10 +66,9 @@ namespace PetitMonde
         }
 
 
-        public void AttackUnit(Units.Unit unit, Map.Cells.Cell dest)
+        public void AttackUnit(Unit unit, int xTargeted, int yTargeted)
         {
             throw new NotImplementedException();
         }
-
     }
 }

@@ -42,7 +42,7 @@ namespace PetitMonde
             GameImpl.INSTANCE.CurrentPlayer = GameImpl.INSTANCE.OpponentPlayer;
             GameImpl.INSTANCE.OpponentPlayer = this;
         }
-
+    
         public void Fight(Unit unit1, Unit unit2)
         {
             throw new NotImplementedException();
@@ -54,12 +54,6 @@ namespace PetitMonde
             return Units.FindAll(u => u.X == x && u.Y == y);
         }
 
-        /// <summary>
-        /// Returns the best defensive unit on the cell given
-        /// </summary>
-        /// <param name="x">X coordinate</param>
-        /// <param name="y">Y coordinate</param>
-        /// <returns>The best defensive unit, if exists</returns>
         public Unit GetBestDefensiveUnit(int x, int y)
         {
             return Units.OrderByDescending(u => u.Health).First();
@@ -88,6 +82,10 @@ namespace PetitMonde
         }
     }
 
+    /// <summary>
+    /// Comparer of units by the current coordinates.
+    /// Units will be equals if they are on the same cell
+    /// </summary>
     class UnitsOnSameCellComparer : EqualityComparer<Unit>
     {
         public override bool Equals(Unit x, Unit y)
