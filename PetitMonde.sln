@@ -1,13 +1,17 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2013
-VisualStudioVersion = 12.0.31101.0
+VisualStudioVersion = 12.0.21005.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{F088123C-0E9E-452A-89E6-6BA2F21D5CAC}") = "ModelingProject1", "ModelingProject1\ModelingProject1.modelproj", "{09EE870B-EADE-4557-A4E1-65E7576546C1}"
 EndProject
 Project("{F088123C-0E9E-452A-89E6-6BA2F21D5CAC}") = "DiagrammeSeqNewGame", "DiagrammeSeqNewGame\DiagrammeSeqNewGame.modelproj", "{17E0376B-1C95-40CD-9639-E574E6A87E38}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SmallWorld", "SmallWorld\SmallWorld.csproj", "{B7292B8D-A9EB-4309-B248-5EA02021369E}"
+	ProjectSection(ProjectDependencies) = postProject
+		{345C925D-1D20-4509-92F6-BE1FC3E25343} = {345C925D-1D20-4509-92F6-BE1FC3E25343}
+		{95BFF0C8-8A63-4087-908C-51D0EA50F6B8} = {95BFF0C8-8A63-4087-908C-51D0EA50F6B8}
+	EndProjectSection
 EndProject
 Project("{F088123C-0E9E-452A-89E6-6BA2F21D5CAC}") = "DiagrammeSeqCombat", "ModelingProject2\DiagrammeSeqCombat.modelproj", "{8E7AE54B-504B-49FE-9CD6-F6889859F486}"
 EndProject

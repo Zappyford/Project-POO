@@ -1,19 +1,19 @@
 #ifndef __WRAPPER__
 #define __WRAPPER__
-#include "../Debug/Algo.lib" // A changer
+#include "../Algo/Algo.h"
+// A changer
 // Le bon chemin pour être "../Debug/nomProjetLib.lib"
-
-#pragma comment(lib,"Algo.lib") // A changer
+#pragma comment(lib,"../Debug/Algo.lib") // A changer
 
 using namespace System;
 namespace Wrapper {
-	public ref class WrapperAlgo {
+	public ref class WrapperMapBuilder {
 	private:
-		Algo* algo;
+		MapBuilderC* algo;
 	public:
-		WrapperAlgo(){ algo = Algo_new(); }
-		~WrapperAlgo(){ Algo_delete(algo); }
-		int computeFoo() { return algo->computeFoo(); }
+		WrapperMapBuilder(){ algo = MapBuilderC_new(); }
+		~WrapperMapBuilder(){ MapBuilderC_delete(algo); }
+		int* BuildMap(const int size, const int numberOfCellTypes) { return algo->BuildMap(size, numberOfCellTypes); }
 	};
 }
 #endif

@@ -5,15 +5,15 @@
 #define DLL
 #define EXTERNC
 #endif
-class DLL Algo {
+class DLL MapBuilderC {
 public:
-	Algo() {}
-	~Algo() {}
-	int computeFoo();
+	MapBuilderC() {}
+	~MapBuilderC() {}
+	int* BuildMap(const int size, const int numberOfCellTypes);
 };
 // A ne pas implémenter dans le .h !
-EXTERNC DLL Algo* Algo_new();
-EXTERNC DLL void Algo_delete(Algo* algo);
-EXTERNC DLL int Algo_computeAlgo(Algo* algo);
+EXTERNC DLL MapBuilderC* MapBuilderC_new();
+EXTERNC DLL void MapBuilderC_delete(MapBuilderC* algo);
+EXTERNC DLL int* MapBuilderC_BuildMap(MapBuilderC* algo, const int size, const int numberOfCellTypes);
 
 
