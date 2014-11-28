@@ -30,7 +30,14 @@ namespace PetitMonde.Map
                 int* cellNumbers = mBuilder.BuildMap(size, 4);
                 cells = new Cell[size * size];
 
+
+
+                
                 for(int i = 0; i<cells.Length; i++){
+
+                    cells[i] = cellFactory.createCell((CellType)cellNumbers[i]);
+
+                    /*
                     switch(cellNumbers[i]){
                         case (int)CellType.Desert:
                             cells[i] = cellFactory.CreateDesert();
@@ -44,10 +51,8 @@ namespace PetitMonde.Map
                         case (int)CellType.Plains:
                             cells[i] = cellFactory.CreatePlains();
                             break;
+                     */
                     }
-
-
-                }
             }
            
             map.mapCells = cells;

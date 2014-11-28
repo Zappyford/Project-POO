@@ -1,5 +1,7 @@
 ﻿using PetitMonde.Units;
 using System;
+using System.Collections.Generic;
+using System.Linq;
 
 namespace PetitMonde
 {
@@ -66,9 +68,32 @@ namespace PetitMonde
         }
 
 
-        public void AttackUnit(Unit unit, int xTargeted, int yTargeted)
+        public void MoveUnit(Unit unit, int xTargeted, int yTargeted)
         {
-            throw new NotImplementedException();
+            if (unit.CanMove(xTargeted,yTargeted) && CurrentPlayer.Units.Contains(unit))
+            {
+                List<Unit> opponentPlayerUnits = OpponentPlayer.GetUnitsOnCell(xTargeted,yTargeted);
+                if (opponentPlayerUnits.Count > 0)
+                {
+                    /// Il y a un combat
+                    unit.AttackUnit(OpponentPlayer.GetBestDefensiveUnit(xTargeted,yTargeted));
+                    /// TODO
+                }
+                else
+                {
+                    unit.Move(xTargeted, yTargeted);
+                }
+            }
+            else
+            {
+                /// On tente de déplacer l'unité de l'ennemi
+            }
+        }
+
+        public void EndTurn() {
+            PlayerImpl tmp = this.CurrentPlayer;
+            CurrentPlayer = OpponentPlayer;
+            OpponentPlayer = tmp;
         }
     }
 }

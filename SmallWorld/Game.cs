@@ -79,6 +79,11 @@ namespace PetitMonde
         /// <param name="unit">The unit that tries to move on the targeted cell</param>
         /// <param name="xTargeted">The x coordinate of the targeted cell</param>
         /// <param name="yTargeted">The y coordinate of the targeted Cell</param>
-        void AttackUnit(Units.Unit unit, int xTargeted, int yTargeted);
+        void MoveUnit(Units.Unit unit, int xTargeted, int yTargeted);
+
+        /// <summary>
+        /// Ends the current player's turn
+        /// </summary>
+        void EndTurn();
     }
 }
