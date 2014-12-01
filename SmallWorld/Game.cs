@@ -6,7 +6,7 @@ namespace PetitMonde
         /// <summary>
         /// The second player
         /// </summary>
-        PetitMonde.PlayerImpl Player2
+        PetitMonde.Player Player2
         {
             get;
             set;
@@ -15,7 +15,7 @@ namespace PetitMonde
         /// <summary>
         /// The first player
         /// </summary>
-        PetitMonde.PlayerImpl Player1
+        PetitMonde.Player Player1
         {
             get;
             set;
@@ -24,7 +24,7 @@ namespace PetitMonde
         /// <summary>
         /// The map
         /// </summary>
-        PetitMonde.Map.MapImpl Map
+        PetitMonde.Map.Map Map
         {
             get;
             set;
@@ -33,7 +33,7 @@ namespace PetitMonde
         /// <summary>
         /// The player that plays his turn
         /// </summary>
-        PetitMonde.PlayerImpl CurrentPlayer
+        PetitMonde.Player CurrentPlayer
         {
             get;
         }
@@ -68,7 +68,7 @@ namespace PetitMonde
         /// <summary>
         /// The player that doesn't play his turn
         /// </summary>
-        PlayerImpl OpponentPlayer
+        Player OpponentPlayer
         {
             get;
         }

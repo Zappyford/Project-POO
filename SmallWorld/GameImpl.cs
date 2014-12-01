@@ -9,27 +9,27 @@ namespace PetitMonde
     {
         public static readonly GameImpl INSTANCE = new GameImpl();
 
-        public PetitMonde.PlayerImpl Player2
+        public PetitMonde.Player Player2
         {
             get;
             set;
         }
 
-        public PetitMonde.PlayerImpl Player1
-        {
-            get;
-            set;
-        }
-
-
-        public PetitMonde.Map.MapImpl Map
+        public PetitMonde.Player Player1
         {
             get;
             set;
         }
 
 
-        public PetitMonde.PlayerImpl CurrentPlayer
+        public PetitMonde.Map.Map Map
+        {
+            get;
+            set;
+        }
+
+
+        public PetitMonde.Player CurrentPlayer
         {
             get;
             set;
@@ -53,7 +53,7 @@ namespace PetitMonde
             set;
         }
 
-        public PlayerImpl OpponentPlayer
+        public Player OpponentPlayer
         {
             get;
             set;
@@ -91,7 +91,7 @@ namespace PetitMonde
         }
 
         public void EndTurn() {
-            PlayerImpl tmp = this.CurrentPlayer;
+            Player tmp = this.CurrentPlayer;
             CurrentPlayer = OpponentPlayer;
             OpponentPlayer = tmp;
         }

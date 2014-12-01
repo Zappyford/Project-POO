@@ -25,19 +25,18 @@ namespace WpfSmallWorld
             InitializeComponent();
         }
 
-        private void Button_Click(object sender, RoutedEventArgs e)
-        {
-            
-        }
 
-        private void Button_Click_1(object sender, RoutedEventArgs e)
-        {
-
-        }
 
         private void btnQuit_Click(object sender, RoutedEventArgs e)
         {
             Application.Current.Shutdown();
+        }
+
+        private void btnNewGame_Click(object sender, RoutedEventArgs e)
+        {
+            NewGame newGameWindow = new NewGame();
+            newGameWindow.Show();
+            this.Close();
         }
 
     }

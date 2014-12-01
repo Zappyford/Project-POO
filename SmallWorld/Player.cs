@@ -33,6 +33,15 @@ namespace PetitMonde
         }
 
         /// <summary>
+        /// List of all units of this player
+        /// </summary>
+        System.Collections.Generic.List<PetitMonde.Units.Unit> Units
+        {
+            get;
+            set;
+        }
+
+        /// <summary>
         /// Returns a list containing all the units owned by this player on the cell at the given coordinates
         /// </summary>
         /// <param name="x">X coordinate of the cell</param>

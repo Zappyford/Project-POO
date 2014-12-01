@@ -31,7 +31,7 @@
       </MemberNameLabel>
     </AssociationLine>
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAhAAAAQAxAAAAAAAAAQAYAEAAAAAgAQAAAA=</HashCode>
+      <HashCode>AAAAACAAABAAAAQAxAABAAAAAAQAYAAAAAAAgAAAAAA=</HashCode>
       <FileName>GameImpl.cs</FileName>
     </TypeIdentifier>
     <ShowAsAssociation>
@@ -47,13 +47,6 @@
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>SavedGame.cs</FileName>
-    </TypeIdentifier>
-  </Class>
-  <Class Name="PetitMonde.NewGame">
-    <Position X="12" Y="8.75" Width="2.5" />
-    <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>NewGame.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="PetitMonde.PlayerImpl">
@@ -101,7 +94,7 @@
   <Class Name="PetitMonde.Map.MapBuilderImpl">
     <Position X="4" Y="6.25" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAAAAAAAIAAAABAAAAAAAAABAAAAAAAAAA=</HashCode>
       <FileName>Map\MapBuilderImpl.cs</FileName>
     </TypeIdentifier>
     <Lollipop Position="0.2" />
@@ -109,28 +102,28 @@
   <Class Name="PetitMonde.Map.DemoMapBuilder">
     <Position X="1.5" Y="8" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Map\DemoMapBuilder.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="PetitMonde.Map.SmallMapBuilder">
     <Position X="3.5" Y="8" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Map\SmallMapBuilder.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="PetitMonde.Map.MediumMapBuilder">
     <Position X="5.5" Y="8" Width="1.75" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Map\MediumMapBuilder.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="PetitMonde.Units.UnitImpl">
     <Position X="16.75" Y="0.5" Width="2.5" />
     <TypeIdentifier>
-      <HashCode>AAEACCAAAIUAAAQgAAAAEAARAIAAABEEQAgAAgAAYAA=</HashCode>
+      <HashCode>AAEACCAAAIUAAAAgAAAAEAARAIAAABEEQAgAAgAAYAA=</HashCode>
       <FileName>Units\UnitImpl.cs</FileName>
     </TypeIdentifier>
     <Lollipop Position="0.2" />
@@ -212,17 +205,24 @@
   <Class Name="PetitMonde.Map.Cells.CellFactory">
     <Position X="1" Y="9.25" Width="2.75" />
     <TypeIdentifier>
-      <HashCode>AABAKAAAAAACAAAACAAAAAAAAEAAAAAAAgAAAAAAAAA=</HashCode>
+      <HashCode>QAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Map\Cells\CellFactory.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="PetitMonde.Map.MapImpl">
     <Position X="1.25" Y="3.25" Width="2.5" />
     <TypeIdentifier>
-      <HashCode>QAAIAAgAAAACAAAAAIAAAABAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>QAAIAAgAAAACAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Map\MapImpl.cs</FileName>
     </TypeIdentifier>
     <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="PetitMonde.NewGame">
+    <Position X="12" Y="8.75" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAEACAAAAAAAAAgAAAAACAEAAAAAAAAAAAAA=</HashCode>
+      <FileName>NewGame.cs</FileName>
+    </TypeIdentifier>
   </Class>
   <Interface Name="PetitMonde.Units.Tribe">
     <Position X="15" Y="6.25" Width="1.5" />
@@ -248,7 +248,7 @@
   <Interface Name="PetitMonde.Game">
     <Position X="4.5" Y="0.5" Width="2.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAhAAAAQAxAAAAAAAAAAAYAEAAAAAgAQAAAA=</HashCode>
+      <HashCode>AAAAACAAABAAAAQAxAABAAAAAAAAYAAAAAAAgAAAAAA=</HashCode>
       <FileName>Game.cs</FileName>
     </TypeIdentifier>
   </Interface>

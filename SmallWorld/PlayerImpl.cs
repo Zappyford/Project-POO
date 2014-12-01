@@ -28,7 +28,7 @@ namespace PetitMonde
         public System.Collections.Generic.List<PetitMonde.Units.Unit> Units
         {
             get;
-            private set;
+            set;
         }
 
         public string Name

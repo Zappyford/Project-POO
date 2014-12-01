@@ -58,5 +58,11 @@ namespace PetitMonde.Map
             map.mapCells = cells;
             return map;
         }
+
+
+        public abstract int numberOfUnits
+        {
+            get;
+        }
     }
 }
