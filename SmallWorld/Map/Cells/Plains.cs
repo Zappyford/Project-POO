@@ -1,4 +1,5 @@
-﻿using System;
+﻿using PetitMonde.Units;
+using System;
 
 namespace PetitMonde.Map.Cells
 {

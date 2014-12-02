@@ -13,7 +13,8 @@ namespace PetitMonde.Map
             {
                 return DEFAULT_NUMBER_UNITS;
             }
-        }
+        }
+
 
         public DemoMapBuilder()
         {

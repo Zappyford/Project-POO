@@ -1,4 +1,5 @@
-﻿using System;
+﻿using PetitMonde.Units;
+using System;
 
 namespace PetitMonde.Map.Cells
 {
@@ -12,12 +13,19 @@ namespace PetitMonde.Map.Cells
 
         public override float GetMovingCost(Faction faction)
         {
-            throw new NotImplementedException();
+            if (faction == Faction.Elves)
+                return BaseMovingCost / 2;
+
+            else
+                return BaseMovingCost;
         }
 
         public override int GetScore(Faction faction)
         {
-            throw new NotImplementedException();
+            if (faction == Faction.Orcs)
+                return 0;
+            else
+                return BaseScore;
         }
 
         public override CellType getType()

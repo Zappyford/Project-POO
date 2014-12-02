@@ -13,6 +13,8 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 using PetitMonde;
+using PetitMonde.Units;
+using PetitMonde.Map;
 
 namespace WpfSmallWorld
 {
@@ -21,11 +23,15 @@ namespace WpfSmallWorld
     /// </summary>
     public partial class NewGame : Window
     {
+
+        NewGameDataContext dataContext = new NewGameDataContext();
+
         ResourceManager rm = new System.Resources.ResourceManager("WpfSmallWorld.Properties.Resources", System.Reflection.Assembly.GetExecutingAssembly());
 
         public NewGame()
         {
             InitializeComponent();
+            this.DataContext = dataContext;
         }
 
         private void rbOrcsP1_Checked(object sender, RoutedEventArgs e)
@@ -92,8 +98,11 @@ namespace WpfSmallWorld
         private void btnStartGame_Click(object sender, RoutedEventArgs e)
         {
             // TODO
-           // GameBuilder gm = (GameBuilder)new PetitMonde.NewGame(tbNicknameP1.Text, tbNicknameP2.Text);
+            GameBuilder gameBuilder = (GameBuilder)new PetitMonde.NewGame(this.dataContext);
+            gameBuilder.BuildGame();
         }
 
     }
+    
+   
 }

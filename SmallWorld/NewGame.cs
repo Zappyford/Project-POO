@@ -7,39 +7,25 @@ using System.Text;
 
 namespace PetitMonde
 {
-    public enum MapSize
-    {
-        demo,
-        small,
-        medium
-    }
+    
 
     /// <summary>
     /// GameBuilder for a new game
     /// </summary>
     public class NewGame : GameBuilderImpl
     {
-        private string nicknameP1;
-        private string nicknameP2;
-        private Faction factionP1;
-        private Faction factionP2;
-        private MapSize mapSize;
-        private int numberOfUnits;
+        private NewGameDataContext dataContext;
 
-        public NewGame(string nicknameP1, string nicknameP2, Faction tribeP1, Faction tribeP2, MapSize mapSize)
+        public NewGame(NewGameDataContext dataContext)// string nicknameP1, string nicknameP2, Faction tribeP1, Faction tribeP2, MapSize mapSize)
         {
-            this.mapSize = mapSize;
-            this.nicknameP1 = nicknameP1;
-            this.nicknameP2 = nicknameP2;
-            this.factionP1 = tribeP1;
-            this.factionP2 = tribeP2;
+            this.dataContext = dataContext;
         }
     
         public override Game BuildGame()
         {
             MapBuilder mapbuilder;
 
-            switch (mapSize)
+            switch (dataContext.SizeOfMap)
             {
                 case MapSize.demo:
                     mapbuilder = new DemoMapBuilder();
@@ -63,7 +49,7 @@ namespace PetitMonde
             Tribe tribeP1;
             Tribe tribeP2;
 
-            switch(factionP1){
+            switch(dataContext.FactionP1){
                 case Faction.Dwarves:
                     tribeP1 = new Dwarves();
                     break;
@@ -78,7 +64,8 @@ namespace PetitMonde
                     break;
             }
 
-            switch(factionP2){
+            switch (dataContext.FactionP2)
+            {
                 case Faction.Dwarves:
                     tribeP2 = new Dwarves();
                     break;
@@ -89,12 +76,19 @@ namespace PetitMonde
                     tribeP2 = new Orcs();
                     break;
                 default:
-                    tribeP2 = factionP1 != Faction.Orcs ? (Tribe)new Orcs() : (Tribe)new Dwarves();
+                    tribeP2 = dataContext.FactionP1 != Faction.Orcs ? (Tribe)new Orcs() : (Tribe)new Dwarves();
                     break;
             }
 
-            GameImpl.INSTANCE.Player1 = new PlayerImpl(tribeP1, 0, 0, mapbuilder.numberOfUnits, nicknameP1);
-            GameImpl.INSTANCE.Player2 = new PlayerImpl(tribeP2, 0, 0, mapbuilder.numberOfUnits, nicknameP2);
+            int sizeOfMap = (int)Math.Sqrt(GameImpl.INSTANCE.Map.mapCells.Length);
+            int defaultXP1 = (int) (sizeOfMap*0.5);
+            int defaultYP1 = (int) (sizeOfMap*0.2);
+
+            int defaultXP2 = (int) (sizeOfMap*0.5);
+            int defaultYP2 = (int) (sizeOfMap*0.9);
+
+            GameImpl.INSTANCE.Player1 = new PlayerImpl(tribeP1, defaultXP1, defaultYP1, mapbuilder.numberOfUnits, dataContext.NicknameP1);
+            GameImpl.INSTANCE.Player2 = new PlayerImpl(tribeP2, defaultXP1, defaultYP2, mapbuilder.numberOfUnits, dataContext.NicknameP2);
 
             return GameImpl.INSTANCE;
         }

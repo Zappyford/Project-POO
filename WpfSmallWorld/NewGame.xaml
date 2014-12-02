@@ -1,36 +1,40 @@
 ﻿<Window
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        xmlns:Custom="http://schemas.microsoft.com/surface/2008" xmlns:Units="clr-namespace:PetitMonde.Units;assembly=SmallWorld" x:Class="WpfSmallWorld.NewGame"
+        xmlns:Custom="http://schemas.microsoft.com/surface/2008" 
+        xmlns:Units="clr-namespace:PetitMonde.Units;assembly=SmallWorld" 
+        x:Class="WpfSmallWorld.NewGame"
+        xmlns:Map="clr-namespace:PetitMonde.Map;assembly=SmallWorld"
+        xmlns:local="clr-namespace:WpfSmallWorld"
         Title="NewGame" Height="768" Width="1024">
-    <Grid>
+    <Grid x:Name="gridNewGame">
+        <Grid.Resources>
+            <local:EnumBooleanConverter x:Key="EnumToBooleanConverter" /> 
+        </Grid.Resources>
+
         <Label x:Name="lblPlayer1" Content="Player 1" HorizontalAlignment="Left" Margin="136,58,0,0" VerticalAlignment="Top" Height="35" Width="126" FontSize="16"/>
         <Label x:Name="lblPlayer2" Content="Player 2" HorizontalAlignment="Left" Margin="702,58,0,0" VerticalAlignment="Top" Height="35" Width="128" FontSize="16"/>
         <Label x:Name="lblNewGame" Content="New Game" HorizontalAlignment="Left" Margin="424,10,0,0" VerticalAlignment="Top" FontSize="24" FontWeight="Bold"/>
-        <TextBox x:Name="tbNicknameP1" HorizontalAlignment="Left" Height="22" Margin="158,117,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
-        <TextBox x:Name="tbNicknameP2" HorizontalAlignment="Left" Height="22" Margin="746,123,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="tbNicknameP1" HorizontalAlignment="Left" Height="22" Margin="158,117,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Text="{Binding Path=NicknameP1}"/>
+        <TextBox x:Name="tbNicknameP2" HorizontalAlignment="Left" Height="22" Margin="746,123,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Text="{Binding Path=NicknameP2}"/>
         <Label x:Name="lblNicknameP1" Content="Nickname" HorizontalAlignment="Left" Margin="86,113,0,0" VerticalAlignment="Top" Width="67"/>
         <Label x:Name="lblNicknameP2" Content="Nickname" HorizontalAlignment="Left" Margin="674,121,0,0" VerticalAlignment="Top" Width="67"/>
-        <RadioButton x:Name="rbDwarvesP1" Content="Dwarves" HorizontalAlignment="Left" Margin="158,149,0,0" VerticalAlignment="Top" GroupName="TribeP1" Checked="rbDwarvesP1_Checked"/>
+        <RadioButton IsChecked="{Binding Path=FactionP1, Converter={StaticResource EnumToBooleanConverter}, ConverterParameter={x:Static Units:Faction.Dwarves},UpdateSourceTrigger=PropertyChanged}" x:Name="rbDwarvesP1" Content="Dwarves" HorizontalAlignment="Left" Margin="158,149,0,0" VerticalAlignment="Top" GroupName="TribeP1" Checked="rbDwarvesP1_Checked"/>
         <Label x:Name="lblTribeP1" Content="Tribe" HorizontalAlignment="Left" Margin="116,144,0,0" VerticalAlignment="Top"/>
         <Label x:Name="lblTribeP2" Content="Tribe" HorizontalAlignment="Left" Margin="702,152,0,0" VerticalAlignment="Top"/>
-        <RadioButton x:Name="rbOrcsP1" HorizontalAlignment="Left" Margin="158,170,0,0" VerticalAlignment="Top" GroupName="TribeP1" Checked="rbOrcsP1_Checked" Content="Orcs">
-            <RadioButton.DataContext>
-                <Units:Orcs/>
-            </RadioButton.DataContext>
+        <RadioButton IsChecked="{Binding Path=FactionP1, Converter={StaticResource EnumToBooleanConverter}, ConverterParameter={x:Static Units:Faction.Orcs},UpdateSourceTrigger=PropertyChanged}" x:Name="rbOrcsP1" HorizontalAlignment="Left" Margin="158,170,0,0" VerticalAlignment="Top" GroupName="TribeP1" Checked="rbOrcsP1_Checked" Content="Orcs">
         </RadioButton>
-        <RadioButton x:Name="rbElvesP1" Content="Elves" HorizontalAlignment="Left" Margin="158,191,0,0" VerticalAlignment="Top" GroupName="TribeP1" Checked="rbElvesP1_Checked"/>
-        <RadioButton x:Name="rbDwarvesP2" Content="Dwarves" HorizontalAlignment="Left" Margin="748,152,0,0" VerticalAlignment="Top" GroupName="TribeP2" Checked="rbDwarvesP2_Checked"/>
-        <RadioButton x:Name="rbOrcsP2" Content="Orcs" HorizontalAlignment="Left" Margin="748,173,0,0" VerticalAlignment="Top" GroupName="TribeP2" Checked="rbOrcsP2_Checked"/>
-        <RadioButton x:Name="rbElvesP2" Content="Elves" HorizontalAlignment="Left" Margin="748,194,0,0" VerticalAlignment="Top" GroupName="TribeP2" Checked="rbElvesP2_Checked"/>
+        <RadioButton IsChecked="{Binding Path=FactionP1, Converter={StaticResource EnumToBooleanConverter}, ConverterParameter={x:Static Units:Faction.Elves},UpdateSourceTrigger=PropertyChanged}" x:Name="rbElvesP1" Content="Elves" HorizontalAlignment="Left" Margin="158,191,0,0" VerticalAlignment="Top" GroupName="TribeP1" Checked="rbElvesP1_Checked"/>
+        <RadioButton  IsChecked="{Binding Path=FactionP2, Converter={StaticResource EnumToBooleanConverter}, ConverterParameter={x:Static Units:Faction.Dwarves},UpdateSourceTrigger=PropertyChanged}" x:Name="rbDwarvesP2" Content="Dwarves" HorizontalAlignment="Left" Margin="748,152,0,0" VerticalAlignment="Top" GroupName="TribeP2" Checked="rbDwarvesP2_Checked"/>
+        <RadioButton  IsChecked="{Binding Path=FactionP2, Converter={StaticResource EnumToBooleanConverter}, ConverterParameter={x:Static Units:Faction.Orcs},UpdateSourceTrigger=PropertyChanged}" x:Name="rbOrcsP2" Content="Orcs" HorizontalAlignment="Left" Margin="748,173,0,0" VerticalAlignment="Top" GroupName="TribeP2" Checked="rbOrcsP2_Checked"/>
+        <RadioButton  IsChecked="{Binding Path=FactionP2, Converter={StaticResource EnumToBooleanConverter}, ConverterParameter={x:Static Units:Faction.Elves},UpdateSourceTrigger=PropertyChanged}" x:Name="rbElvesP2" Content="Elves" HorizontalAlignment="Left" Margin="748,194,0,0" VerticalAlignment="Top" GroupName="TribeP2" Checked="rbElvesP2_Checked"/>
         <TextBlock x:Name="tbkTribeDescriptionP1" HorizontalAlignment="Left" Margin="60,230,0,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top" Height="78" Width="236"/>
         <TextBlock x:Name="tbkTribeDescriptionP2" HorizontalAlignment="Left" Margin="630,230,0,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top" Height="78" Width="236"/>
-        <RadioButton x:Name="rbMapSizeSmall" Content="Small" HorizontalAlignment="Left" Margin="442,396,0,0" VerticalAlignment="Top" GroupName="MapSize"/>
-        <RadioButton x:Name="rbMapSizeDemo" Content="Demo" HorizontalAlignment="Left" Margin="238,396,0,0" VerticalAlignment="Top" GroupName="MapSize"/>
-        <RadioButton x:Name="rbMapSizeMedium" Content="Medium" HorizontalAlignment="Left" Margin="657,396,0,0" VerticalAlignment="Top" GroupName="MapSize"/>
+        <RadioButton IsChecked="{Binding Path=SizeOfMap, Converter={StaticResource EnumToBooleanConverter}, ConverterParameter={x:Static Map:MapSize.small},UpdateSourceTrigger=PropertyChanged}" x:Name="rbMapSizeSmall" Content="Small" HorizontalAlignment="Left" Margin="442,396,0,0" VerticalAlignment="Top" GroupName="MapSize"/>
+        <RadioButton IsChecked="{Binding Path=SizeOfMap, Converter={StaticResource EnumToBooleanConverter}, ConverterParameter={x:Static Map:MapSize.demo},UpdateSourceTrigger=PropertyChanged}" x:Name="rbMapSizeDemo" Content="Demo" HorizontalAlignment="Left" Margin="238,396,0,0" VerticalAlignment="Top" GroupName="MapSize"/>
+        <RadioButton IsChecked="{Binding Path=SizeOfMap, Converter={StaticResource EnumToBooleanConverter}, ConverterParameter={x:Static Map:MapSize.medium},UpdateSourceTrigger=PropertyChanged}" x:Name="rbMapSizeMedium" Content="Medium" HorizontalAlignment="Left" Margin="657,396,0,0" VerticalAlignment="Top" GroupName="MapSize"/>
         <Label x:Name="lblMapSize" Content="Size of the map" HorizontalAlignment="Left" Margin="442,344,0,0" VerticalAlignment="Top"/>
         <Button x:Name="btnStartGame" Content="Start Game" HorizontalAlignment="Left" Margin="822,661,0,0" VerticalAlignment="Top" Width="83" IsDefault="True" Height="28" Click="btnStartGame_Click"/>
         <Button x:Name="btnBack" Content="Back" HorizontalAlignment="Left" Margin="116,661,0,0" VerticalAlignment="Top" Width="75" IsCancel="True" Height="28" Click="btnBack_Click"/>
-
     </Grid>
 </Window>

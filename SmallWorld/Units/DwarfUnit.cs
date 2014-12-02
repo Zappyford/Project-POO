@@ -8,7 +8,7 @@ namespace PetitMonde.Units
         public DwarfUnit(int defaultX, int DefaultY)
             : base(defaultX, DefaultY)
         {
-            Faction = PetitMonde.Faction.Dwarves;
+            Faction = Faction.Dwarves;
         }
 
         public override bool CanMove(int x, int y)

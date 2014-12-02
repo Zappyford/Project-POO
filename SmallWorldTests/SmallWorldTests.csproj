@@ -50,6 +50,7 @@
     </Otherwise>
   </Choose>
   <ItemGroup>
+    <Compile Include="Map\MapBuilderImplTest.cs" />
     <Compile Include="PlayerImplTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Units\UnitImplTests.cs" />
@@ -60,9 +61,7 @@
       <Name>SmallWorld</Name>
     </ProjectReference>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Map\" />
-  </ItemGroup>
+  <ItemGroup />
   <Choose>
     <When Condition="'$(VisualStudioVersion)' == '10.0' And '$(IsCodedUITest)' == 'True'">
       <ItemGroup>

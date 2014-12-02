@@ -1,5 +1,4 @@
 ﻿using PetitMonde.Map.Cells;
-using SmallWorld.Map;
 using System;
 
 namespace PetitMonde.Map

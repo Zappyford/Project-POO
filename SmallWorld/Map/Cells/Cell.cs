@@ -1,4 +1,5 @@
 ﻿
+using PetitMonde.Units;
 namespace PetitMonde.Map.Cells
 {
     public interface Cell

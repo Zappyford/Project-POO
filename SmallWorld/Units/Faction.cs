@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace PetitMonde
+namespace PetitMonde.Units
 {
     public enum Faction
     {
