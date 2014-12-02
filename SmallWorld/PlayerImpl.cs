@@ -80,6 +80,15 @@ namespace PetitMonde
                 return basePoints + bonusPoints;
             }
         }
+
+
+        public void clearMovingPoints()
+        {
+            foreach (Unit u in Units)
+            {
+                u.clearMovingPoints();
+            }
+        }
     }
 
     /// <summary>

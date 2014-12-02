@@ -92,6 +92,7 @@ namespace PetitMonde
 
         public void EndTurn() {
             Player tmp = this.CurrentPlayer;
+            
             CurrentPlayer = OpponentPlayer;
             OpponentPlayer = tmp;
         }

@@ -121,9 +121,34 @@
     <value>Description des nains</value>
   </data>
   <data name="DescriptionElves" xml:space="preserve">
-    <value>Description des elfs</value>
+    <value>Description des elfes</value>
   </data>
   <data name="DescriptionOrcs" xml:space="preserve">
     <value>Description des orques</value>
+  </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="desert" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\desert.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Dwarf" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Dwarf.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Elf" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\elf.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="foret" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\foret.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ocean" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\ocean.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Orc" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\orc.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="plaine" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\plaine.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="smallworld_boxfront" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\smallworld_boxfront.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

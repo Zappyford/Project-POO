@@ -90,6 +90,8 @@ namespace PetitMonde
             GameImpl.INSTANCE.Player1 = new PlayerImpl(tribeP1, defaultXP1, defaultYP1, mapbuilder.numberOfUnits, dataContext.NicknameP1);
             GameImpl.INSTANCE.Player2 = new PlayerImpl(tribeP2, defaultXP1, defaultYP2, mapbuilder.numberOfUnits, dataContext.NicknameP2);
 
+            GameImpl.INSTANCE.CurrentPlayer = GameImpl.INSTANCE.Player1; // Le joueur 1 commence
+            GameImpl.INSTANCE.OpponentPlayer = GameImpl.INSTANCE.Player2;
             return GameImpl.INSTANCE;
         }
     }

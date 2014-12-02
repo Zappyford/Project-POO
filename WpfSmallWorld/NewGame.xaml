@@ -9,7 +9,7 @@
         Title="NewGame" Height="768" Width="1024">
     <Grid x:Name="gridNewGame">
         <Grid.Resources>
-            <local:EnumBooleanConverter x:Key="EnumToBooleanConverter" /> 
+            <local:EnumBooleanConverter x:Key="EnumToBooleanConverter" />
         </Grid.Resources>
 
         <Label x:Name="lblPlayer1" Content="Player 1" HorizontalAlignment="Left" Margin="136,58,0,0" VerticalAlignment="Top" Height="35" Width="126" FontSize="16"/>
@@ -30,11 +30,13 @@
         <RadioButton  IsChecked="{Binding Path=FactionP2, Converter={StaticResource EnumToBooleanConverter}, ConverterParameter={x:Static Units:Faction.Elves},UpdateSourceTrigger=PropertyChanged}" x:Name="rbElvesP2" Content="Elves" HorizontalAlignment="Left" Margin="748,194,0,0" VerticalAlignment="Top" GroupName="TribeP2" Checked="rbElvesP2_Checked"/>
         <TextBlock x:Name="tbkTribeDescriptionP1" HorizontalAlignment="Left" Margin="60,230,0,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top" Height="78" Width="236"/>
         <TextBlock x:Name="tbkTribeDescriptionP2" HorizontalAlignment="Left" Margin="630,230,0,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top" Height="78" Width="236"/>
-        <RadioButton IsChecked="{Binding Path=SizeOfMap, Converter={StaticResource EnumToBooleanConverter}, ConverterParameter={x:Static Map:MapSize.small},UpdateSourceTrigger=PropertyChanged}" x:Name="rbMapSizeSmall" Content="Small" HorizontalAlignment="Left" Margin="442,396,0,0" VerticalAlignment="Top" GroupName="MapSize"/>
-        <RadioButton IsChecked="{Binding Path=SizeOfMap, Converter={StaticResource EnumToBooleanConverter}, ConverterParameter={x:Static Map:MapSize.demo},UpdateSourceTrigger=PropertyChanged}" x:Name="rbMapSizeDemo" Content="Demo" HorizontalAlignment="Left" Margin="238,396,0,0" VerticalAlignment="Top" GroupName="MapSize"/>
-        <RadioButton IsChecked="{Binding Path=SizeOfMap, Converter={StaticResource EnumToBooleanConverter}, ConverterParameter={x:Static Map:MapSize.medium},UpdateSourceTrigger=PropertyChanged}" x:Name="rbMapSizeMedium" Content="Medium" HorizontalAlignment="Left" Margin="657,396,0,0" VerticalAlignment="Top" GroupName="MapSize"/>
-        <Label x:Name="lblMapSize" Content="Size of the map" HorizontalAlignment="Left" Margin="442,344,0,0" VerticalAlignment="Top"/>
+        <RadioButton IsChecked="{Binding Path=SizeOfMap, Converter={StaticResource EnumToBooleanConverter}, ConverterParameter={x:Static Map:MapSize.small},UpdateSourceTrigger=PropertyChanged}" x:Name="rbMapSizeSmall" Content="Small" HorizontalAlignment="Left" Margin="459,608,0,0" VerticalAlignment="Top" GroupName="MapSize"/>
+        <RadioButton IsChecked="{Binding Path=SizeOfMap, Converter={StaticResource EnumToBooleanConverter}, ConverterParameter={x:Static Map:MapSize.demo},UpdateSourceTrigger=PropertyChanged}" x:Name="rbMapSizeDemo" Content="Demo" HorizontalAlignment="Left" Margin="255,608,0,0" VerticalAlignment="Top" GroupName="MapSize"/>
+        <RadioButton IsChecked="{Binding Path=SizeOfMap, Converter={StaticResource EnumToBooleanConverter}, ConverterParameter={x:Static Map:MapSize.medium},UpdateSourceTrigger=PropertyChanged}" x:Name="rbMapSizeMedium" Content="Medium" HorizontalAlignment="Left" Margin="674,608,0,0" VerticalAlignment="Top" GroupName="MapSize"/>
+        <Label x:Name="lblMapSize" Content="Size of the map" HorizontalAlignment="Left" Margin="459,556,0,0" VerticalAlignment="Top"/>
         <Button x:Name="btnStartGame" Content="Start Game" HorizontalAlignment="Left" Margin="822,661,0,0" VerticalAlignment="Top" Width="83" IsDefault="True" Height="28" Click="btnStartGame_Click"/>
         <Button x:Name="btnBack" Content="Back" HorizontalAlignment="Left" Margin="116,661,0,0" VerticalAlignment="Top" Width="75" IsCancel="True" Height="28" Click="btnBack_Click"/>
+        <Image x:Name="imgFactionP1" HorizontalAlignment="Left" Height="224" Margin="116,281,0,0" VerticalAlignment="Top" Width="162"/>
+        <Image x:Name="imgFactionP2" HorizontalAlignment="Left" Height="224" Margin="702,281,0,0" VerticalAlignment="Top" Width="162"/>
     </Grid>
 </Window>

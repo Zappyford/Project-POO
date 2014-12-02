@@ -15,11 +15,13 @@ namespace PetitMonde
             get;
             set;
         }
+
         public Faction FactionP2
         {
             get;
             set;
         }
+
         public MapSize SizeOfMap
         {
             get;

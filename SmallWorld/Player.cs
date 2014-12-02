@@ -56,5 +56,10 @@ namespace PetitMonde
         /// <param name="y">Y coordinate of the cell</param>
         /// <returns>The best defensive unit on the cell</returns>
         Unit GetBestDefensiveUnit(int x, int y);
+
+        /// <summary>
+        /// Sets the moving points of all alive units to their default
+        /// </summary>
+        void clearMovingPoints();
     }
 }

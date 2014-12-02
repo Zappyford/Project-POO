@@ -70,7 +70,7 @@ namespace WpfSmallWorld.Properties {
         }
         
         /// <summary>
-        ///   Recherche une chaîne localisée semblable à Description des elfs.
+        ///   Recherche une chaîne localisée semblable à Description des elfes.
         /// </summary>
         public static string DescriptionElves {
             get {
@@ -84,6 +84,86 @@ namespace WpfSmallWorld.Properties {
         public static string DescriptionOrcs {
             get {
                 return ResourceManager.GetString("DescriptionOrcs", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap desert {
+            get {
+                object obj = ResourceManager.GetObject("desert", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap Dwarf {
+            get {
+                object obj = ResourceManager.GetObject("Dwarf", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap Elf {
+            get {
+                object obj = ResourceManager.GetObject("Elf", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap foret {
+            get {
+                object obj = ResourceManager.GetObject("foret", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap ocean {
+            get {
+                object obj = ResourceManager.GetObject("ocean", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap Orc {
+            get {
+                object obj = ResourceManager.GetObject("Orc", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap plaine {
+            get {
+                object obj = ResourceManager.GetObject("plaine", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap smallworld_boxfront {
+            get {
+                object obj = ResourceManager.GetObject("smallworld_boxfront", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
             }
         }
     }

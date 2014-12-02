@@ -70,13 +70,13 @@ namespace PetitMonde.Units
         public int X
         {
             get;
-            set;
+            protected set;
         }
 
         public int Y
         {
             get;
-            set;
+            protected set;
         }
 
         public float MovingPoints
@@ -148,5 +148,11 @@ namespace PetitMonde.Units
             throw new NotImplementedException();
         }
 
+
+
+        public void clearMovingPoints()
+        {
+            this.MovingPoints = DEFAULT_MOVING_POINTS;
+        }
     }
 }
