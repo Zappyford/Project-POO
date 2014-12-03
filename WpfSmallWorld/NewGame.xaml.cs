@@ -25,7 +25,7 @@ namespace WpfSmallWorld
     public partial class NewGame : Window
     {
         string[] ImageResourceNameFromFaction;
-
+        string[] DescriptionResourceNameFromFaction;
         NewGameDataContext dataContext = new NewGameDataContext();
 
         ResourceManager rm = new System.Resources.ResourceManager("WpfSmallWorld.Properties.Resources", System.Reflection.Assembly.GetExecutingAssembly());
@@ -38,6 +38,10 @@ namespace WpfSmallWorld
             ImageResourceNameFromFaction[(int)Faction.Orcs] = "Orc";
             ImageResourceNameFromFaction[(int)Faction.Dwarves] = "Dwarf";
             ImageResourceNameFromFaction[(int)Faction.Elves] = "Elf";
+            DescriptionResourceNameFromFaction = new string[3];
+            DescriptionResourceNameFromFaction[(int)Faction.Dwarves] = "DescriptionDwarves";
+            DescriptionResourceNameFromFaction[(int)Faction.Orcs] = "DescriptionOrcs";
+            DescriptionResourceNameFromFaction[(int)Faction.Elves] = "DescriptionElves";
 
         }
 
@@ -47,7 +51,8 @@ namespace WpfSmallWorld
             {
                 rbElvesP2.IsChecked = true;
             }
-            tbkTribeDescriptionP1.Text = rm.GetString("DescriptionOrcs");
+
+            updateFactionDescriptions();
             updateFactionImages();
         }
 
@@ -57,7 +62,8 @@ namespace WpfSmallWorld
             {
                 rbOrcsP2.IsChecked = true;
             }
-            tbkTribeDescriptionP1.Text = rm.GetString("DescriptionDwarves");
+
+            updateFactionDescriptions();
             updateFactionImages();
            
         }
@@ -68,7 +74,8 @@ namespace WpfSmallWorld
             {
                 rbDwarvesP2.IsChecked = true;
             }
-            tbkTribeDescriptionP1.Text = rm.GetString("DescriptionElves");
+
+            updateFactionDescriptions();
             updateFactionImages();
         }
 
@@ -78,7 +85,8 @@ namespace WpfSmallWorld
             {
                 rbOrcsP1.IsChecked = true;
             }
-            tbkTribeDescriptionP2.Text = rm.GetString("DescriptionDwarves");
+
+            updateFactionDescriptions();
             updateFactionImages();
         }
 
@@ -88,7 +96,8 @@ namespace WpfSmallWorld
             {
                 rbElvesP1.IsChecked = true;
             }
-            tbkTribeDescriptionP2.Text = rm.GetString("DescriptionOrcs");
+
+            updateFactionDescriptions();
             updateFactionImages();
         }
 
@@ -98,7 +107,7 @@ namespace WpfSmallWorld
             {
                 rbDwarvesP1.IsChecked = true;
             }
-            tbkTribeDescriptionP2.Text = rm.GetString("DescriptionElves");
+            updateFactionDescriptions();
             updateFactionImages();
         }
 
@@ -116,6 +125,13 @@ namespace WpfSmallWorld
             gameBuilder.BuildGame();
         }
 
+        /// <summary>
+        /// Updates the faction descriptions
+        /// </summary>
+        private void updateFactionDescriptions(){
+            tbkTribeDescriptionP2.Text = rm.GetString(getDescriptionResourceNameFromFaction(dataContext.FactionP2));
+            tbkTribeDescriptionP1.Text = rm.GetString(getDescriptionResourceNameFromFaction(dataContext.FactionP1));
+        }
         /// <summary>
         /// Updates the faction images
         /// </summary>
@@ -135,6 +151,10 @@ namespace WpfSmallWorld
         private string getImageResourceNameFromFaction(Faction f)
         {
             return ImageResourceNameFromFaction[(int)f];
+        }
+        private string getDescriptionResourceNameFromFaction(Faction f)
+        {
+            return DescriptionResourceNameFromFaction[(int)f];
         }
     }
     
