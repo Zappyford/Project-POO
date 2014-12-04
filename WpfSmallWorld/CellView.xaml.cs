@@ -1,4 +1,5 @@
-﻿using System;
+﻿using PetitMonde.Map.Cells;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -18,11 +19,23 @@ namespace WpfSmallWorld
     /// <summary>
     /// Logique d'interaction pour CellView.xaml
     /// </summary>
-    public partial class CellView : Page
+    public partial class CellView : UserControl
     {
-        public CellView()
+
+        static string[] brushResourceNameFromCellType;
+        public CellView(Cell c)
         {
             InitializeComponent();
+            this.hexagonPath.Fill = (Brush)FindResource(brushResourceNameFromCellType[(int)c.getType()]);
+        }
+
+        static CellView()
+        {
+            brushResourceNameFromCellType = new string[4];
+            brushResourceNameFromCellType[(int)CellType.Desert] = "BrushDesertCell";
+            brushResourceNameFromCellType[(int)CellType.Plains] = "BrushPlainCell"; 
+            brushResourceNameFromCellType[(int)CellType.Forest] = "BrushForestCell";
+            brushResourceNameFromCellType[(int)CellType.Mountain] = "BrushMountainCell";
         }
     }
 }
