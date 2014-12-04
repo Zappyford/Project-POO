@@ -64,5 +64,14 @@ namespace PetitMonde.Map
         {
             get { return (int)Math.Sqrt(mapCells.Length); }
         }
+
+
+        public int getIndexFromCoodinates(int x, int y)
+        {
+            if (ValidCoordinates(x, y))
+                return x + size * y;
+            else
+                throw new InvalidCellException();
+        }
     }
 }

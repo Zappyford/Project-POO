@@ -17,18 +17,21 @@ namespace PetitMonde.Map
         /// <summary>
         /// The size of the map
         /// </summary>
-        protected int size;
+        protected abstract int Size
+        {
+            get;
+        }
 
         public Map BuildMap()
         {
             WrapperMapBuilder mBuilder = new WrapperMapBuilder();
-            Map map = new MapImpl(size);
+            Map map = new MapImpl(Size);
             Cell[] cells;
 
             unsafe
             {
-                int* cellNumbers = mBuilder.BuildMap(size, 4);
-                cells = new Cell[size * size];
+                int* cellNumbers = mBuilder.BuildMap(Size, 4);
+                cells = new Cell[Size * Size];
 
 
 

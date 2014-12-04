@@ -17,11 +17,18 @@ namespace PetitMonde.Map
             {
                 return DEFAULT_NUMBER_UNITS;
             }
-        }
+        }
+
+        protected override int Size
+        {
+            get
+            {
+                return DEFAULT_SIZE;
+            }
+        }
 
         public SmallMapBuilder()
         {
-            this.size = DEFAULT_SIZE;
         }
     
     }

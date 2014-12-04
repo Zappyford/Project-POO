@@ -5,7 +5,7 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              mc:Ignorable="d" 
              d:DesignHeight="65" d:DesignWidth="58">
-    <Grid>
+    <Grid Name="grid" Loaded="OnCellViewLoaded">
         <Grid.Resources>
             <ImageBrush x:Key="BrushDesertCell" ImageSource="{DynamicResource DesertCell}" />
             <ImageBrush x:Key="BrushForestCell" ImageSource="{DynamicResource ForestCell}" />
@@ -16,12 +16,17 @@
             d:LastTangent="0,0"
             HorizontalAlignment="Stretch" VerticalAlignment="Stretch" 
             Margin="0" Width="58" Height ="65" Stretch="Fill"
-            Data="M8.660254,0 L17.320508,5 17.320508,15 8.660254,20 0,15 0,5 8.660254,0 z" Fill="Green"
-        />
+            Data="M8.660254,0 L17.320508,5 17.320508,15 8.660254,20 0,15 0,5 8.660254,0 z" Fill="Red"
+            MouseEnter="bgPath_MouseEnter" MouseLeave="bgPath_MouseLeave" MouseLeftButtonDown="bgPath_MouseLeftButtonDown"
+            />
         <Path Name="hexagonPath" d:LayoutOverrides="None" 
             d:LastTangent="0,0" Stroke="LightGray" 
             HorizontalAlignment="Stretch" VerticalAlignment="Stretch" 
+              StrokeThickness="2"
+              Opacity="0"
             Margin="0" Width="58" Height ="65" Stretch="Fill"
-            Data="M8.660254,0 L17.320508,5 17.320508,15 8.660254,20 0,15 0,5 8.660254,0 z" />
+            Data="M8.660254,0 L17.320508,5 17.320508,15 8.660254,20 0,15 0,5 8.660254,0 z" 
+            
+              />
     </Grid>
 </UserControl>

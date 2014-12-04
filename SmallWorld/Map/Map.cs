@@ -39,5 +39,13 @@ namespace PetitMonde.Map
         /// <returns>True if the cells are adjacent</returns>
         bool CellIsAdjacentTo(int x, int y, int xTarget, int yTarget);
 
+        /// <summary>
+        /// Gets the index in the tab of cells from the given coordinates
+        /// </summary>
+        /// <param name="x">x Coordinate</param>
+        /// <param name="y">y Coordinate</param>
+        /// <returns>The index</returns>
+        int getIndexFromCoodinates(int x, int y);
+
     }
 }

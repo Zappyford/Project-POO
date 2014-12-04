@@ -15,10 +15,16 @@ namespace PetitMonde.Map
             }
         }
 
+        protected override int Size
+        {
+            get
+            {
+                return DEFAULT_SIZE;
+            }
+        }
 
         public DemoMapBuilder()
         {
-            this.size = DEFAULT_SIZE;
         }
     }
 }

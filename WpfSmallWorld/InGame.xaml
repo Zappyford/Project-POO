@@ -1,14 +1,12 @@
 ﻿<Window x:Class="WpfSmallWorld.InGame"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        Title="InGame" Height="768" Width="1024"
-        xmlns:local="clr-namespace:WpfSmallWorld"
+        Title="InGame" Height="900" Width="1440"
+        xmlns:local="clr-namespace:WpfSmallWorld" ResizeMode="NoResize"
         >
-    
+
     <Grid>
-        <local:CellView 
-            Margin="188,162,469,316"/>
-
-
+        <Grid x:Name="mapGrid" HorizontalAlignment="Center" VerticalAlignment="Center" Height="900" RenderTransformOrigin="0.026,0.048" Width="1440" Margin="0,-13,-4,-15">
+        </Grid>
     </Grid>
 </Window>

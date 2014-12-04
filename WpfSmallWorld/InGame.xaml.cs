@@ -1,4 +1,5 @@
-﻿using System;
+﻿using PetitMonde;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -19,9 +20,11 @@ namespace WpfSmallWorld
     /// </summary>
     public partial class InGame : Window
     {
+        MapView mapView;
         public InGame()
         {
             InitializeComponent();
+            mapView = new MapView(GameImpl.INSTANCE.Map, mapGrid);
         }
 
     }

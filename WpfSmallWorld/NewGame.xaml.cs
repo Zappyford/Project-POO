@@ -123,6 +123,9 @@ namespace WpfSmallWorld
             // TODO
             GameBuilder gameBuilder = (GameBuilder)new PetitMonde.NewGame(this.dataContext);
             gameBuilder.BuildGame();
+            Window w = new InGame();
+            w.Show();
+            this.Close();
         }
 
         /// <summary>

@@ -9,11 +9,10 @@ using System.Windows.Controls;
 
 namespace WpfSmallWorld
 {
-		public class MapView {
-		public Map Map { get; protected set; }
-		public Grid MapViewGrid { get; protected set; }
-		public Dictionary<Cell, CellView> cellView { get; protected set; }
-		public CellView SelectedTileView { get; set; }
+	public class MapView {
+		public static Map Map { get; protected set; }
+		public static Grid MapViewGrid { get; protected set; }
+		public static Dictionary<int, CellView> cellViews { get; protected set; }
 
 		/// <summary>
 		/// Constructor to the view of the map
@@ -24,15 +23,15 @@ namespace WpfSmallWorld
 			Map = _map;
 			MapViewGrid = _mapViewGrid;
 
-			cellView = new Dictionary<Cell,CellView>();
+			cellViews = new Dictionary<int,CellView>();
 
 			for (int y = 0; y < Map.Size; y++)
 			{
 				for (int x = 0; x < Map.Size; x++)
 				{
-					CellView cell = new CellView(Map.GetCell(x,y));
+					CellView cell = new CellView(Map.GetCell(x,y),x,y);
 					MapViewGrid.Children.Add(cell);
-					cellView.Add(Map.GetCell(x,y), cell);
+					cellViews.Add(Map.getIndexFromCoodinates(x,y), cell);
 				}
 			}
 		}
