@@ -2,11 +2,11 @@
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:Custom="http://schemas.microsoft.com/surface/2008" 
-        xmlns:Units="clr-namespace:PetitMonde.Units;assembly=SmallWorld" 
+        xmlns:Units="clr-namespace:PetitMonde.Units;assembly=SmallWorld" x:Name="NewGameWindow" 
         x:Class="WpfSmallWorld.NewGame"
         xmlns:Map="clr-namespace:PetitMonde.Map;assembly=SmallWorld"
         xmlns:local="clr-namespace:WpfSmallWorld"
-        Title="NewGame" Height="768" Width="1024">
+        Title="NewGame" Height="768" Width="1024" ResizeMode="NoResize">
     <Grid x:Name="gridNewGame">
         <Grid.Resources>
             <local:EnumBooleanConverter x:Key="EnumToBooleanConverter" />

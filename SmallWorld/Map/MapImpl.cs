@@ -58,5 +58,11 @@ namespace PetitMonde.Map
                 throw new InvalidCellException();
             }
         }
+
+
+        public int Size
+        {
+            get { return (int)Math.Sqrt(mapCells.Length); }
+        }
     }
 }

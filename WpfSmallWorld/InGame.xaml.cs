@@ -23,5 +23,6 @@ namespace WpfSmallWorld
         {
             InitializeComponent();
         }
+
     }
 }

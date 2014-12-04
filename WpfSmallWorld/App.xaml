@@ -5,6 +5,9 @@
     <Application.Resources>
 
         <BitmapImage x:Key="backgroundImage" CreateOptions="IgnoreImageCache" CacheOption="OnLoad" UriSource="Resources/smallworld_boxfront.jpg"/>
-
+        <BitmapImage x:Key="PlainsCell" CreateOptions="IgnoreImageCache" CacheOption="OnLoad" UriSource="Resources/plaine.png"/>
+        <BitmapImage x:Key="MountainCell" CreateOptions="IgnoreImageCache" CacheOption="OnLoad" UriSource="Resources/ocean.png"/>
+        <BitmapImage x:Key="DesertCell" CreateOptions="IgnoreImageCache" CacheOption="OnLoad" UriSource="Resources/desert.png"/>
+        <BitmapImage x:Key="ForestCell" CreateOptions="IgnoreImageCache" CacheOption="OnLoad" UriSource="Resources/foret.png"/>
     </Application.Resources>
 </Application>

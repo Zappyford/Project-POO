@@ -1,6 +1,14 @@
 ﻿<Window x:Class="WpfSmallWorld.InGame"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        Title="InGame" Height="768" Width="1024">
-    <Grid/>
+        Title="InGame" Height="768" Width="1024"
+        xmlns:local="clr-namespace:WpfSmallWorld"
+        >
+    
+    <Grid>
+        <local:CellView 
+            Margin="188,162,469,316"/>
+
+
+    </Grid>
 </Window>

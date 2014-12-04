@@ -14,6 +14,14 @@ namespace PetitMonde.Map
         }
 
         /// <summary>
+        /// The size of the map
+        /// </summary>
+        int Size
+        {
+            get;
+        }
+
+        /// <summary>
         /// Gets cell at the given coordinates
         /// </summary>
         /// <param name="x">X coordinate</param>
