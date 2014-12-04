@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Linq;
+using System.Runtime.CompilerServices;
 
 namespace PetitMonde
 {
@@ -29,6 +30,28 @@ namespace PetitMonde
             set;
         }
 
+        private int _remainingTurns;
+        public int RemainingTurns
+        {
+            get
+            {
+                return _remainingTurns;
+            }
+            set
+            {
+                _remainingTurns = value > 0 ? value : 0;
+                OnPropertyChanged();
+            }
+        }
+
+        public bool GameOver
+        {
+            get
+            {
+                return RemainingTurns == 0 || Player1.HasLost || Player2.HasLost;
+            }
+        }
+
         private Player _currentPlayer;
         public PetitMonde.Player CurrentPlayer
         {
@@ -39,14 +62,22 @@ namespace PetitMonde
             set
             {
                 _currentPlayer = value;
-                OnPropertyChanged("CurrentPlayer");
+                OnPropertyChanged();
             }
         }
 
+        private Unit _selectedUnit;
         public Unit SelectedUnit
         {
-            get;
-            set;
+            get
+            {
+                return _selectedUnit;
+            }
+            set
+            {
+                _selectedUnit = value;
+                OnPropertyChanged();
+            }
         }
 
         public int XSelected
@@ -100,16 +131,19 @@ namespace PetitMonde
 
         public void EndTurn() {
             Player tmp = this.CurrentPlayer;
-            
+            CurrentPlayer.clearMovingPoints();
             CurrentPlayer = OpponentPlayer;
             OpponentPlayer = tmp;
+
+            if (System.Object.ReferenceEquals(CurrentPlayer, Player1))
+                RemainingTurns--;
         }
 
         #region INotifyPropertyChanged
 
         public event PropertyChangedEventHandler PropertyChanged;
 
-        public void OnPropertyChanged(string propertyName)
+        public void OnPropertyChanged([CallerMemberName] string propertyName = "")
         {
             if (this.PropertyChanged != null)
             {
@@ -118,5 +152,8 @@ namespace PetitMonde
         }
 
         #endregion
+
+
+
     }
 }

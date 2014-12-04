@@ -13,7 +13,15 @@ namespace PetitMonde.Map
         /// <summary>
         /// The number of unit per default for the size of the map
         /// </summary>
-        int numberOfUnits
+        int NumberOfUnits
+        {
+            get;
+        }
+
+        /// <summary>
+        /// Number of turn to play for the size of the map
+        /// </summary>
+        int TurnsToPlay
         {
             get;
         }

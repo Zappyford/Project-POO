@@ -10,8 +10,9 @@ namespace PetitMonde.Map
         private const int DEFAULT_SIZE = 10;
 
         private const int DEFAULT_NUMBER_UNITS = 6;
+        private const int DEFAULT_NUMBER_TURNS = 20;
 
-        public override int numberOfUnits
+        public override int NumberOfUnits
         {
             get
             {
@@ -26,6 +27,12 @@ namespace PetitMonde.Map
                 return DEFAULT_SIZE;
             }
         }
+
+        public override int TurnsToPlay
+        {
+            get { return DEFAULT_NUMBER_TURNS; }
+        }
+
 
         public SmallMapBuilder()
         {

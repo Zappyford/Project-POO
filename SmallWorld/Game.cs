@@ -13,6 +13,23 @@ namespace PetitMonde
         }
 
         /// <summary>
+        /// Number of turns left to play
+        /// </summary>
+        int RemainingTurns
+        {
+            get;
+            set;
+        }
+
+        /// <summary>
+        /// True if the game is over, that is to say there is no more turn to play, or a player lost all his units
+        /// </summary>
+        bool GameOver
+        {
+            get;
+        }
+
+        /// <summary>
         /// The first player
         /// </summary>
         PetitMonde.Player Player1

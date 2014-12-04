@@ -30,18 +30,35 @@ namespace WpfSmallWorld
             this.DataContext = GameImpl.INSTANCE;
 
             lblCurrentPlayer.Content = GameImpl.INSTANCE.CurrentPlayer.Nickname + "'s turn.";
+            lblRemainingTurns.Content = GameImpl.INSTANCE.RemainingTurns + " turns left.";
 
-            GameImpl.INSTANCE.PropertyChanged += new PropertyChangedEventHandler(update);
+            GameImpl.INSTANCE.PropertyChanged += new PropertyChangedEventHandler(update); // Souscription au OnPropertyChanged
 
         }
+
+        /// <summary>
+        /// Delegate called when a property is changed in GameImpl
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         public void update(object sender, PropertyChangedEventArgs e)
         {
-            if (e.PropertyName == "CurrentPlayer")
+            switch (e.PropertyName)
             {
-                lblCurrentPlayer.Content = GameImpl.INSTANCE.CurrentPlayer.Nickname + "'s turn.";
+                case "CurrentPlayer":
+                    lblCurrentPlayer.Content = GameImpl.INSTANCE.CurrentPlayer.Nickname + "'s turn.";
+                    break;
+                case "SelectedUnit":
+                    
+                    break;
+                case "RemainingTurns":
+                    lblRemainingTurns.Content = GameImpl.INSTANCE.RemainingTurns + " turns left.";
+                    break;
+
             }
         }
 
+        
         private void btnEndTurn_Click(object sender, RoutedEventArgs e)
         {
             GameImpl.INSTANCE.EndTurn();

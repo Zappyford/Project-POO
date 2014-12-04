@@ -22,6 +22,11 @@ namespace PetitMonde.Map
             get;
         }
 
+        public abstract int TurnsToPlay
+        {
+            get;
+        }
+
         public Map BuildMap()
         {
             WrapperMapBuilder mBuilder = new WrapperMapBuilder();
@@ -35,8 +40,9 @@ namespace PetitMonde.Map
 
 
 
-                
-                for(int i = 0; i<cells.Length; i++){
+
+                for (int i = 0; i < cells.Length; i++)
+                {
 
                     cells[i] = cellFactory.createCell((CellType)cellNumbers[i]);
 
@@ -55,17 +61,19 @@ namespace PetitMonde.Map
                             cells[i] = cellFactory.CreatePlains();
                             break;
                      */
-                    }
+                }
             }
-           
+
             map.mapCells = cells;
             return map;
         }
 
 
-        public abstract int numberOfUnits
+        public abstract int NumberOfUnits
         {
             get;
         }
+
     }
+
 }
