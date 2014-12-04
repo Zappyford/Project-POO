@@ -17,7 +17,7 @@
             HorizontalAlignment="Stretch" VerticalAlignment="Stretch" 
             Margin="0" Width="58" Height ="65" Stretch="Fill"
             Data="M8.660254,0 L17.320508,5 17.320508,15 8.660254,20 0,15 0,5 8.660254,0 z" Fill="Red"
-            MouseEnter="bgPath_MouseEnter" MouseLeave="bgPath_MouseLeave" MouseLeftButtonDown="bgPath_MouseLeftButtonDown"
+            MouseEnter="hexagonPath_MouseEnter" MouseLeave="hexagonPath_MouseLeave" MouseLeftButtonDown="bgPath_MouseLeftButtonDown"
             />
         <Path Name="hexagonPath" d:LayoutOverrides="None" 
             d:LastTangent="0,0" Stroke="LightGray" 

@@ -10,6 +10,14 @@ namespace PetitMonde
         void EndTurn();
 
         /// <summary>
+        /// Nickname of the player
+        /// </summary>
+        string Nickname
+        {
+            get;
+        }
+
+        /// <summary>
         /// Starts a fight between the two units given
         /// </summary>
         /// <param name="unit1">The first unit</param>

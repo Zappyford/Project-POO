@@ -11,7 +11,7 @@ namespace PetitMonde
         public PlayerImpl(Tribe tribe, int defaultX, int defaultY, int numberOfUnits, String name)
         {
             Tribe = tribe;
-            Name = name;
+            Nickname = name;
             Units = new List<Unit>(numberOfUnits);
             for (int i = 0; i < numberOfUnits; i++)
             {
@@ -31,7 +31,7 @@ namespace PetitMonde
             set;
         }
 
-        public string Name
+        public string Nickname
         {
             get;
             private set;

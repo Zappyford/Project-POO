@@ -87,12 +87,12 @@ namespace WpfSmallWorld
        //     SetGround();
         }
 
-        private void bgPath_MouseEnter(object sender, MouseEventArgs e)
+        private void hexagonPath_MouseEnter(object sender, MouseEventArgs e)
         {
             this.hexagonPath.Opacity = 1;
         }
 
-        private void bgPath_MouseLeave(object sender, MouseEventArgs e)
+        private void hexagonPath_MouseLeave(object sender, MouseEventArgs e)
         {
             this.hexagonPath.Opacity = 0;
         }

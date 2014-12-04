@@ -1,11 +1,12 @@
 ﻿using PetitMonde.Units;
 using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Linq;
 
 namespace PetitMonde
 {
-    public class GameImpl : PetitMonde.Game
+    public class GameImpl : PetitMonde.Game, INotifyPropertyChanged
     {
         public static readonly GameImpl INSTANCE = new GameImpl();
 
@@ -28,11 +29,18 @@ namespace PetitMonde
             set;
         }
 
-
+        private Player _currentPlayer;
         public PetitMonde.Player CurrentPlayer
         {
-            get;
-            set;
+            get
+            {
+                return _currentPlayer;
+            }
+            set
+            {
+                _currentPlayer = value;
+                OnPropertyChanged("CurrentPlayer");
+            }
         }
 
         public Unit SelectedUnit
@@ -96,5 +104,19 @@ namespace PetitMonde
             CurrentPlayer = OpponentPlayer;
             OpponentPlayer = tmp;
         }
+
+        #region INotifyPropertyChanged
+
+        public event PropertyChangedEventHandler PropertyChanged;
+
+        public void OnPropertyChanged(string propertyName)
+        {
+            if (this.PropertyChanged != null)
+            {
+                this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+            }
+        }
+
+        #endregion
     }
 }
