@@ -1,7 +1,9 @@
-﻿using PetitMonde.Units;
+﻿using Newtonsoft.Json;
+using PetitMonde.Units;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
+using System.IO;
 using System.Linq;
 using System.Runtime.CompilerServices;
 
@@ -154,6 +156,13 @@ namespace PetitMonde
         #endregion
 
 
+        public void save(string path)
+        {
 
+            using (System.IO.StreamWriter file = File.CreateText(path))
+            {
+                file.Write(JsonConvert.SerializeObject(this));
+            }
+        }
     }
 }

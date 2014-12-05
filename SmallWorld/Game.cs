@@ -1,4 +1,5 @@
 ﻿using PetitMonde.Units;
+using System.IO;
 namespace PetitMonde
 {
     public interface Game
@@ -102,5 +103,11 @@ namespace PetitMonde
         /// Ends the current player's turn
         /// </summary>
         void EndTurn();
+
+        /// <summary>
+        /// Saves the game at the given path
+        /// </summary>
+        /// <param name="path">The path</param>
+        void save(string path);
     }
 }
