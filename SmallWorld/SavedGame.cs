@@ -22,11 +22,10 @@ namespace PetitMonde
         {
             if (File.Exists(dataContext.path))
             {
-                using (Stream TestFileStream = File.OpenRead(dataContext.path))
+                using (Stream FileStream = File.OpenRead(dataContext.path))
                 {
                     BinaryFormatter deserializer = new BinaryFormatter();
-                    GameImpl.load((GameImpl)deserializer.Deserialize(TestFileStream));
-                    TestFileStream.Close();
+                    GameImpl.load((GameImpl)deserializer.Deserialize(FileStream));
                 }
             }
             return GameImpl.INSTANCE;
