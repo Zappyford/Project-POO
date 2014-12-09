@@ -8,6 +8,13 @@ namespace PetitMonde
 {
     public class SavedGameDataContext
     {
-        public string path;
+        /// <summary>
+        /// The path of the file to load
+        /// </summary>
+        public string path
+        {
+            get;
+            set;
+        }
     }
 }

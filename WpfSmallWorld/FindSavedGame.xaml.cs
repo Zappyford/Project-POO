@@ -1,4 +1,5 @@
-﻿using System;
+﻿using PetitMonde;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -21,18 +22,27 @@ namespace WpfSmallWorld
     /// </summary>
     public partial class FindSavedGame : Window
     {
-        ResourceManager rm = new System.Resources.ResourceManager("WpfSmallWorld.Properties.Resources", System.Reflection.Assembly.GetExecutingAssembly());
+        private ResourceManager rm = new System.Resources.ResourceManager("WpfSmallWorld.Properties.Resources", System.Reflection.Assembly.GetExecutingAssembly());
+        private SavedGameDataContext dataContext = new SavedGameDataContext();
+        private readonly String path;
+
         public FindSavedGame()
         {
             InitializeComponent();
+            path = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "\\" + rm.GetString("SmallWorldSaveFolder");
             listSavedGames.ItemsSource = findSavedGames();
+            this.DataContext = dataContext;
         }
 
+        /// <summary>
+        /// Lists all files contained in the ApplicationData\Roaming\SmallWorld folder
+        /// </summary>
+        /// <returns>A list containing the name of each file</returns>
         private IEnumerable<String> findSavedGames()
         {
 
             List<string> res = new List<string>();
-            String path = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "\\" + rm.GetString("SmallWorldSaveFolder");
+            
 
             /// Debug
             Console.WriteLine("Find saved games Path : " + path);
@@ -57,6 +67,11 @@ namespace WpfSmallWorld
             MainWindow mainWindow = new MainWindow();
             mainWindow.Show();
             this.Close();
+        }
+
+        private void listSavedGames_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            dataContext.path = path + "\\" + listSavedGames.SelectedItem;
         }
 
 

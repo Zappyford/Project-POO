@@ -171,7 +171,10 @@ namespace PetitMonde
              * */
         }
 
-
+        /// <summary>
+        /// Loads the given game into the INSTANCE
+        /// </summary>
+        /// <param name="g">The game to load</param>
         public static void load(GameImpl g)
         {
             GameImpl.INSTANCE.Map = g.Map;
