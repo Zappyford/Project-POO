@@ -4,7 +4,7 @@
         Title="FindSavedGame" Height="356" Width="404">
     <Grid>
         <ListBox x:Name="listSavedGames" HorizontalAlignment="Left" Height="239" Margin="46,40,0,0" VerticalAlignment="Top" Width="291" SelectionChanged="listSavedGames_SelectionChanged"/>
-        <Button x:Name="btnLoadGame" Content="Load Game &gt;" HorizontalAlignment="Left" Margin="303,294,0,0" VerticalAlignment="Top" Width="83"/>
+        <Button x:Name="btnLoadGame" Content="Load Game &gt;" HorizontalAlignment="Left" Margin="303,294,0,0" VerticalAlignment="Top" Width="83" Click="btnLoadGame_Click"/>
         <Button x:Name="btnBack" Content="&lt; Back" HorizontalAlignment="Left" Margin="10,294,0,0" VerticalAlignment="Top" Width="81" Click="btnBack_Click"/>
 
     </Grid>

@@ -144,7 +144,7 @@ namespace PetitMonde
 
         #region INotifyPropertyChanged
 
-        [NonSerialized()]
+        [field: NonSerialized()]
         public event PropertyChangedEventHandler PropertyChanged;
 
         public void OnPropertyChanged([CallerMemberName] string propertyName = "")
@@ -164,12 +164,6 @@ namespace PetitMonde
                 BinaryFormatter serializer = new BinaryFormatter();
                 serializer.Serialize(FileStream, this);
             }
-            /*
-            using (System.IO.StreamWriter file = File.CreateText(path))
-            {
-                file.Write(JsonConvert.SerializeObject(this));
-            }
-            */
         }
 
         /// <summary>

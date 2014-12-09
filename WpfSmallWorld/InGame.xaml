@@ -1,4 +1,4 @@
-﻿<Window x:Class="WpfSmallWorld.InGame"
+﻿<Window x:Name="WindowInGame" x:Class="WpfSmallWorld.InGame"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         Title="InGame" Height="900" Width="1440"
