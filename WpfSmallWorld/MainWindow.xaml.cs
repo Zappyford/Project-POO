@@ -1,4 +1,5 @@
-﻿using System;
+﻿using PetitMonde;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -37,6 +38,20 @@ namespace WpfSmallWorld
             NewGame newGameWindow = new NewGame();
             newGameWindow.Show();
             this.Close();
+        }
+
+        private void btnLoadGame_Click(object sender, RoutedEventArgs e)
+        {
+            FindSavedGame findSavedGameWindow = new FindSavedGame();
+            findSavedGameWindow.Show();
+            this.Close();
+            /*
+            String path = @"c:\save.sav";
+            SavedGameDataContext data = new SavedGameDataContext();
+            data.path = path;
+            GameBuilder gameBuilder = new SavedGame(data);
+            gameBuilder.BuildGame();
+             * */
         }
 
     }

@@ -1,6 +1,8 @@
 ﻿
+using System;
 namespace PetitMonde.Units
 {
+    [Serializable()]
     public abstract class TribeImpl : Tribe
     {
   

@@ -5,6 +5,7 @@ using System.Text;
 
 namespace PetitMonde.Map.Cells
 {
+    [Serializable()]
     public enum CellType
     {
         Plains,

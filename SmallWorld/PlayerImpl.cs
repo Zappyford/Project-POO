@@ -6,6 +6,7 @@ using System.Linq;
 
 namespace PetitMonde
 {
+    [Serializable()]
     public class PlayerImpl : Player
     {
         public PlayerImpl(Tribe tribe, int defaultX, int defaultY, int numberOfUnits, String name)

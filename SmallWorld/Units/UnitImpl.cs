@@ -3,6 +3,7 @@ using System;
 
 namespace PetitMonde.Units
 {
+    [Serializable()]
     public abstract class UnitImpl : Unit
     {
         /// <summary>

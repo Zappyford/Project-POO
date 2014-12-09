@@ -1,7 +1,9 @@
 ﻿
 using PetitMonde.Units;
+using System;
 namespace PetitMonde.Map.Cells
 {
+    [Serializable()]
     public abstract class CellImpl : Cell
     {
         protected const float BaseMovingCost = 1;

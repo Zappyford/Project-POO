@@ -1,6 +1,8 @@
 ﻿
+using System;
 namespace PetitMonde.Units
 {
+    [Serializable()]
     public class OrcUnit : PetitMonde.Units.UnitImpl
     {
         public OrcUnit(int defaultX, int DefaultY)

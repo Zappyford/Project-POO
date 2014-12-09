@@ -3,6 +3,7 @@ using System;
 
 namespace PetitMonde.Units
 {
+    [Serializable()]
     public class DwarfUnit : UnitImpl
     {
         public DwarfUnit(int defaultX, int DefaultY)

@@ -3,6 +3,7 @@ using System;
 
 namespace PetitMonde.Map.Cells
 {
+    [Serializable()]
     public class Forest : CellImpl
     {
         public Forest()

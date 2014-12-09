@@ -166,5 +166,14 @@ namespace WpfSmallWorld.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
+        
+        /// <summary>
+        ///   Recherche une chaîne localisée semblable à SmallWorld.
+        /// </summary>
+        public static string SmallWorldSaveFolder {
+            get {
+                return ResourceManager.GetString("SmallWorldSaveFolder", resourceCulture);
+            }
+        }
     }
 }

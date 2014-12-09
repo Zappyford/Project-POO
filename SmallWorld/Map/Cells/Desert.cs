@@ -2,7 +2,9 @@
 using System;
 
 namespace PetitMonde.Map.Cells
+
 {
+    [Serializable()]
     public class Desert : CellImpl
     {
         public Desert()

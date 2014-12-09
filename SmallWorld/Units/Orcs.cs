@@ -4,7 +4,9 @@ using System.Linq;
 using System.Text;
 
 namespace PetitMonde.Units
+
 {
+    [Serializable()]
     public class Orcs : TribeImpl
     {
         public Orcs()

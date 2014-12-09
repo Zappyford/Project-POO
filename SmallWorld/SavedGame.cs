@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
+using System.Runtime.Serialization.Formatters.Binary;
 using System.Text;
 
 namespace PetitMonde
@@ -10,14 +12,24 @@ namespace PetitMonde
     /// </summary>
     public class SavedGame : GameBuilderImpl
     {
-        public SavedGame()
+        SavedGameDataContext dataContext;
+        public SavedGame(SavedGameDataContext data)
         {
-            throw new System.NotImplementedException();
+            dataContext = data;
         }
 
         public override Game BuildGame()
         {
-            throw new NotImplementedException();
+            if (File.Exists(dataContext.path))
+            {
+                using (Stream TestFileStream = File.OpenRead(dataContext.path))
+                {
+                    BinaryFormatter deserializer = new BinaryFormatter();
+                    GameImpl.load((GameImpl)deserializer.Deserialize(TestFileStream));
+                    TestFileStream.Close();
+                }
+            }
+            return GameImpl.INSTANCE;
         }
     }
 }

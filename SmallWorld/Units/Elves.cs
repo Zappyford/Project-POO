@@ -5,6 +5,7 @@ using System.Text;
 
 namespace PetitMonde.Units
 {
+    [Serializable()]
     public class Elves : TribeImpl
     {
         public Elves()

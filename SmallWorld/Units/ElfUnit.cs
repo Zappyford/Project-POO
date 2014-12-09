@@ -5,6 +5,7 @@ using System.Text;
 
 namespace PetitMonde
 {
+    [Serializable()]
     public class ElfUnit : PetitMonde.Units.UnitImpl
     {
         public ElfUnit(int defaultX, int DefaultY)

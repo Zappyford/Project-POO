@@ -3,6 +3,7 @@ using System;
 
 namespace PetitMonde.Map
 {
+    [Serializable()]
     public class MapImpl : Map
     {
         

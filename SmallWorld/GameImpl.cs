@@ -1,14 +1,15 @@
-﻿using Newtonsoft.Json;
-using PetitMonde.Units;
+﻿using PetitMonde.Units;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.IO;
 using System.Linq;
 using System.Runtime.CompilerServices;
+using System.Runtime.Serialization.Formatters.Binary;
 
 namespace PetitMonde
 {
+    [Serializable()]
     public class GameImpl : PetitMonde.Game, INotifyPropertyChanged
     {
         public static readonly GameImpl INSTANCE = new GameImpl();
@@ -158,11 +159,30 @@ namespace PetitMonde
 
         public void save(string path)
         {
-
+            using (Stream TestFileStream = File.Create(path)) { 
+                BinaryFormatter serializer = new BinaryFormatter();
+                serializer.Serialize(TestFileStream, this);
+             }
+            /*
             using (System.IO.StreamWriter file = File.CreateText(path))
             {
                 file.Write(JsonConvert.SerializeObject(this));
             }
+             * */
+        }
+
+
+        public static void load(GameImpl g)
+        {
+            GameImpl.INSTANCE.Map = g.Map;
+            GameImpl.INSTANCE.Player1 = g.Player1;
+            GameImpl.INSTANCE.Player2 = g.Player2;
+            GameImpl.INSTANCE.OpponentPlayer = g.OpponentPlayer;
+            GameImpl.INSTANCE.RemainingTurns = g.RemainingTurns;
+            GameImpl.INSTANCE.SelectedUnit = g.SelectedUnit;
+            GameImpl.INSTANCE.CurrentPlayer = g.CurrentPlayer;
+            GameImpl.INSTANCE.XSelected = g.XSelected;
+            GameImpl.INSTANCE.YSelected = g.YSelected;
         }
     }
 }
