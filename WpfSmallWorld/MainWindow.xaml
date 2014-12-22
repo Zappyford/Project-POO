@@ -1,7 +1,10 @@
 ﻿<Window x:Name="MenuWindow" x:Class="WpfSmallWorld.MainWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        Title="PetitMonde" Height="768" Width="1024">
+        Title="PetitMonde" Height="768" Width="1024"
+        xmlns:local="clr-namespace:WpfSmallWorld"
+        >
+    
     <Window.Background>
         <ImageBrush ImageSource="{DynamicResource backgroundImage}"></ImageBrush>
     </Window.Background>
