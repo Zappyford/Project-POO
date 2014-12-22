@@ -88,12 +88,25 @@ namespace WpfSmallWorld
             }
             else if (e.Key == Key.Escape)
             {
-                IsPaused = !IsPaused;
-                MenuRectangle.Height = WindowInGame.ActualHeight;
-                MenuRectangle.Width = WindowInGame.ActualWidth;
-                MenuRectangle.IsEnabled = !MenuRectangle.IsEnabled;
-                MenuRectangle.Visibility = MenuRectangle.Visibility == Visibility.Visible ? Visibility.Collapsed : Visibility.Visible;
+                toggleMenu();
             }
+        }
+
+        private void toggleMenu(){
+            IsPaused = !IsPaused;
+            MenuRectangle.Height = WindowInGame.ActualHeight;
+            MenuRectangle.Width = WindowInGame.ActualWidth;
+            MenuRectangle.IsEnabled = !MenuRectangle.IsEnabled;
+            MenuRectangle.Visibility = MenuRectangle.Visibility == Visibility.Visible ? Visibility.Collapsed : Visibility.Visible;
+            btnContinue.Visibility = btnContinue.Visibility == Visibility.Visible ? Visibility.Collapsed : Visibility.Visible;
+            btnQuit.Visibility = btnQuit.Visibility == Visibility.Visible ? Visibility.Collapsed : Visibility.Visible;
+            btnSaveGame.Visibility = btnSaveGame.Visibility == Visibility.Visible ? Visibility.Collapsed : Visibility.Visible;
+            lblGamePaused.Visibility = lblGamePaused.Visibility == Visibility.Visible ? Visibility.Collapsed : Visibility.Visible;
+        }
+
+        private void btnContinue_Click(object sender, RoutedEventArgs e)
+        {
+            toggleMenu();
         }
 
     }
