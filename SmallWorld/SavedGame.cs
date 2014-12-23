@@ -12,8 +12,8 @@ namespace PetitMonde
     /// </summary>
     public class SavedGame : GameBuilderImpl
     {
-        SavedGameDataContext dataContext;
-        public SavedGame(SavedGameDataContext data)
+        SaveGameDataContext dataContext;
+        public SavedGame(SaveGameDataContext data)
         {
             dataContext = data;
         }

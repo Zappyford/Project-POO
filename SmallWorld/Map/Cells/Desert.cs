@@ -12,7 +12,6 @@ namespace PetitMonde.Map.Cells
            
         }
 
-
         public override float GetMovingCost(Faction faction)
         {
             if (faction == Faction.Elves)
@@ -31,5 +30,6 @@ namespace PetitMonde.Map.Cells
         {
             return CellType.Desert;
         }
+        
     }
 }

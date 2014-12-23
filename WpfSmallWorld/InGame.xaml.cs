@@ -109,5 +109,20 @@ namespace WpfSmallWorld
             toggleMenu();
         }
 
+        private void btnQuit_Click(object sender, RoutedEventArgs e)
+        {
+            MessageBoxResult result = MessageBox.Show("Are you sure you want to quit this game?", "Confirmation", MessageBoxButton.YesNo, MessageBoxImage.Question);
+            if (result == MessageBoxResult.Yes)
+            {
+                Application.Current.Shutdown();
+            }
+        }
+
+        private void btnSaveGame_Click(object sender, RoutedEventArgs e)
+        {
+            SaveGame saveGameWindow = new SaveGame();
+            saveGameWindow.Show();
+        }
+
     }
 }
