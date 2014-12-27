@@ -35,6 +35,7 @@ namespace WpfSmallWorld
                     GameImpl.INSTANCE.XSelected = X;
                     GameImpl.INSTANCE.YSelected = Y;
                     this.bgPath.Opacity = 0.4;
+                    GameImpl.INSTANCE.SelectedUnit = GameImpl.INSTANCE.CurrentPlayer.Units.Where(u => u.X == this.X && u.Y == this.Y).FirstOrDefault();
                 }
                 else
                 {
@@ -55,6 +56,7 @@ namespace WpfSmallWorld
             get;
             private set;
         }
+
         static string[] brushResourceNameFromCellType;
         public CellView(Cell c, int x, int y)
         {
