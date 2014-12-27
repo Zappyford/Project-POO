@@ -110,6 +110,16 @@ namespace WpfSmallWorld.Properties {
         /// <summary>
         ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
         /// </summary>
+        public static System.Drawing.Bitmap DwarfUnit {
+            get {
+                object obj = ResourceManager.GetObject("DwarfUnit", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
         public static System.Drawing.Bitmap Elf {
             get {
                 object obj = ResourceManager.GetObject("Elf", resourceCulture);

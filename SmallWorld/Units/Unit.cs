@@ -1,7 +1,8 @@
 ﻿using System;
+using System.ComponentModel;
 namespace PetitMonde.Units
 {
-    public interface Unit
+    public interface Unit : INotifyPropertyChanged
     {
         /// <summary>
         /// Current Attack of this unit

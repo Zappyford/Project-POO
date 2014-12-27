@@ -61,6 +61,9 @@
     <Compile Include="SaveGame.xaml.cs">
       <DependentUpon>SaveGame.xaml</DependentUpon>
     </Compile>
+    <Compile Include="UnitView.xaml.cs">
+      <DependentUpon>UnitView.xaml</DependentUpon>
+    </Compile>
     <Page Include="CellView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -100,6 +103,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="SaveGame.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UnitView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -163,6 +170,9 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Resources\montagne.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\DwarfUnit.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

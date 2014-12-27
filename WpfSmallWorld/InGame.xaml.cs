@@ -1,4 +1,5 @@
 ﻿using PetitMonde;
+using PetitMonde.Units;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -21,6 +22,7 @@ namespace WpfSmallWorld
     /// </summary>
     public partial class InGame : Window
     {
+        List<UnitView> unitViews = new List<UnitView>();
         MapView mapView;
 
         /// <summary>
@@ -33,6 +35,20 @@ namespace WpfSmallWorld
             InitializeComponent();
             IsPaused = false;
             mapView = new MapView(GameImpl.INSTANCE.Map, mapGrid);
+            foreach (Unit u in GameImpl.INSTANCE.Player1.Units)
+            {
+                unitViews.Add(new UnitView(u));
+            }
+            foreach (Unit u in GameImpl.INSTANCE.Player2.Units)
+            {
+                unitViews.Add(new UnitView(u));
+            }
+
+            foreach (UnitView uv in unitViews)
+            {
+                mapGrid.Children.Add(uv);
+            }
+
             this.DataContext = GameImpl.INSTANCE;
 
             lblCurrentPlayer.Content = GameImpl.INSTANCE.CurrentPlayer.Nickname + "'s turn.";

@@ -1,5 +1,7 @@
 ﻿using PetitMonde.Map.Cells;
 using System;
+using System.ComponentModel;
+using System.Runtime.CompilerServices;
 
 namespace PetitMonde.Units
 {
@@ -68,16 +70,32 @@ namespace PetitMonde.Units
             }
         }
 
+        private int XField;
         public int X
         {
-            get;
-            protected set;
+            get
+            {
+                return XField;
+            }
+            protected set
+            {
+                XField = value;
+                OnPropertyChanged();
+            }
         }
 
+        private int YField;
         public int Y
         {
-            get;
-            protected set;
+            get
+            {
+                return YField;
+            }
+            protected set
+            {
+                YField = value;
+                OnPropertyChanged();
+            }
         }
 
         public float MovingPoints
@@ -155,5 +173,20 @@ namespace PetitMonde.Units
         {
             this.MovingPoints = DEFAULT_MOVING_POINTS;
         }
+
+        #region INotifyPropertyChanged
+
+        [field: NonSerialized()]
+        public event PropertyChangedEventHandler PropertyChanged;
+
+        public void OnPropertyChanged([CallerMemberName] string propertyName = "")
+        {
+            if (this.PropertyChanged != null)
+            {
+                this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+            }
+        }
+
+        #endregion
     }
 }
