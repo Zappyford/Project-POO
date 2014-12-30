@@ -3,23 +3,54 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         Title="InGame" Height="900" Width="1440"
         xmlns:local="clr-namespace:WpfSmallWorld" ResizeMode="NoResize"
-        xmlns:PM="clr-namespace:PetitMonde;assembly=SmallWorld" KeyUp="WindowInGame_KeyUp"
+        xmlns:PM="clr-namespace:PetitMonde;assembly=SmallWorld" KeyUp="WindowInGame_KeyUp" WindowStartupLocation="Manual" WindowState="Maximized" WindowStyle="None"
         >
+    <Window.Background>
+        <ImageBrush ImageSource="Resources/parchemin.jpg"/>
+    </Window.Background>
     <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="50px"/>
+            <RowDefinition Height="750px"/>
+            <RowDefinition Height="100px"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="900px" />
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
 
-        <Grid x:Name="mapGrid" HorizontalAlignment="Left" VerticalAlignment="Top" Height="900" RenderTransformOrigin="0.026,0.048" Width="1440" Margin="-6,0,0,-28">
-            <Label x:Name="lblCurrentPlayer" Content="Player1's turn" HorizontalAlignment="Left" Margin="972,10,0,0" VerticalAlignment="Top" Height="47" Width="458"/>
-            <Button x:Name="btnEndTurn" Content="End turn" HorizontalAlignment="Left" Margin="1223,782,0,0" VerticalAlignment="Top" Width="75" Click="btnEndTurn_Click"/>
-            <Label x:Name="lblRemainingTurns" Content="Number of turns left" HorizontalAlignment="Left" Margin="1030,782,0,0" VerticalAlignment="Top"/>
-            
-
+        <!--<Grid x:Name="mapGrid" HorizontalAlignment="Left" VerticalAlignment="Top" Height="900" RenderTransformOrigin="0.026,0.048" Width="1440" Margin="-6,0,0,-28" Grid.Row="1">-->
+        <Grid>
+            <Label x:Name="lblCurrentPlayer" Content="Player1's turn" HorizontalAlignment="Left" Margin="60,0,0,0" VerticalAlignment="Top" Height="47" Width="458" FontSize="30"/>
         </Grid>
-        <Label Content="Label" HorizontalAlignment="Left" Margin="1869,350,-535,0" VerticalAlignment="Top" Width="100"/>
-        <Rectangle x:Name="MenuRectangle" Panel.ZIndex="4" Fill="Black" HorizontalAlignment="Left" Stroke="Black" VerticalAlignment="Top" Margin="0,0,0,0" Visibility="Collapsed" IsEnabled="False" Opacity="0.9"/>
-        <Button x:Name="btnContinue" Visibility="Collapsed" Panel.ZIndex="5" Content="Continue" HorizontalAlignment="Left" Margin="531,151,0,0" VerticalAlignment="Top" Width="75" Click="btnContinue_Click"/>
-        <Button x:Name="btnSaveGame" Visibility="Collapsed" Panel.ZIndex="5" Content="Save Game" HorizontalAlignment="Left" Margin="531,242,0,0" VerticalAlignment="Top" Width="75" Click="btnSaveGame_Click"/>
-        <Button x:Name="btnQuit" Visibility="Collapsed" Panel.ZIndex="5" Content="Quit Game" HorizontalAlignment="Left" Margin="531,325,0,0" VerticalAlignment="Top" Width="75" Click="btnQuit_Click"/>
-        <Label x:Name="lblGamePaused" Content="Game paused" Panel.ZIndex="5" HorizontalAlignment="Left" Margin="509,72,0,0" VerticalAlignment="Top" Foreground="White" FontWeight="Bold" FontSize="18" Visibility="Collapsed" />
+        <!--list of unit Grid-->
+        <Grid Grid.Row="1" Grid.Column="1" Width="530px" Margin="0,0,10,0">
+            
+        </Grid>
+        <!-- Map Grid -->
+        <Grid x:Name="bgmapGrid" Grid.Row="1" Width="875px">
+            <Grid.Background>
+                <SolidColorBrush Color="Black" Opacity="0.7"/>
+            </Grid.Background>
+            <Grid x:Name="mapGrid" Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Center" />
+        </Grid>
+        <!-- Button turn grid-->
+        <Grid Grid.Row="3" Grid.Column="2">
+            <Button x:Name="btnEndTurn" Content="End turn" HorizontalAlignment="Left" Margin="400,33,0,0" VerticalAlignment="Top" Width="125" Click="btnEndTurn_Click" FontSize="25" Foreground="White">
+                <Button.Background>
+                    <SolidColorBrush Color="Black" Opacity="0.7"/>
+                </Button.Background>
+            </Button>
+            <Label x:Name="lblRemainingTurns" Content="Number of turns left" HorizontalAlignment="Left" Margin="80,30,0,0" VerticalAlignment="Top" Foreground="White" FontSize="25"/>
+        </Grid>
+        <!-- Pause Menu -->
+        <Grid x:Name="pauseMenu" Grid.RowSpan="3" Grid.ColumnSpan="2">
+            <Rectangle x:Name="MenuRectangle" Panel.ZIndex="4" Fill="Black" HorizontalAlignment="Left" Stroke="Black" VerticalAlignment="Top" Margin="0,0,0,0" Visibility="Collapsed" IsEnabled="False" Opacity="0.9"/>
+            <Button x:Name="btnContinue" Visibility="Collapsed" Panel.ZIndex="5" Content="Continue" Margin="0,-300,0,0" Width="75" Click="btnContinue_Click" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+            <Button x:Name="btnSaveGame" Visibility="Collapsed" Panel.ZIndex="5" Content="Save Game" HorizontalAlignment="Center" Margin="0,-200,0,0" VerticalAlignment="Center" Width="75" Click="btnSaveGame_Click"/>
+            <Button x:Name="btnQuit" Visibility="Collapsed" Panel.ZIndex="5" Content="Quit Game" HorizontalAlignment="Center" Margin="0,-100,0,0" VerticalAlignment="Center" Width="75" Click="btnQuit_Click"/>
+            <Label x:Name="lblGamePaused" Content="Game paused" Panel.ZIndex="5" HorizontalAlignment="Center" Margin="0,-500,0,0" VerticalAlignment="Center" Foreground="White" FontWeight="Bold" FontSize="18" Visibility="Collapsed" />
+        </Grid>
     </Grid>
 
 </Window>

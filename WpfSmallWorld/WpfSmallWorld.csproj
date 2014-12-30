@@ -166,10 +166,13 @@
     <None Include="Resources\elf.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\orc.jpg" />
+    <Resource Include="Resources\montagne.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Resources\montagne.png" />
+    <Resource Include="Resources\parchemin.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\orc.png" />
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Resources\DwarfUnit.png" />

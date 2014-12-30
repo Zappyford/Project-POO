@@ -6,7 +6,10 @@
         x:Class="WpfSmallWorld.NewGame"
         xmlns:Map="clr-namespace:PetitMonde.Map;assembly=SmallWorld"
         xmlns:local="clr-namespace:WpfSmallWorld"
-        Title="NewGame" Height="768" Width="1024" ResizeMode="NoResize">
+        Title="NewGame" Height="768" Width="1024" ResizeMode="NoResize" WindowStartupLocation="CenterScreen">
+    <Window.Background>
+        <ImageBrush ImageSource="Resources/parchemin.jpg"/>
+    </Window.Background>
     <Grid x:Name="gridNewGame">
         <Grid.Resources>
             <local:EnumBooleanConverter x:Key="EnumToBooleanConverter" />
@@ -36,7 +39,7 @@
         <Label x:Name="lblMapSize" Content="Size of the map" HorizontalAlignment="Left" Margin="459,556,0,0" VerticalAlignment="Top"/>
         <Button x:Name="btnStartGame" Content="Start Game" HorizontalAlignment="Left" Margin="822,661,0,0" VerticalAlignment="Top" Width="83" IsDefault="True" Height="28" Click="btnStartGame_Click"/>
         <Button x:Name="btnBack" Content="Back" HorizontalAlignment="Left" Margin="116,661,0,0" VerticalAlignment="Top" Width="75" IsCancel="True" Height="28" Click="btnBack_Click"/>
-        <Image x:Name="imgFactionP1" HorizontalAlignment="Left" Height="224" Margin="116,281,0,0" VerticalAlignment="Top" Width="162"/>
-        <Image x:Name="imgFactionP2" HorizontalAlignment="Left" Height="224" Margin="702,281,0,0" VerticalAlignment="Top" Width="162"/>
+        <Image x:Name="imgFactionP1" HorizontalAlignment="Left" Height="96" Margin="116,281,0,0" VerticalAlignment="Top" Width="96"/>
+        <Image x:Name="imgFactionP2" HorizontalAlignment="Left" Height="96" Margin="702,281,0,0" VerticalAlignment="Top" Width="96"/>
     </Grid>
 </Window>

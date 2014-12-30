@@ -29,12 +29,14 @@ namespace WpfSmallWorld
         /// Gets or sets the IsPaused field
         /// </summary>
         bool IsPaused { get; set; }
+        private float moveOffsetX, moveOffsetY;
 
         public InGame()
         {
             InitializeComponent();
             IsPaused = false;
             mapView = new MapView(GameImpl.INSTANCE.Map, mapGrid);
+
             foreach (Unit u in GameImpl.INSTANCE.Player1.Units)
             {
                 unitViews.Add(new UnitView(u));
@@ -49,6 +51,25 @@ namespace WpfSmallWorld
                 mapGrid.Children.Add(uv);
             }
 
+            //to move the map at the center (depending on the size of the map)
+            switch (MapView.Map.Size)
+            {
+                case 6:
+                    moveOffsetX = (MapView.Map.Size * 55);
+                    moveOffsetY = (MapView.Map.Size * 40);
+                    break;
+                case 10:
+                    moveOffsetX = (MapView.Map.Size * 60);
+                    moveOffsetY = (MapView.Map.Size * 40);
+                    break;
+                case 14:
+                    moveOffsetX = (MapView.Map.Size * 58);
+                    moveOffsetY = (MapView.Map.Size * 45);
+                    break;
+            }
+            
+            mapGrid.Margin = new Thickness(-moveOffsetX, -moveOffsetY, 0, 0);
+            
             this.DataContext = GameImpl.INSTANCE;
 
             lblCurrentPlayer.Content = GameImpl.INSTANCE.CurrentPlayer.Nickname + "'s turn.";

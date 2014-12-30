@@ -79,7 +79,8 @@ namespace WpfSmallWorld
         private void OnCellViewLoaded(object sender, RoutedEventArgs e)
         {
             // Set position (hexagon disposition)
-            TranslateTransform trTns = new TranslateTransform(X * 60 + ((Y % 2 == 0) ? 0 : 30) - 640, Y * 50 - 370);
+            //TranslateTransform trTns = new TranslateTransform(X * 60 + ((Y % 2 == 0) ? 0 : 30) - 640, Y * 50 - 370);
+            TranslateTransform trTns = new TranslateTransform(X * 60 + ((Y % 2 == 0) ? 0 : 30), Y * 50);
             TransformGroup trGrp = new TransformGroup();
             trGrp.Children.Add(trTns);
 
