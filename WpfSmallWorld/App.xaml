@@ -9,5 +9,6 @@
         <BitmapImage x:Key="MountainCell" CreateOptions="IgnoreImageCache" CacheOption="OnLoad" UriSource="Resources/montagne.png"/>
         <BitmapImage x:Key="DesertCell" CreateOptions="IgnoreImageCache" CacheOption="OnLoad" UriSource="Resources/desert.png"/>
         <BitmapImage x:Key="ForestCell" CreateOptions="IgnoreImageCache" CacheOption="OnLoad" UriSource="Resources/foret.png"/>
+        <BitmapImage x:Key="DwarfImg"  CreateOptions="IgnoreImageCache" CacheOption="OnLoad" UriSource="Resources\dwarfUnit.png" />
     </Application.Resources>
 </Application>

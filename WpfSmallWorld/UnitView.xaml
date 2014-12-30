@@ -7,11 +7,6 @@
              Loaded="OnUnitLoaded"
              d:DesignHeight="60" d:DesignWidth="60">
 
-    <UserControl.Resources>
-       <!-- <BitmapImage x:Key="VikingsImg" UriSource="../Resources/units/viking.png"></BitmapImage>
-        <BitmapImage x:Key="GaulsImg" UriSource="../Resources/units/gaul.png"></BitmapImage> -->
-        <BitmapImage x:Key="DwarfImg" UriSource="C:\Users\Mathias\Source\Repos\Project-POO\WpfSmallWorld\Resources\dwarfUnit.png"></BitmapImage>
-    </UserControl.Resources>
 
     <Grid Name="grid" IsHitTestVisible="False">
 
