@@ -1,4 +1,5 @@
-﻿using PetitMonde.Units;
+﻿using PetitMonde;
+using PetitMonde.Units;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -34,10 +35,17 @@ namespace WpfSmallWorld
 
         private void update(object sender, PropertyChangedEventArgs e)
         {
-            TranslateTransform trTns = new TranslateTransform(Unit.X * 60 + ((Unit.Y % 2 == 0) ? 0 : 30) + rand.Next(-5, 5), Unit.Y * 50 + rand.Next(-5, 5));
+            TranslateTransform trTns = new TranslateTransform(Unit.X * 60 + ((Unit.Y % 2 == 0) ? 0 : 30), Unit.Y * 50);
             TransformGroup trGrp = new TransformGroup();
             trGrp.Children.Add(trTns);
             grid.RenderTransform = trGrp;
+            if (GameImpl.INSTANCE.CurrentPlayer.GetUnitsOnCell(Unit.X, Unit.Y).Count > 1)
+            {
+                int randMarginX = rand.Next(-10, 15);
+                int randMarginY = rand.Next(-20, 15);
+
+                this.Margin = new Thickness(randMarginX, randMarginY, -randMarginX, -randMarginY);
+            }
         }
 
         private void OnUnitLoaded(object sender, RoutedEventArgs e)
