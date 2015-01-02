@@ -37,19 +37,7 @@ namespace WpfSmallWorld
             IsPaused = false;
             mapView = new MapView(GameImpl.INSTANCE.Map, mapGrid);
 
-            foreach (Unit u in GameImpl.INSTANCE.Player1.Units)
-            {
-                unitViews.Add(new UnitView(u));
-            }
-            foreach (Unit u in GameImpl.INSTANCE.Player2.Units)
-            {
-                unitViews.Add(new UnitView(u));
-            }
-
-            foreach (UnitView uv in unitViews)
-            {
-                mapGrid.Children.Add(uv);
-            }
+            
 
             //to move the map at the center (depending on the size of the map)
             switch (MapView.Map.Size)
@@ -68,8 +56,24 @@ namespace WpfSmallWorld
                     break;
             }
             
+
             mapGrid.Margin = new Thickness(-moveOffsetX, -moveOffsetY, 0, 0);
-            
+
+            foreach (Unit u in GameImpl.INSTANCE.Player1.Units)
+            {
+                unitViews.Add(new UnitView(u));
+            }
+            foreach (Unit u in GameImpl.INSTANCE.Player2.Units)
+            {
+                unitViews.Add(new UnitView(u));
+            }
+
+            foreach (UnitView uv in unitViews)
+            {
+                mapGrid.Children.Add(uv);
+            }
+
+
             this.DataContext = GameImpl.INSTANCE;
 
             lblCurrentPlayer.Content = GameImpl.INSTANCE.CurrentPlayer.Nickname + "'s turn.";

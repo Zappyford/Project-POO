@@ -22,6 +22,7 @@ namespace WpfSmallWorld
     /// </summary>
     public partial class UnitView : UserControl
     {
+        private static Random rand = new Random();
         public Unit Unit { get; private set; }
 
         public UnitView(Unit u)
@@ -33,7 +34,7 @@ namespace WpfSmallWorld
 
         private void update(object sender, PropertyChangedEventArgs e)
         {
-            TranslateTransform trTns = new TranslateTransform(Unit.X * 60 + ((Unit.Y % 2 == 0) ? 0 : 30) - 640, Unit.Y * 50 - 370);
+            TranslateTransform trTns = new TranslateTransform(Unit.X * 60 + ((Unit.Y % 2 == 0) ? 0 : 30) + rand.Next(-5, 5), Unit.Y * 50 + rand.Next(-5, 5));
             TransformGroup trGrp = new TransformGroup();
             trGrp.Children.Add(trTns);
             grid.RenderTransform = trGrp;

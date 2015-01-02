@@ -25,7 +25,7 @@
         </Grid>
         <!--list of unit Grid-->
         <Grid Grid.Row="1" Grid.Column="1" Width="530px" Margin="0,0,10,0">
-            
+
         </Grid>
         <!-- Map Grid -->
         <Grid x:Name="bgmapGrid" Grid.Row="1" Width="875px">
@@ -46,10 +46,22 @@
         <!-- Pause Menu -->
         <Grid x:Name="pauseMenu" Grid.RowSpan="3" Grid.ColumnSpan="2">
             <Rectangle x:Name="MenuRectangle" Panel.ZIndex="4" Fill="Black" HorizontalAlignment="Left" Stroke="Black" VerticalAlignment="Top" Margin="0,0,0,0" Visibility="Collapsed" IsEnabled="False" Opacity="0.9"/>
-            <Button x:Name="btnContinue" Visibility="Collapsed" Panel.ZIndex="5" Content="Continue" Margin="0,-300,0,0" Width="75" Click="btnContinue_Click" VerticalAlignment="Center" HorizontalAlignment="Center"/>
-            <Button x:Name="btnSaveGame" Visibility="Collapsed" Panel.ZIndex="5" Content="Save Game" HorizontalAlignment="Center" Margin="0,-200,0,0" VerticalAlignment="Center" Width="75" Click="btnSaveGame_Click"/>
-            <Button x:Name="btnQuit" Visibility="Collapsed" Panel.ZIndex="5" Content="Quit Game" HorizontalAlignment="Center" Margin="0,-100,0,0" VerticalAlignment="Center" Width="75" Click="btnQuit_Click"/>
-            <Label x:Name="lblGamePaused" Content="Game paused" Panel.ZIndex="5" HorizontalAlignment="Center" Margin="0,-500,0,0" VerticalAlignment="Center" Foreground="White" FontWeight="Bold" FontSize="18" Visibility="Collapsed" />
+            <Button x:Name="btnContinue" Visibility="Collapsed" Panel.ZIndex="5" Content="Continue" Click="btnContinue_Click" HorizontalAlignment="Center"  Margin="649,218,620,0" VerticalAlignment="Top" Width="171" FontSize="25" Foreground="White" Height="60">
+                <Button.Background>
+                    <SolidColorBrush Color="Black" Opacity="0.7"/>
+                </Button.Background>
+            </Button>
+            <Button x:Name="btnSaveGame" Visibility="Collapsed" Panel.ZIndex="5" Content="Save Game" HorizontalAlignment="Center" Margin="649,320,620,0" Click="btnSaveGame_Click" VerticalAlignment="Top" Width="171" FontSize="25" Foreground="White" Height="60">
+                <Button.Background>
+                    <SolidColorBrush Color="Black" Opacity="0.7"/>
+                </Button.Background>
+            </Button>
+            <Button x:Name="btnQuit" Visibility="Collapsed" Panel.ZIndex="5" Content="Quit Game" HorizontalAlignment="Center" Margin="649,424,620,0" Click="btnQuit_Click" VerticalAlignment="Top" Width="171" FontSize="25" Foreground="White" Height="60">
+                <Button.Background>
+                    <SolidColorBrush Color="Black" Opacity="0.7"/>
+                </Button.Background>
+            </Button>
+            <Label x:Name="lblGamePaused" Content="Game paused" Panel.ZIndex="5" Margin="649,121,620,729" VerticalAlignment="Center" Foreground="White" FontWeight="Bold" FontSize="24" Visibility="Collapsed" Height="50" Width="171" HorizontalAlignment="Center" />
         </Grid>
     </Grid>
 
