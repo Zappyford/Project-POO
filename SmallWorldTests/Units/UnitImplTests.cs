@@ -12,11 +12,13 @@ namespace PetitMonde.Units.Tests
     public class UnitImplTests
     {
         Unit u;
+        Unit opponentUnit;
 
         [TestInitialize]
         public void UnitImplTest()
         {
             u = new OrcUnit(0, 1);
+            opponentUnit = new ElfUnit(1, 1);
         }
 
         [TestMethod()]
@@ -26,6 +28,7 @@ namespace PetitMonde.Units.Tests
             Assert.AreEqual(1, u.X);
             Assert.AreEqual(0, u.Y);
         }
+
 
         [TestMethod()]
         public void DieTest()

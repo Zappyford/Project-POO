@@ -46,13 +46,13 @@ namespace PetitMonde
     
         public void Fight(Unit unit1, Unit unit2)
         {
-            throw new NotImplementedException();
+            unit1.AttackUnit(unit2);
         }
 
 
         public List<Unit> GetUnitsOnCell(int x, int y)
         {
-            return Units.FindAll(u => u.X == x && u.Y == y);
+            return Units.FindAll(u => u.X == x && u.Y == y && !u.IsDead);
         }
 
         public Unit GetBestDefensiveUnit(int x, int y)

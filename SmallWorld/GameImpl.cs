@@ -118,8 +118,17 @@ namespace PetitMonde
                 if (opponentPlayerUnits.Count > 0)
                 {
                     /// Il y a un combat
-                    unit.AttackUnit(OpponentPlayer.GetBestDefensiveUnit(xTargeted,yTargeted));
-                    /// TODO
+                    Unit opponentDefensiveUnit = OpponentPlayer.GetBestDefensiveUnit(xTargeted,yTargeted);
+                    CurrentPlayer.Fight(unit, opponentDefensiveUnit);
+                    if (opponentDefensiveUnit.IsDead && OpponentPlayer.GetUnitsOnCell(xTargeted, yTargeted).Count==0)
+                    {
+                        // No more enemy unit on targeted cell
+                        unit.Move(xTargeted, yTargeted);
+                    }
+                    else
+                    {
+                        unit.MovingPoints -= GameImpl.INSTANCE.Map.GetCell(xTargeted, yTargeted).GetMovingCost(unit.Faction);
+                    }
                 }
                 else
                 {

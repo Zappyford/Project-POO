@@ -12,11 +12,13 @@ namespace PetitMonde.Tests
     public class PlayerImplTests
     {
         Player p;
+        Player p2;
 
         [TestInitialize()]
         public void PlayerImplTest()
         {
             p = new PlayerImpl(new Orcs(), 0,1,12,"jeu");
+            p2 = new PlayerImpl(new Elves(), 0, 2, 12, "opponent");
         }
 
         [TestMethod()]
@@ -28,7 +30,7 @@ namespace PetitMonde.Tests
         [TestMethod()]
         public void FightTest()
         {
-          //  Assert.Fail();
+            p.Fight(p.GetUnitsOnCell(0, 1).Find(u => true), p2.GetBestDefensiveUnit(0, 2));
         }
 
         [TestMethod()]

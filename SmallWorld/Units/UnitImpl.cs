@@ -8,6 +8,7 @@ namespace PetitMonde.Units
     [Serializable()]
     public abstract class UnitImpl : Unit
     {
+        private static Random rand = new Random();
         /// <summary>
         /// Health points by default
         /// </summary>
@@ -164,7 +165,36 @@ namespace PetitMonde.Units
 
         public void AttackUnit(Unit unit)
         {
-            throw new NotImplementedException();
+            int numberOfAttacks = rand.Next(3, Math.Max(this.Health, unit.Health)+2);
+            while (numberOfAttacks > 0 && !IsDead && !unit.IsDead)
+            {
+                int AttackingUnitAttack = (int)Math.Round(this.Attack * (this.Health / (double)DEFAULT_HEALTH), 0, MidpointRounding.AwayFromZero);
+                int AttackedUnitDefense = (int)Math.Round(unit.Defense * (unit.Health / (double)DEFAULT_HEALTH), 0, MidpointRounding.AwayFromZero);
+                double chanceOfAttackingUnitWin;
+
+                if (AttackingUnitAttack >= AttackedUnitDefense)
+                    chanceOfAttackingUnitWin = 0.5d + 0.5d * (1d - ((double)AttackedUnitDefense / AttackingUnitAttack));
+                else
+                    chanceOfAttackingUnitWin = 1d - (0.5d + 0.5d * (1d - ((double)AttackingUnitAttack / AttackedUnitDefense)));
+
+                if (rand.NextDouble() < chanceOfAttackingUnitWin)
+                {
+                    // The attacking unit wins this attack
+                    unit.Health--;
+                }
+                else
+                {
+                    this.Health--;
+                }
+                numberOfAttacks--;
+            }
+
+            if (this.IsDead)
+                ((UnitImpl)unit).UnitsKilled++;
+            else if (unit.IsDead)
+                this.UnitsKilled++;
+
+
         }
 
 
