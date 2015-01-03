@@ -22,7 +22,7 @@ namespace WpfSmallWorld
     /// </summary>
     public partial class InGame : Window
     {
-        List<UnitView> unitViews = new List<UnitView>();
+        List<MapUnitView> unitViews = new List<MapUnitView>();
         MapView mapView;
 
         /// <summary>
@@ -61,14 +61,14 @@ namespace WpfSmallWorld
 
             foreach (Unit u in GameImpl.INSTANCE.Player1.Units)
             {
-                unitViews.Add(new UnitView(u));
+                unitViews.Add(new MapUnitView(u));
             }
             foreach (Unit u in GameImpl.INSTANCE.Player2.Units)
             {
-                unitViews.Add(new UnitView(u));
+                unitViews.Add(new MapUnitView(u));
             }
 
-            foreach (UnitView uv in unitViews)
+            foreach (MapUnitView uv in unitViews)
             {
                 mapGrid.Children.Add(uv);
             }

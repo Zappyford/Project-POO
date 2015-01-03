@@ -34,11 +34,11 @@ namespace WpfSmallWorld
         {
             InitializeComponent();
             this.DataContext = dataContext;
-            ImageResourceNameFromFaction = new string[3];
+            ImageResourceNameFromFaction = new string[Enum.GetNames(typeof(Faction)).Length];
             ImageResourceNameFromFaction[(int)Faction.Orcs] = "Orc";
             ImageResourceNameFromFaction[(int)Faction.Dwarves] = "Dwarf";
             ImageResourceNameFromFaction[(int)Faction.Elves] = "Elf";
-            DescriptionResourceNameFromFaction = new string[3];
+            DescriptionResourceNameFromFaction = new string[Enum.GetNames(typeof(Faction)).Length];
             DescriptionResourceNameFromFaction[(int)Faction.Dwarves] = "DescriptionDwarves";
             DescriptionResourceNameFromFaction[(int)Faction.Orcs] = "DescriptionOrcs";
             DescriptionResourceNameFromFaction[(int)Faction.Elves] = "DescriptionElves";

@@ -58,17 +58,24 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="FullUnitView.xaml.cs">
+      <DependentUpon>FullUnitView.xaml</DependentUpon>
+    </Compile>
     <Compile Include="SaveGame.xaml.cs">
       <DependentUpon>SaveGame.xaml</DependentUpon>
     </Compile>
-    <Compile Include="UnitView.xaml.cs">
-      <DependentUpon>UnitView.xaml</DependentUpon>
+    <Compile Include="MapUnitView.xaml.cs">
+      <DependentUpon>MapUnitView.xaml</DependentUpon>
     </Compile>
     <Page Include="CellView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="FindSavedGame.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="FullUnitView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -106,7 +113,7 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="UnitView.xaml">
+    <Page Include="MapUnitView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
