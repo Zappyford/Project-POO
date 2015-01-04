@@ -24,9 +24,9 @@
             <Label x:Name="lblCurrentPlayer" Content="Player1's turn" HorizontalAlignment="Left" Margin="60,0,0,0" VerticalAlignment="Top" Height="47" Width="458" FontSize="30"/>
         </Grid>
         <!--list of unit Grid-->
-        <Grid Grid.Row="1" Grid.Column="1" Width="530px" Margin="0,0,10,0">
-
-        </Grid>
+        <ScrollViewer Grid.Row="1" Grid.Column="1">
+        <StackPanel x:Name="listUnitGrid"   CanHorizontallyScroll="True" CanVerticallyScroll="True" Width="530px" Margin="0,0,10,0"></StackPanel>
+        </ScrollViewer>
         <!-- Map Grid -->
         <Grid x:Name="bgmapGrid" Grid.Row="1" Width="875px">
             <Grid.Background>

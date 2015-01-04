@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Linq;
+using System.Resources;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
@@ -22,21 +23,37 @@ namespace WpfSmallWorld
     /// </summary>
     public partial class FullUnitView : UserControl
     {
-
+        private Unit Unit
+        {
+            get;
+            set;
+        }
 
         public FullUnitView(Unit u)
         {
+            Unit = u;
             InitializeComponent();
+            u.PropertyChanged += new PropertyChangedEventHandler(update);
+            pbHealth.Maximum = Unit.DEFAULT_HEALTH;
+            pbHealth.Minimum = 0;
+            pbMovingPoints.Maximum = Unit.DEFAULT_MOVING_POINTS;
+            pbMovingPoints.Minimum = 0;
+            lblAttack.Content = Unit.DEFAULT_ATTACK;
+            lblDefense.Content = Unit.DEFAULT_DEFENSE;
         }
         
 
         protected void update(object sender, PropertyChangedEventArgs e){
-
+            pbHealth.Value = Unit.Health;
+            lblHealth.Content = Unit.Health + "/" + Unit.DEFAULT_HEALTH;
+            pbMovingPoints.Value = Unit.MovingPoints;
+            lblMovingPoints.Content = Unit.MovingPoints + "/" + Unit.DEFAULT_MOVING_POINTS;
         }
 
         protected void OnUnitLoaded(object sender, RoutedEventArgs e)
         {
-
+            update(this, null);
+            imgUnit.Source = Util.getImageResourceFromFaction(Unit.Faction);
         }
     }
 }

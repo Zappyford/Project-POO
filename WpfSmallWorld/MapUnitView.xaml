@@ -29,7 +29,7 @@
             StrokeThickness="2">
         </Rectangle>
 
-        <Image Name="sprite" 
+        <Image Name="imgUnit" 
             Width="60"
             Source="{DynamicResource DwarfImg}"/>
     

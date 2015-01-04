@@ -9,6 +9,9 @@
         <BitmapImage x:Key="MountainCell" CreateOptions="IgnoreImageCache" CacheOption="OnLoad" UriSource="Resources/montagne.png"/>
         <BitmapImage x:Key="DesertCell" CreateOptions="IgnoreImageCache" CacheOption="OnLoad" UriSource="Resources/desert.png"/>
         <BitmapImage x:Key="ForestCell" CreateOptions="IgnoreImageCache" CacheOption="OnLoad" UriSource="Resources/foret.png"/>
-        <BitmapImage x:Key="DwarfImg"  CreateOptions="IgnoreImageCache" CacheOption="OnLoad" UriSource="Resources\dwarfUnit.png" />
+        <BitmapImage x:Key="Heart"  CreateOptions="IgnoreImageCache" CacheOption="OnLoad" UriSource="Resources/heart.png" />
+        <BitmapImage x:Key="Boot"  CreateOptions="IgnoreImageCache" CacheOption="OnLoad" UriSource="Resources/boot.png" />
+        <BitmapImage x:Key="Sword"  CreateOptions="IgnoreImageCache" CacheOption="OnLoad" UriSource="Resources/sword.png" />
+        <BitmapImage x:Key="Shield"  CreateOptions="IgnoreImageCache" CacheOption="OnLoad" UriSource="Resources/shield.png" />
     </Application.Resources>
 </Application>

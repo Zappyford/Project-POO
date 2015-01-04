@@ -9,25 +9,41 @@ namespace PetitMonde.Units
     public abstract class UnitImpl : Unit
     {
         private static Random rand = new Random();
+
+
         /// <summary>
         /// Health points by default
         /// </summary>
-        private const int DEFAULT_HEALTH = 5;
+        public int DEFAULT_HEALTH
+        {
+            get { return 5; }
+        }
 
         /// <summary>
         /// Attack points by default 
         /// </summary>
-        private const int DEFAULT_ATTACK = 2;
+        public int DEFAULT_ATTACK
+        {
+            get { return 2; }
+        }
+
 
         /// <summary>
         /// Defense points by default
         /// </summary>
-        private const int DEFAULT_DEFENSE = 1;
+        public int DEFAULT_DEFENSE
+        {
+            get { return 1; }
+        }
 
         /// <summary>
         /// Moving points by default
         /// </summary>
-        private const int DEFAULT_MOVING_POINTS = 1;
+        public int DEFAULT_MOVING_POINTS
+        {
+            get { return 1; }
+        }
+
 
         public UnitImpl(int defaultX, int defaultY)
         {
@@ -218,5 +234,7 @@ namespace PetitMonde.Units
         }
 
         #endregion
+
+ 
     }
 }

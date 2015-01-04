@@ -67,6 +67,7 @@
     <Compile Include="MapUnitView.xaml.cs">
       <DependentUpon>MapUnitView.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Util.cs" />
     <Page Include="CellView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -167,10 +168,7 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\Dwarf.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\elf.jpg" />
+    <Resource Include="Resources\Dwarf.png" />
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Resources\montagne.png" />
@@ -183,6 +181,18 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Resources\DwarfUnit.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\heart.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\boot.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\shield.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\sword.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

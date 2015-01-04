@@ -81,6 +81,11 @@ namespace WpfSmallWorld
 
             GameImpl.INSTANCE.PropertyChanged += new PropertyChangedEventHandler(update); // Souscription au OnPropertyChanged
 
+           // foreach (Unit u in GameImpl.INSTANCE.CurrentPlayer.Units)
+           // {
+           //     listUnitGrid.Children.Add(new FullUnitView(u));
+           // }
+            //listUnitGrid.Arrange();
         }
 
         /// <summary>
