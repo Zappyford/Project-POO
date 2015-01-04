@@ -23,7 +23,7 @@ namespace PetitMonde.Map.Cells
 
         public override int GetScore(Faction faction)
         {
-            throw new NotImplementedException();
+            return 1;
         }
 
         public override CellType getType()
