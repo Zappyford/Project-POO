@@ -115,10 +115,22 @@ namespace PetitMonde.Units
             }
         }
 
-        public float MovingPoints
+        private double MovingPointsField;
+        public double MovingPoints
         {
-            get;
-            set;
+            get
+            {
+                return MovingPointsField;
+            }
+            set
+            {
+                if (value < 0)
+                    MovingPointsField = 0;
+                else
+                    MovingPointsField = value;
+
+                OnPropertyChanged();
+            }
         }
 
 

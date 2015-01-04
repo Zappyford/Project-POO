@@ -1,6 +1,7 @@
 ﻿using PetitMonde;
 using PetitMonde.Units;
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Linq;
@@ -79,16 +80,15 @@ namespace WpfSmallWorld
             lblCurrentPlayer.Content = GameImpl.INSTANCE.CurrentPlayer.Nickname + "'s turn.";
             lblRemainingTurns.Content = GameImpl.INSTANCE.RemainingTurns + " turns left.";
 
-            lblVictoryPointsP1.Content = GameImpl.INSTANCE.Player1.Nickname + "'s victory points : 0";
-            lblVictoryPointsP2.Content = GameImpl.INSTANCE.Player2.Nickname + "'s victory points : 0";
+            lblVictoryPointsP1.Content = GameImpl.INSTANCE.Player1.Nickname + "'s victory points : 1";
+            lblVictoryPointsP2.Content = GameImpl.INSTANCE.Player2.Nickname + "'s victory points : 1";
 
             GameImpl.INSTANCE.PropertyChanged += new PropertyChangedEventHandler(update); // Souscription au OnPropertyChanged
 
-           // foreach (Unit u in GameImpl.INSTANCE.CurrentPlayer.Units)
-           // {
-           //     listUnitGrid.Children.Add(new FullUnitView(u));
-           // }
-            //listUnitGrid.Arrange();
+            foreach (Unit u in GameImpl.INSTANCE.CurrentPlayer.Units)
+            {
+                listUnitGrid.Children.Add(new FullUnitView(u));
+            }
         }
 
         /// <summary>
@@ -108,6 +108,9 @@ namespace WpfSmallWorld
                     break;
                 case "RemainingTurns":
                     lblRemainingTurns.Content = GameImpl.INSTANCE.RemainingTurns + " turns left.";
+                    break;
+                case "MoveUnit":
+                    deleteDeadUnits();
                     break;
             }
         }
@@ -174,5 +177,15 @@ namespace WpfSmallWorld
             saveGameWindow.Show();
         }
 
+        public void deleteDeadUnits()
+        {
+            foreach (UIElement uv in mapGrid.Children.Cast<UIElement>().ToArray())
+            { 
+                if (uv is MapUnitView && ((MapUnitView)uv).Unit.IsDead)
+                {
+                    mapGrid.Children.Remove(uv);
+                }
+            }
+        }
     }
 }

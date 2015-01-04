@@ -40,16 +40,19 @@ namespace WpfSmallWorld
 
         protected virtual void update(object sender, PropertyChangedEventArgs e)
         {
-            TranslateTransform trTns = new TranslateTransform(Unit.X * 60 + ((Unit.Y % 2 == 0) ? 0 : 30), Unit.Y * 50);
-            TransformGroup trGrp = new TransformGroup();
-            trGrp.Children.Add(trTns);
-            grid.RenderTransform = trGrp;
-            if (GameImpl.INSTANCE.CurrentPlayer.GetUnitsOnCell(Unit.X, Unit.Y).Count > 1)
+            if (e == null || e.PropertyName == "X" || e.PropertyName == "Y")
             {
-                int randMarginX = rand.Next(-10, 15);
-                int randMarginY = rand.Next(-20, 15);
+                TranslateTransform trTns = new TranslateTransform(Unit.X * 60 + ((Unit.Y % 2 == 0) ? 0 : 30), Unit.Y * 50);
+                TransformGroup trGrp = new TransformGroup();
+                trGrp.Children.Add(trTns);
+                grid.RenderTransform = trGrp;
+                if (GameImpl.INSTANCE.CurrentPlayer.GetUnitsOnCell(Unit.X, Unit.Y).Count > 1)
+                {
+                    int randMarginX = rand.Next(-10, 15);
+                    int randMarginY = rand.Next(-20, 15);
 
-                this.Margin = new Thickness(randMarginX, randMarginY, -randMarginX, -randMarginY);
+                    this.Margin = new Thickness(randMarginX, randMarginY, -randMarginX, -randMarginY);
+                }
             }
         }
 

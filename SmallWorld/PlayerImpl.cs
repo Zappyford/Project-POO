@@ -69,11 +69,11 @@ namespace PetitMonde
         {
             get { 
                 int bonusPoints = 0;
-                foreach (Unit u in Units)
+                foreach (Unit u in Units.Where(u => !u.IsDead))
                     bonusPoints += u.BonusPoints;
 
                 int basePoints = 0;
-                IEnumerable<Unit> distinctUnits = Units.Distinct(new UnitsOnSameCellComparer()); // Sélection des unités sur des cases différentes
+                IEnumerable<Unit> distinctUnits = Units.Distinct(new UnitsOnSameCellComparer()).Where(u => !u.IsDead); // Sélection des unités sur des cases différentes
                 foreach (Unit u in distinctUnits)
                 {
                     basePoints += GameImpl.INSTANCE.Map.GetCell(u.X, u.Y).GetScore(Tribe.FactionName);

@@ -38,29 +38,9 @@ namespace PetitMonde.Map
                 int* cellNumbers = mBuilder.BuildMap(Size, 4);
                 cells = new Cell[Size * Size];
 
-
-
-
                 for (int i = 0; i < cells.Length; i++)
                 {
-
                     cells[i] = cellFactory.createCell((CellType)cellNumbers[i]);
-
-                    /*
-                    switch(cellNumbers[i]){
-                        case (int)CellType.Desert:
-                            cells[i] = cellFactory.CreateDesert();
-                            break;
-                        case (int)CellType.Mountain:
-                            cells[i]= cellFactory.CreateMountain();
-                            break;
-                        case (int)CellType.Forest:
-                            cells[i] = cellFactory.CreateForest();
-                            break;
-                        case (int)CellType.Plains:
-                            cells[i] = cellFactory.CreatePlains();
-                            break;
-                     */
                 }
             }
 

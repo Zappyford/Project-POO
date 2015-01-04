@@ -1,9 +1,12 @@
 #include "Algo.h"
 #include <stdlib.h> 
+#include <time.h> 
 
 int* MapBuilderC::BuildMap(const int size, const int numberOfCellTypes) { 
 	int numberOfCells = size*size;
 	int* cells = new int[numberOfCells];
+
+	srand(time(NULL));
 
 	int numberOfEachCell = numberOfCells / numberOfCellTypes;
 	// Array that stores the number of case of each type left to place

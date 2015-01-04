@@ -120,6 +120,7 @@ namespace PetitMonde
                     /// Il y a un combat
                     Unit opponentDefensiveUnit = OpponentPlayer.GetBestDefensiveUnit(xTargeted,yTargeted);
                     CurrentPlayer.Fight(unit, opponentDefensiveUnit);
+                    OnPropertyChanged();
                     if (opponentDefensiveUnit.IsDead && OpponentPlayer.GetUnitsOnCell(xTargeted, yTargeted).Count==0)
                     {
                         // No more enemy unit on targeted cell

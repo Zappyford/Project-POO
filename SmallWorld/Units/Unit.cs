@@ -82,7 +82,7 @@ namespace PetitMonde.Units
         /// <summary>
         /// Current moving points of this unit
         /// </summary>
-        float MovingPoints
+        double MovingPoints
         {
             get;
             set;

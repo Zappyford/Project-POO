@@ -105,5 +105,14 @@ namespace WpfSmallWorld
             MapView.cellViews[GameImpl.INSTANCE.Map.getIndexFromCoodinates(GameImpl.INSTANCE.XSelected, GameImpl.INSTANCE.YSelected)].IsSelected = false;
             this.IsSelected = true;
         }
+
+        private void bgPath_MouseRightButtonDown(object sender, MouseButtonEventArgs e)
+        {
+            if (GameImpl.INSTANCE.SelectedUnit != null)
+            {
+                GameImpl.INSTANCE.MoveUnit(GameImpl.INSTANCE.SelectedUnit, this.X, this.Y);
+                //this.IsSelected = true;
+            }
+        }
     }
 }

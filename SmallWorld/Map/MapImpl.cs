@@ -51,8 +51,10 @@ namespace PetitMonde.Map
         {
             if (ValidCoordinates(x,y) && ValidCoordinates(xTarget,yTarget))
             {
-               /// TODO: if (Math.Abs(x - xTarget) <= 1 && )
-                return (x == xTarget && Math.Abs(y - yTarget) == 1) || (Math.Abs(x - xTarget) == 1 && (yTarget == y || yTarget == y - 1));
+                return (x == xTarget && Math.Abs(y - yTarget) == 1)
+                        || (xTarget - x == -1 && (yTarget == y || yTarget - y == 1))
+                        || (xTarget - x == +1 && (yTarget == y || yTarget - y == -1))
+                        ;
             }
             else
             {
