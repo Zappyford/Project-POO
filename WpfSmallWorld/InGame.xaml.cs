@@ -79,6 +79,9 @@ namespace WpfSmallWorld
             lblCurrentPlayer.Content = GameImpl.INSTANCE.CurrentPlayer.Nickname + "'s turn.";
             lblRemainingTurns.Content = GameImpl.INSTANCE.RemainingTurns + " turns left.";
 
+            lblVictoryPointsP1.Content = GameImpl.INSTANCE.Player1.Nickname + "'s victory points : 0";
+            lblVictoryPointsP2.Content = GameImpl.INSTANCE.Player2.Nickname + "'s victory points : 0";
+
             GameImpl.INSTANCE.PropertyChanged += new PropertyChangedEventHandler(update); // Souscription au OnPropertyChanged
 
            // foreach (Unit u in GameImpl.INSTANCE.CurrentPlayer.Units)
@@ -106,7 +109,6 @@ namespace WpfSmallWorld
                 case "RemainingTurns":
                     lblRemainingTurns.Content = GameImpl.INSTANCE.RemainingTurns + " turns left.";
                     break;
-
             }
         }
 
@@ -119,6 +121,8 @@ namespace WpfSmallWorld
         {
             if(!IsPaused)
                 GameImpl.INSTANCE.EndTurn();
+                lblVictoryPointsP1.Content = GameImpl.INSTANCE.Player1.Nickname + "'s victory points : " + GameImpl.INSTANCE.Player1.Score;
+                lblVictoryPointsP2.Content = GameImpl.INSTANCE.Player2.Nickname + "'s victory points : " + GameImpl.INSTANCE.Player2.Score;
         }
 
         /// <summary>
