@@ -83,16 +83,28 @@ namespace PetitMonde
             }
         }
 
+        private int XSelectedField;
         public int XSelected
         {
-            get;
-            set;
+            get { 
+                return XSelectedField;
+            }
+            set { 
+                XSelectedField = value;
+                OnPropertyChanged();
+            }
         }
 
+        private int YSelectedField;
         public int YSelected
         {
-            get;
-            set;
+            get { 
+                return YSelectedField; 
+            }
+            set { 
+                YSelectedField = value; 
+                OnPropertyChanged(); 
+            }
         }
 
         public Player OpponentPlayer

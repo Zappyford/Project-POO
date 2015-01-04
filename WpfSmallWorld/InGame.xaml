@@ -30,7 +30,7 @@
         </Grid>
         <!--list of unit Grid-->
         <ScrollViewer Grid.Row="1" Grid.Column="1">
-        <StackPanel x:Name="listUnitGrid"   CanHorizontallyScroll="True" CanVerticallyScroll="True" Width="530px" Margin="0,0,10,0"></StackPanel>
+        <StackPanel x:Name="listUnitGrid" Background="{x:Null}"  CanHorizontallyScroll="True" CanVerticallyScroll="True" Width="530px" Margin="0,0,10,0"></StackPanel>
         </ScrollViewer>
         <!-- Map Grid -->
         <Grid x:Name="bgmapGrid" Grid.Row="1" Width="875px">

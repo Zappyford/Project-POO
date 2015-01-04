@@ -6,21 +6,23 @@
              xmlns:local="clr-namespace:WpfSmallWorld"
              mc:Ignorable="d" 
              Loaded="OnUnitLoaded"
-             d:DesignHeight="300" d:DesignWidth="200">
+             d:DesignHeight="300" d:DesignWidth="200"
+             >
 
 
-    <Grid Name="grid" IsHitTestVisible="False">
-        <Image x:Name="imgUnit" HorizontalAlignment="Left" Height="148" Margin="31,22,0,0" VerticalAlignment="Top" Width="134"/>
-
+    <Grid Name="grid" IsHitTestVisible="False" Background="Transparent" PreviewMouseDown="grid_MouseLeftButtonDown" >
+        <Border x:Name="border" Height="300" Width="200" HorizontalAlignment="Left" VerticalAlignment="Top"  BorderBrush="Black" BorderThickness="2" Visibility="Hidden"></Border>
+        <Image  x:Name="imgUnit" HorizontalAlignment="Left" Height="148" Margin="31,22,0,0" VerticalAlignment="Top" Width="134"/>
         <ProgressBar x:Name="pbHealth" Foreground="Green" Background="Red" HorizontalAlignment="Left" Height="10" Margin="52,189,0,0" VerticalAlignment="Top" Width="100" Maximum="5" Value="2"/>
-        <ProgressBar x:Name="pbMovingPoints" Foreground="Green" Background="Red" HorizontalAlignment="Left" Height="10" Margin="52,214,0,0" VerticalAlignment="Top" Width="100" Maximum="1" Value="0.6"/>
-        <Image x:Name="imgHeart" HorizontalAlignment="Left" Height="16" Margin="31,186,0,0" VerticalAlignment="Top" Width="16" Source="{StaticResource Heart}"/>
-        <Image x:Name="imgBoots" HorizontalAlignment="Left" Height="16" Margin="31,210,0,0" VerticalAlignment="Top" Width="16" Source="{StaticResource Boot}"/>
-        <Image x:Name="imgSword" HorizontalAlignment="Left" Height="16" Margin="31,239,0,0" VerticalAlignment="Top" Width="16" Source="{StaticResource Sword}"/>
-        <Image x:Name="imgShield" HorizontalAlignment="Left" Height="16" Margin="31,264,0,0" VerticalAlignment="Top" Width="16" Source="{StaticResource Shield}"/>
-        <Label x:Name="lblHealth" Content="5/5" HorizontalAlignment="Left" Margin="155,181,0,0" VerticalAlignment="Top"/>
-        <Label x:Name="lblMovingPoints" Content="1.0/1.0" HorizontalAlignment="Left" Margin="152,204,0,0" VerticalAlignment="Top"/>
-        <Label x:Name="lblAttack" Content="1" HorizontalAlignment="Left" Margin="52,232,0,0" VerticalAlignment="Top"/>
-        <Label x:Name="lblDefense" Content="1" HorizontalAlignment="Left" Margin="52,258,0,0" VerticalAlignment="Top"/>
-    </Grid>
+            <ProgressBar x:Name="pbMovingPoints" Foreground="Green" Background="Red" HorizontalAlignment="Left" Height="10" Margin="52,214,0,0" VerticalAlignment="Top" Width="100" Maximum="1" Value="0.6"/>
+            <Image x:Name="imgHeart" HorizontalAlignment="Left" Height="16" Margin="31,186,0,0" VerticalAlignment="Top" Width="16" Source="{StaticResource Heart}"/>
+            <Image x:Name="imgBoots" HorizontalAlignment="Left" Height="16" Margin="31,210,0,0" VerticalAlignment="Top" Width="16" Source="{StaticResource Boot}"/>
+            <Image x:Name="imgSword" HorizontalAlignment="Left" Height="16" Margin="31,239,0,0" VerticalAlignment="Top" Width="16" Source="{StaticResource Sword}"/>
+            <Image x:Name="imgShield" HorizontalAlignment="Left" Height="16" Margin="31,264,0,0" VerticalAlignment="Top" Width="16" Source="{StaticResource Shield}"/>
+            <Label x:Name="lblHealth" Content="5/5" HorizontalAlignment="Left" Margin="155,181,0,0" VerticalAlignment="Top"/>
+            <Label x:Name="lblMovingPoints" Content="1.0/1.0" HorizontalAlignment="Left" Margin="152,204,0,0" VerticalAlignment="Top"/>
+            <Label x:Name="lblAttack" Content="1" HorizontalAlignment="Left" Margin="52,232,0,0" VerticalAlignment="Top"/>
+            <Label x:Name="lblDefense" Content="1" HorizontalAlignment="Left" Margin="52,258,0,0" VerticalAlignment="Top"/>
+        </Grid>
+
 </UserControl>

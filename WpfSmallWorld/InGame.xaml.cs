@@ -112,6 +112,14 @@ namespace WpfSmallWorld
                 case "MoveUnit":
                     deleteDeadUnits();
                     break;
+                case "XSelected":
+                case "YSelected":
+                    listUnitGrid.Children.Clear();
+                    foreach (Unit u in GameImpl.INSTANCE.CurrentPlayer.Units.Where(u => u.X == GameImpl.INSTANCE.XSelected && u.Y == GameImpl.INSTANCE.YSelected))
+                    {
+                        listUnitGrid.Children.Add(new FullUnitView(u));
+                    }
+                    break;
             }
         }
 
@@ -181,6 +189,13 @@ namespace WpfSmallWorld
         {
             foreach (UIElement uv in mapGrid.Children.Cast<UIElement>().ToArray())
             { 
+                if (uv is MapUnitView && ((MapUnitView)uv).Unit.IsDead)
+                {
+                    mapGrid.Children.Remove(uv);
+                }
+            }
+            foreach (UIElement uv in listUnitGrid.Children.Cast<UIElement>().ToArray())
+            {
                 if (uv is MapUnitView && ((MapUnitView)uv).Unit.IsDead)
                 {
                     mapGrid.Children.Remove(uv);
