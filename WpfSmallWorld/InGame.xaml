@@ -8,6 +8,7 @@
     <Window.Background>
         <ImageBrush ImageSource="Resources/parchemin.jpg"/>
     </Window.Background>
+    <Viewbox>
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="50px"/>
@@ -69,5 +70,5 @@
             <Label x:Name="lblGamePaused" Content="Game paused" Panel.ZIndex="5" Margin="649,121,620,729" VerticalAlignment="Center" Foreground="White" FontWeight="Bold" FontSize="24" Visibility="Collapsed" Height="50" Width="171" HorizontalAlignment="Center" />
         </Grid>
     </Grid>
-
+    </Viewbox>
 </Window>
