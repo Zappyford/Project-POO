@@ -7,10 +7,11 @@
              mc:Ignorable="d" 
              Loaded="OnUnitLoaded"
              d:DesignHeight="300" d:DesignWidth="200"
+             
+             PreviewMouseDown="grid_MouseLeftButtonDown"
              >
 
-
-    <Grid Name="grid" IsHitTestVisible="False" Background="Transparent" PreviewMouseDown="grid_MouseLeftButtonDown" >
+    <Grid Name="grid" IsHitTestVisible="True" Background="Transparent"  >
             <Border x:Name="border" Height="300" Width="200" HorizontalAlignment="Left" VerticalAlignment="Top"  BorderBrush="Black" BorderThickness="2" Visibility="Hidden"></Border>
             <Image  x:Name="imgUnit" HorizontalAlignment="Left" Height="148" Margin="31,22,0,0" VerticalAlignment="Top" Width="134"/>
             <ProgressBar x:Name="pbHealth" Foreground="Green" Background="Red" HorizontalAlignment="Left" Height="10" Margin="52,189,0,0" VerticalAlignment="Top" Width="100" Maximum="5" Value="2"/>

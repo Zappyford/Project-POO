@@ -32,13 +32,14 @@ namespace WpfSmallWorld
         bool IsPaused { get; set; }
         private float moveOffsetX, moveOffsetY;
 
+        /// <summary>
+        /// Constructor for InGame
+        /// </summary>
         public InGame()
         {
             InitializeComponent();
             IsPaused = false;
             mapView = new MapView(GameImpl.INSTANCE.Map, mapGrid);
-
-            
 
             //to move the map at the center (depending on the size of the map)
             switch (MapView.Map.Size)
@@ -60,6 +61,7 @@ namespace WpfSmallWorld
 
             mapGrid.Margin = new Thickness(-moveOffsetX, -moveOffsetY, 0, 0);
 
+            // Populate the map with the units
             foreach (Unit u in GameImpl.INSTANCE.Player1.Units)
             {
                 unitViews.Add(new MapUnitView(u));
@@ -68,7 +70,6 @@ namespace WpfSmallWorld
             {
                 unitViews.Add(new MapUnitView(u));
             }
-
             foreach (MapUnitView uv in unitViews)
             {
                 mapGrid.Children.Add(uv);
@@ -84,11 +85,6 @@ namespace WpfSmallWorld
             lblVictoryPointsP2.Content = GameImpl.INSTANCE.Player2.Nickname + "'s victory points : 1";
 
             GameImpl.INSTANCE.PropertyChanged += new PropertyChangedEventHandler(update); // Souscription au OnPropertyChanged
-
-            foreach (Unit u in GameImpl.INSTANCE.CurrentPlayer.Units)
-            {
-                listUnitGrid.Children.Add(new FullUnitView(u));
-            }
         }
 
         /// <summary>
@@ -111,17 +107,28 @@ namespace WpfSmallWorld
                     break;
                 case "MoveUnit":
                     deleteDeadUnits();
+                    updateListUnits();
                     break;
                 case "XSelected":
                 case "YSelected":
-                    listUnitGrid.Children.Clear();
-                    foreach (Unit u in GameImpl.INSTANCE.CurrentPlayer.Units.Where(u => u.X == GameImpl.INSTANCE.XSelected && u.Y == GameImpl.INSTANCE.YSelected))
-                    {
-                        listUnitGrid.Children.Add(new FullUnitView(u));
-                    }
+                    updateListUnits();
                     break;
             }
         }
+
+
+        /// <summary>
+        /// Clears and updates the list of units of the selected cell
+        /// </summary>
+        private void updateListUnits()
+        {
+            listUnitGrid.Children.Clear();
+            foreach (Unit u in GameImpl.INSTANCE.CurrentPlayer.Units.Where(u => u.X == GameImpl.INSTANCE.XSelected && u.Y == GameImpl.INSTANCE.YSelected))
+            {
+                listUnitGrid.Children.Add(new FullUnitView(u));
+            }
+        }
+
 
         /// <summary>
         /// Delegete called when the end turn button is pressed
@@ -153,6 +160,9 @@ namespace WpfSmallWorld
             }
         }
 
+        /// <summary>
+        /// Toggles the menu
+        /// </summary>
         private void toggleMenu(){
             IsPaused = !IsPaused;
             MenuRectangle.Height = WindowInGame.ActualHeight;
@@ -165,11 +175,21 @@ namespace WpfSmallWorld
             lblGamePaused.Visibility = lblGamePaused.Visibility == Visibility.Visible ? Visibility.Collapsed : Visibility.Visible;
         }
 
+        /// <summary>
+        /// Delegate called when the continue button is clicked
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnContinue_Click(object sender, RoutedEventArgs e)
         {
             toggleMenu();
         }
 
+        /// <summary>
+        /// Delegate called when the quit button is clicked
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnQuit_Click(object sender, RoutedEventArgs e)
         {
             MessageBoxResult result = MessageBox.Show("Are you sure you want to quit this game?", "Confirmation", MessageBoxButton.YesNo, MessageBoxImage.Question);
@@ -179,12 +199,20 @@ namespace WpfSmallWorld
             }
         }
 
+        /// <summary>
+        /// Delegate called when the save game button is clicked
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnSaveGame_Click(object sender, RoutedEventArgs e)
         {
             SaveGame saveGameWindow = new SaveGame();
             saveGameWindow.Show();
         }
 
+        /// <summary>
+        /// Deletes the dead units's views from the map
+        /// </summary>
         public void deleteDeadUnits()
         {
             foreach (UIElement uv in mapGrid.Children.Cast<UIElement>().ToArray())
@@ -202,5 +230,6 @@ namespace WpfSmallWorld
                 }
             }
         }
+
     }
 }
