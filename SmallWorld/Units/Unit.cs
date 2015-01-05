@@ -5,9 +5,9 @@ namespace PetitMonde.Units
     public interface Unit : INotifyPropertyChanged
     {
         /// <summary>
-        /// Health points by default
+        /// Gets the health points by default
         /// </summary>
-        int DEFAULT_HEALTH
+        int DefaultHealth
         {
             get;
         }
@@ -15,7 +15,7 @@ namespace PetitMonde.Units
         /// <summary>
         /// Attack points by default 
         /// </summary>
-        int DEFAULT_ATTACK
+        int DefaultAttack
         {
             get;
         }
@@ -23,7 +23,7 @@ namespace PetitMonde.Units
         /// <summary>
         /// Defense points by default
         /// </summary>
-        int DEFAULT_DEFENSE
+        int DefaultDefense
         {
             get;
         }
@@ -31,7 +31,7 @@ namespace PetitMonde.Units
         /// <summary>
         /// Moving points by default
         /// </summary>
-        int DEFAULT_MOVING_POINTS
+        double DefaultMovingPoints
         {
             get;
         }
