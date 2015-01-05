@@ -87,8 +87,8 @@ namespace PetitMonde
             int defaultXP2 = (int) (sizeOfMap*0.5);
             int defaultYP2 = (int) (sizeOfMap*0.9);
 
-            GameImpl.INSTANCE.Player1 = new PlayerImpl(tribeP1, defaultXP1, defaultYP1, mapbuilder.NumberOfUnits, dataContext.NicknameP1);
-            GameImpl.INSTANCE.Player2 = new PlayerImpl(tribeP2, defaultXP1, defaultYP2, mapbuilder.NumberOfUnits, dataContext.NicknameP2);
+            GameImpl.INSTANCE.Player1 = new PlayerImpl(tribeP1, defaultXP1, defaultYP1, mapbuilder.NumberOfUnits, dataContext.NicknameP1 != null && dataContext.NicknameP1.Length > 1 ? dataContext.NicknameP1 : "Player 1");
+            GameImpl.INSTANCE.Player2 = new PlayerImpl(tribeP2, defaultXP1, defaultYP2, mapbuilder.NumberOfUnits, dataContext.NicknameP2 != null && dataContext.NicknameP2.Length > 1 ? dataContext.NicknameP2 : "Player 2");
 
             GameImpl.INSTANCE.CurrentPlayer = GameImpl.INSTANCE.Player1; // Le joueur 1 commence
             GameImpl.INSTANCE.OpponentPlayer = GameImpl.INSTANCE.Player2;

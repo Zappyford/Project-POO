@@ -120,7 +120,7 @@ namespace WpfSmallWorld
 
         private void btnStartGame_Click(object sender, RoutedEventArgs e)
         {
-            // TODO
+ 
             GameBuilder gameBuilder = (GameBuilder)new PetitMonde.NewGame(this.dataContext);
             gameBuilder.BuildGame();
             Window w = new InGame();
