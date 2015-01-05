@@ -36,21 +36,21 @@ namespace WpfSmallWorld
             InitializeComponent();
             u.PropertyChanged += new PropertyChangedEventHandler(update);
             GameImpl.INSTANCE.PropertyChanged += new PropertyChangedEventHandler(update);
-            pbHealth.Maximum = Unit.DEFAULT_HEALTH;
+            pbHealth.Maximum = Unit.DefaultHealth;
             pbHealth.Minimum = 0;
-            pbMovingPoints.Maximum = Unit.DEFAULT_MOVING_POINTS;
+            pbMovingPoints.Maximum = Unit.DefaultMovingPoints;
             pbMovingPoints.Minimum = 0;
-            lblAttack.Content = Unit.DEFAULT_ATTACK;
-            lblDefense.Content = Unit.DEFAULT_DEFENSE;
+            lblAttack.Content = Unit.DefaultAttack;
+            lblDefense.Content = Unit.DefaultDefense;
             AddHandler(FrameworkElement.MouseDownEvent, new MouseButtonEventHandler(grid_MouseLeftButtonDown), true);
         }
         
 
         protected void update(object sender, PropertyChangedEventArgs e){
             pbHealth.Value = Unit.Health;
-            lblHealth.Content = Unit.Health + "/" + Unit.DEFAULT_HEALTH;
+            lblHealth.Content = Unit.Health + "/" + Unit.DefaultHealth;
             pbMovingPoints.Value = Unit.MovingPoints;
-            lblMovingPoints.Content = Unit.MovingPoints + "/" + Unit.DEFAULT_MOVING_POINTS;
+            lblMovingPoints.Content = Unit.MovingPoints + "/" + Unit.DefaultMovingPoints;
 
             if (Object.ReferenceEquals(GameImpl.INSTANCE.SelectedUnit,this.Unit))
             {

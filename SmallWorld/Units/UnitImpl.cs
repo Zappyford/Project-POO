@@ -14,7 +14,7 @@ namespace PetitMonde.Units
         /// <summary>
         /// Health points by default
         /// </summary>
-        public int DEFAULT_HEALTH
+        public int DefaultHealth
         {
             get { return 5; }
         }
@@ -22,7 +22,7 @@ namespace PetitMonde.Units
         /// <summary>
         /// Attack points by default 
         /// </summary>
-        public int DEFAULT_ATTACK
+        public int DefaultAttack
         {
             get { return 2; }
         }
@@ -31,7 +31,7 @@ namespace PetitMonde.Units
         /// <summary>
         /// Defense points by default
         /// </summary>
-        public int DEFAULT_DEFENSE
+        public int DefaultDefense
         {
             get { return 1; }
         }
@@ -39,7 +39,7 @@ namespace PetitMonde.Units
         /// <summary>
         /// Moving points by default
         /// </summary>
-        public int DEFAULT_MOVING_POINTS
+        public double DefaultMovingPoints
         {
             get { return 1; }
         }
@@ -47,10 +47,10 @@ namespace PetitMonde.Units
 
         public UnitImpl(int defaultX, int defaultY)
         {
-            Attack = DEFAULT_ATTACK;
-            Health = DEFAULT_HEALTH;
-            Defense = DEFAULT_DEFENSE;
-            MovingPoints = DEFAULT_MOVING_POINTS;
+            Attack = DefaultAttack;
+            Health = DefaultHealth;
+            Defense = DefaultDefense;
+            MovingPoints = DefaultMovingPoints;
             X = defaultX;
             Y = defaultY;
         }
@@ -67,22 +67,22 @@ namespace PetitMonde.Units
             set;
         }
 
-        private int _health;
+        private int HealthField;
         public int Health
         {
             get
             {
-                return _health;
+                return HealthField;
             }
             set
             {
                 if (value >= 0)
                 {
-                    _health = value;
+                    HealthField = value;
                 }
                 else
                 {
-                    _health = 0;
+                    HealthField = 0;
                 }
             }
         }
@@ -196,8 +196,8 @@ namespace PetitMonde.Units
             int numberOfAttacks = rand.Next(3, Math.Max(this.Health, unit.Health)+2);
             while (numberOfAttacks > 0 && !IsDead && !unit.IsDead)
             {
-                int AttackingUnitAttack = (int)Math.Round(this.Attack * (this.Health / (double)DEFAULT_HEALTH), 0, MidpointRounding.AwayFromZero);
-                int AttackedUnitDefense = (int)Math.Round(unit.Defense * (unit.Health / (double)DEFAULT_HEALTH), 0, MidpointRounding.AwayFromZero);
+                int AttackingUnitAttack = (int)Math.Round(this.Attack * (this.Health / (double)DefaultHealth), 0, MidpointRounding.AwayFromZero);
+                int AttackedUnitDefense = (int)Math.Round(unit.Defense * (unit.Health / (double)DefaultHealth), 0, MidpointRounding.AwayFromZero);
                 double chanceOfAttackingUnitWin;
 
                 if (AttackingUnitAttack >= AttackedUnitDefense)
@@ -229,7 +229,7 @@ namespace PetitMonde.Units
 
         public void clearMovingPoints()
         {
-            this.MovingPoints = DEFAULT_MOVING_POINTS;
+            this.MovingPoints = DefaultMovingPoints;
         }
 
         #region INotifyPropertyChanged
