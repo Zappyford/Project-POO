@@ -118,13 +118,13 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="DescriptionDwarves" xml:space="preserve">
-    <value>Description des nains</value>
+    <value>Easy Win</value>
   </data>
   <data name="DescriptionElves" xml:space="preserve">
-    <value>Description des elfes</value>
+    <value>Tanche style</value>
   </data>
   <data name="DescriptionOrcs" xml:space="preserve">
-    <value>Description des orques</value>
+    <value>Barbar</value>
   </data>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="desert" type="System.Resources.ResXFileRef, System.Windows.Forms">

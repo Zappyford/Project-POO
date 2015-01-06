@@ -22,7 +22,7 @@
 
         <!--<Grid x:Name="mapGrid" HorizontalAlignment="Left" VerticalAlignment="Top" Height="900" RenderTransformOrigin="0.026,0.048" Width="1440" Margin="-6,0,0,-28" Grid.Row="1">-->
         <Grid>
-            <Label x:Name="lblCurrentPlayer" Content="Player1's turn" HorizontalAlignment="Left" Margin="60,0,0,0" VerticalAlignment="Top" Height="47" Width="458" FontSize="30"/>
+            <Label x:Name="lblCurrentPlayer" Content="Player1's turn" HorizontalAlignment="Left" Margin="60,0,0,0" VerticalAlignment="Top" Height="47" Width="458" FontSize="30" Foreground="White"/>
         </Grid>
         <!-- Victory Points Grid-->
         <Grid Grid.Row="0" Grid.Column="2">
@@ -42,7 +42,7 @@
         </Grid>
         <!-- Button turn grid-->
         <Grid Grid.Row="3" Grid.Column="2">
-            <Button x:Name="btnEndTurn" Content="End turn" HorizontalAlignment="Left" Margin="400,33,0,0" VerticalAlignment="Top" Width="125" Click="btnEndTurn_Click" FontSize="25" Foreground="White">
+                <Button x:Name="btnEndTurn" Content="End turn" HorizontalAlignment="Left" Margin="400,33,0,0" VerticalAlignment="Top" Width="125" Click="btnEndTurn_Click" FontSize="25" Foreground="White">
                 <Button.Background>
                     <SolidColorBrush Color="Black" Opacity="0.7"/>
                 </Button.Background>

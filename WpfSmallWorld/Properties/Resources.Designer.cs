@@ -71,7 +71,7 @@ namespace WpfSmallWorld.Properties {
         }
         
         /// <summary>
-        ///   Recherche une chaîne localisée semblable à Description des nains.
+        ///   Recherche une chaîne localisée semblable à Easy Win.
         /// </summary>
         public static string DescriptionDwarves {
             get {
@@ -80,7 +80,7 @@ namespace WpfSmallWorld.Properties {
         }
         
         /// <summary>
-        ///   Recherche une chaîne localisée semblable à Description des elfes.
+        ///   Recherche une chaîne localisée semblable à Tanche style.
         /// </summary>
         public static string DescriptionElves {
             get {
@@ -89,7 +89,7 @@ namespace WpfSmallWorld.Properties {
         }
         
         /// <summary>
-        ///   Recherche une chaîne localisée semblable à Description des orques.
+        ///   Recherche une chaîne localisée semblable à Barbar.
         /// </summary>
         public static string DescriptionOrcs {
             get {
