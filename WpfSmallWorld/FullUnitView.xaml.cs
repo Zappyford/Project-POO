@@ -42,7 +42,7 @@ namespace WpfSmallWorld
             pbMovingPoints.Minimum = 0;
             lblAttack.Content = Unit.DefaultAttack;
             lblDefense.Content = Unit.DefaultDefense;
-            AddHandler(FrameworkElement.MouseDownEvent, new MouseButtonEventHandler(grid_MouseLeftButtonDown), true);
+            grid.AddHandler(FrameworkElement.MouseDownEvent, new MouseButtonEventHandler(grid_MouseLeftButtonDown), true);
         }
         
 

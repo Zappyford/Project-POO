@@ -8,7 +8,6 @@
     <Window.Background>
         <ImageBrush ImageSource="Resources/parchemin.jpg"/>
     </Window.Background>
-    <Viewbox>
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="50px"/>
@@ -30,8 +29,8 @@
             <Label x:Name="lblVictoryPointsP2" Content="Player2's Victory Points :" FontSize="20" Foreground="White" HorizontalAlignment="Right" Margin="0,0,39,0"/>
         </Grid>
         <!--list of unit Grid-->
-        <ScrollViewer Grid.Row="1" Grid.Column="1">
-        <StackPanel x:Name="listUnitGrid" Background="{x:Null}"  CanHorizontallyScroll="True" CanVerticallyScroll="True" Width="530px" Margin="0,0,10,0"></StackPanel>
+        <ScrollViewer Grid.Row="1" Grid.Column="1" IsHitTestVisible="True">
+            <StackPanel x:Name="listUnitGrid" CanHorizontallyScroll="True" IsHitTestVisible="True" CanVerticallyScroll="True" Width="530px" Margin="0,0,10,0"></StackPanel>
         </ScrollViewer>
         <!-- Map Grid -->
         <Grid x:Name="bgmapGrid" Grid.Row="1" Width="875px">
@@ -70,5 +69,5 @@
             <Label x:Name="lblGamePaused" Content="Game paused" Panel.ZIndex="5" Margin="649,121,620,729" VerticalAlignment="Center" Foreground="White" FontWeight="Bold" FontSize="24" Visibility="Collapsed" Height="50" Width="171" HorizontalAlignment="Center" />
         </Grid>
     </Grid>
-    </Viewbox>
+
 </Window>
