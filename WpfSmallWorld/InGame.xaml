@@ -6,68 +6,74 @@
         xmlns:PM="clr-namespace:PetitMonde;assembly=SmallWorld" KeyUp="WindowInGame_KeyUp" WindowStartupLocation="Manual" WindowStyle="None" ResizeMode="NoResize" WindowState="Maximized"
         >
     <Window.Background>
-        <ImageBrush ImageSource="Resources/parchemin.jpg"/>
+        <ImageBrush ImageSource="Resources/parchemin5.jpg"/>
     </Window.Background>
-    <Grid>
-        <Grid.RowDefinitions>
-            <RowDefinition Height="50px"/>
-            <RowDefinition Height="750px"/>
-            <RowDefinition Height="100px"/>
-        </Grid.RowDefinitions>
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="900px" />
-            <ColumnDefinition Width="*"/>
-        </Grid.ColumnDefinitions>
-
-        <!--<Grid x:Name="mapGrid" HorizontalAlignment="Left" VerticalAlignment="Top" Height="900" RenderTransformOrigin="0.026,0.048" Width="1440" Margin="-6,0,0,-28" Grid.Row="1">-->
+    <Viewbox>
         <Grid>
-            <Label x:Name="lblCurrentPlayer" Content="Player1's turn" HorizontalAlignment="Left" Margin="60,0,0,0" VerticalAlignment="Top" Height="47" Width="458" FontSize="30" Foreground="White"/>
-        </Grid>
-        <!-- Victory Points Grid-->
-        <Grid Grid.Row="0" Grid.Column="2">
-            <Label x:Name="lblVictoryPointsP1" Content="Player1's Victory Points :" FontSize="20" Foreground="White" HorizontalAlignment="Left"/>
-            <Label x:Name="lblVictoryPointsP2" Content="Player2's Victory Points :" FontSize="20" Foreground="White" HorizontalAlignment="Right" Margin="0,0,39,0"/>
-        </Grid>
-        <!--list of unit Grid-->
-        <ScrollViewer Grid.Row="1" Grid.Column="1" IsHitTestVisible="True">
-            <StackPanel x:Name="listUnitGrid" CanHorizontallyScroll="True" IsHitTestVisible="True" CanVerticallyScroll="True" Width="530px" Margin="0,0,10,0"></StackPanel>
-        </ScrollViewer>
-        <!-- Map Grid -->
-        <Grid x:Name="bgmapGrid" Grid.Row="1" Width="875px">
-            <Grid.Background>
-                <SolidColorBrush Color="Black" Opacity="0.7"/>
-            </Grid.Background>
-            <Grid x:Name="mapGrid" Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Center" />
-        </Grid>
-        <!-- Button turn grid-->
-        <Grid Grid.Row="3" Grid.Column="2">
-                <Button x:Name="btnEndTurn" Content="End turn" HorizontalAlignment="Left" Margin="400,33,0,0" VerticalAlignment="Top" Width="125" Click="btnEndTurn_Click" FontSize="25" Foreground="White">
-                <Button.Background>
-                    <SolidColorBrush Color="Black" Opacity="0.7"/>
-                </Button.Background>
-            </Button>
-            <Label x:Name="lblRemainingTurns" Content="Number of turns left" HorizontalAlignment="Left" Margin="80,30,0,0" VerticalAlignment="Top" Foreground="White" FontSize="25"/>
-        </Grid>
-        <!-- Pause Menu -->
-        <Grid x:Name="pauseMenu" Grid.RowSpan="3" Grid.ColumnSpan="2">
-            <Rectangle x:Name="MenuRectangle" Panel.ZIndex="4" Fill="Black" HorizontalAlignment="Left" Stroke="Black" VerticalAlignment="Top" Margin="0,0,0,0" Visibility="Collapsed" IsEnabled="False" Opacity="0.9"/>
-            <Button x:Name="btnContinue" Visibility="Collapsed" Panel.ZIndex="5" Content="Continue" Click="btnContinue_Click" HorizontalAlignment="Center"  Margin="649,218,620,0" VerticalAlignment="Top" Width="171" FontSize="25" Foreground="White" Height="60">
-                <Button.Background>
-                    <SolidColorBrush Color="Black" Opacity="0.7"/>
-                </Button.Background>
-            </Button>
-            <Button x:Name="btnSaveGame" Visibility="Collapsed" Panel.ZIndex="5" Content="Save Game" HorizontalAlignment="Center" Margin="649,320,620,0" Click="btnSaveGame_Click" VerticalAlignment="Top" Width="171" FontSize="25" Foreground="White" Height="60">
-                <Button.Background>
-                    <SolidColorBrush Color="Black" Opacity="0.7"/>
-                </Button.Background>
-            </Button>
-            <Button x:Name="btnQuit" Visibility="Collapsed" Panel.ZIndex="5" Content="Quit Game" HorizontalAlignment="Center" Margin="649,424,620,0" Click="btnQuit_Click" VerticalAlignment="Top" Width="171" FontSize="25" Foreground="White" Height="60">
-                <Button.Background>
-                    <SolidColorBrush Color="Black" Opacity="0.7"/>
-                </Button.Background>
-            </Button>
-            <Label x:Name="lblGamePaused" Content="Game paused" Panel.ZIndex="5" Margin="649,121,620,729" VerticalAlignment="Center" Foreground="White" FontWeight="Bold" FontSize="24" Visibility="Collapsed" Height="50" Width="171" HorizontalAlignment="Center" />
-        </Grid>
-    </Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="70px"/>
+                <RowDefinition Height="750px"/>
+                <RowDefinition Height="100px"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="900px" />
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
 
+            <Grid>
+                <Label x:Name="lblYourTurn" Content="It's your turn :" HorizontalAlignment="Left" VerticalAlignment="Top" FontFamily="Trajan Pro" FontSize="30" Foreground="White" Margin="10,10,0,0" FontWeight="Bold" />
+                <Label x:Name="lblCurrentPlayer" Content="Player1" HorizontalAlignment="Left" Margin="287,10,0,0" VerticalAlignment="Top" Height="48" Width="458" FontSize="30" Foreground="White" FontFamily="Trajan Pro" FontWeight="Bold"/>
+            </Grid>
+            <!-- Victory Points Grid-->
+            <Grid Grid.Row="0" Grid.Column="2">
+                <Label x:Name="lblVictoryPointsP1" Content="Player1's Victory Points :" FontSize="17" Foreground="White" HorizontalAlignment="Left" FontFamily="Trajan Pro" Margin="-13,19,0,3" FontWeight="Bold"/>
+                <Label x:Name="lblVictoryPointsP2" Content="Player2's Victory Points :" FontSize="17" Foreground="White" HorizontalAlignment="Right" Margin="0,19,27,0" FontFamily="Trajan Pro" Height="28" VerticalAlignment="Top" FontWeight="Bold"/>
+            </Grid>
+            <!--list of unit Grid-->
+            <ScrollViewer Grid.Row="1" Grid.Column="1" IsHitTestVisible="True">
+                <StackPanel x:Name="listUnitGrid" CanHorizontallyScroll="True" IsHitTestVisible="True" CanVerticallyScroll="True" Width="530px" Margin="0,0,10,0"></StackPanel>
+            </ScrollViewer>
+            <!-- Map Grid -->
+            <Grid x:Name="bgmapGrid" Grid.Row="1" Width="875px">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="9*"/>
+                    <ColumnDefinition Width="166*"/>
+                </Grid.ColumnDefinitions>
+                <Grid.Background>
+                    <SolidColorBrush Color="Black" Opacity="0.7"/>
+                </Grid.Background>
+                <Grid x:Name="mapGrid" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Column="1" Margin="392.664,375,437,375" />
+            </Grid>
+            <!-- Button turn grid-->
+            <Grid Grid.Row="3" Grid.Column="2">
+                <Button x:Name="btnEndTurn" Content="End turn" HorizontalAlignment="Left" Margin="372,32,0,0" VerticalAlignment="Top" Width="160" Click="btnEndTurn_Click" FontSize="25" Foreground="White" FontFamily="Trajan Pro" Height="45">
+                    <Button.Background>
+                        <SolidColorBrush Color="Black" Opacity="0.7"/>
+                    </Button.Background>
+                </Button>
+                <Label x:Name="lblRemainingTurns" Content="Number of turns left" HorizontalAlignment="Left" Margin="25,32,0,0" VerticalAlignment="Top" Foreground="#FF910000" FontSize="25" FontFamily="Trajan Pro" FontWeight="Bold"/>
+            </Grid>
+            <!-- Pause Menu -->
+            <Grid x:Name="pauseMenu" Grid.RowSpan="3" Grid.ColumnSpan="2">
+                <Rectangle x:Name="MenuRectangle" Panel.ZIndex="4" Fill="Black" Stroke="Black" Margin="0,0,0,0" IsEnabled="False" Opacity="0.9" Visibility="Collapsed"/>
+                <Button x:Name="btnContinue" Panel.ZIndex="5" Content="Continue" Click="btnContinue_Click" HorizontalAlignment="Center"  Margin="0,259,0,0" VerticalAlignment="Top" Width="171" FontSize="25" Foreground="White" Height="60" FontFamily="Trajan Pro" Visibility="Collapsed">
+                    <Button.Background>
+                        <SolidColorBrush Color="Black" Opacity="0.7"/>
+                    </Button.Background>
+                </Button>
+                <Button x:Name="btnSaveGame" Panel.ZIndex="5" Content="Save Game" HorizontalAlignment="Center" Margin="0,410,0,0" Click="btnSaveGame_Click" VerticalAlignment="Top" Width="171" FontSize="25" Foreground="White" Height="60" FontFamily="Trajan Pro" Visibility="Collapsed">
+                    <Button.Background>
+                        <SolidColorBrush Color="Black" Opacity="0.7"/>
+                    </Button.Background>
+                </Button>
+                <Button x:Name="btnQuit" Panel.ZIndex="5" Content="Quit Game" HorizontalAlignment="Center" Margin="0,553,0,0" Click="btnQuit_Click" VerticalAlignment="Top" Width="171" FontSize="25" Foreground="White" Height="60" FontFamily="Trajan Pro" Visibility="Collapsed">
+                    <Button.Background>
+                        <SolidColorBrush Color="Black" Opacity="0.7"/>
+                    </Button.Background>
+                </Button>
+                <Label x:Name="lblGamePaused" Content="Game paused" Panel.ZIndex="5" Margin="0,94,0,756" VerticalAlignment="Center" Foreground="White" FontWeight="Bold" FontSize="24" Height="50" Width="192" HorizontalAlignment="Center" FontFamily="Trajan Pro" Visibility="Collapsed" />
+            </Grid>
+        </Grid>
+
+    </Viewbox>
 </Window>

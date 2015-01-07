@@ -174,9 +174,6 @@
     <Resource Include="Resources\montagne.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Resources\parchemin.jpg" />
-  </ItemGroup>
-  <ItemGroup>
     <Resource Include="Resources\orc.png" />
   </ItemGroup>
   <ItemGroup>
@@ -193,6 +190,9 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Resources\sword.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\parchemin5.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

@@ -6,40 +6,48 @@
         x:Class="WpfSmallWorld.NewGame"
         xmlns:Map="clr-namespace:PetitMonde.Map;assembly=SmallWorld"
         xmlns:local="clr-namespace:WpfSmallWorld"
-        Title="NewGame" ResizeMode="NoResize" WindowStartupLocation="CenterScreen" WindowStyle="None" WindowState="Maximized" Width="1024" Height="768">
+        Title="NewGame" ResizeMode="NoResize" WindowStartupLocation="CenterScreen" WindowStyle="None" WindowState="Maximized">
     <Window.Background>
-        <ImageBrush ImageSource="Resources/parchemin.jpg"/>
+        <ImageBrush ImageSource="Resources/parchemin5.jpg"/>
     </Window.Background>
-    <Viewbox Width="1024" Height="768">
-        <Grid x:Name="gridNewGame" Width="1024" Height="768">
+    <Viewbox>
+        <Grid x:Name="gridNewGame" HorizontalAlignment="Center" VerticalAlignment="Center" Height="586">
             <Grid.Resources>
                 <local:EnumBooleanConverter x:Key="EnumToBooleanConverter" />
             </Grid.Resources>
 
-            <Label x:Name="lblPlayer1" Content="Player 1" HorizontalAlignment="Left" Margin="136,58,0,0" VerticalAlignment="Top" Height="35" Width="126" FontSize="16"/>
-            <Label x:Name="lblPlayer2" Content="Player 2" HorizontalAlignment="Left" Margin="702,59,0,0" VerticalAlignment="Top" Height="35" Width="128" FontSize="16"/>
-            <Label x:Name="lblNewGame" Content="Prepare for Battle !" Margin="0,15,0,0" FontSize="35" FontWeight="Bold" Foreground="#FF910000" HorizontalAlignment="Center" VerticalAlignment="Top" FontFamily="Showcard Gothic"/>
-            <TextBox x:Name="tbNicknameP1" HorizontalAlignment="Left" Height="22" Margin="158,117,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Text="{Binding Path=NicknameP1}"/>
-            <TextBox x:Name="tbNicknameP2" HorizontalAlignment="Left" Height="22" Margin="746,123,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Text="{Binding Path=NicknameP2}"/>
-            <Label x:Name="lblNicknameP1" Content="Nickname" HorizontalAlignment="Left" Margin="86,113,0,0" VerticalAlignment="Top" Width="67"/>
-            <Label x:Name="lblNicknameP2" Content="Nickname" HorizontalAlignment="Left" Margin="674,121,0,0" VerticalAlignment="Top" Width="67"/>
-            <RadioButton IsChecked="{Binding Path=FactionP1, Converter={StaticResource EnumToBooleanConverter}, ConverterParameter={x:Static Units:Faction.Dwarves},UpdateSourceTrigger=PropertyChanged}" x:Name="rbDwarvesP1" Content="Dwarves" HorizontalAlignment="Left" Margin="158,149,0,0" VerticalAlignment="Top" GroupName="TribeP1" Checked="rbDwarvesP1_Checked"/>
-            <Label x:Name="lblTribeP1" Content="Tribe" HorizontalAlignment="Left" Margin="116,144,0,0" VerticalAlignment="Top"/>
-            <Label x:Name="lblTribeP2" Content="Tribe" HorizontalAlignment="Left" Margin="702,152,0,0" VerticalAlignment="Top"/>
-            <RadioButton IsChecked="{Binding Path=FactionP1, Converter={StaticResource EnumToBooleanConverter}, ConverterParameter={x:Static Units:Faction.Orcs},UpdateSourceTrigger=PropertyChanged}" x:Name="rbOrcsP1" HorizontalAlignment="Left" Margin="158,170,0,0" VerticalAlignment="Top" GroupName="TribeP1" Checked="rbOrcsP1_Checked" Content="Orcs">
+            <Label x:Name="lblPlayer1" Content="Player 1" HorizontalAlignment="Left" Margin="116,80,0,0" VerticalAlignment="Top" Height="35" Width="126" FontSize="25" FontFamily="Trajan Pro"/>
+            <Label x:Name="lblPlayer2" Content="Player 2" Margin="0,80,119,0" VerticalAlignment="Top" Height="35" FontSize="25" HorizontalAlignment="Right" Width="128" FontFamily="Trajan Pro"/>
+            <Label x:Name="lblNewGame" Content="Prepare for Battle !" Margin="0,17,0,0" FontSize="40" Foreground="#FF910000" HorizontalAlignment="Center" VerticalAlignment="Top" FontFamily="Trajan Pro" FontWeight="Bold"/>
+            <TextBox x:Name="tbNicknameP1" HorizontalAlignment="Left" Height="22" Margin="140,126,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Text="{Binding Path=NicknameP1}"/>
+            <TextBox x:Name="tbNicknameP2" Height="22" Margin="0,126,60,0" TextWrapping="Wrap" VerticalAlignment="Top" Text="{Binding Path=NicknameP2}" HorizontalAlignment="Right" Width="120"/>
+            <Label x:Name="lblNicknameP1" Content="Your name" HorizontalAlignment="Left" Margin="50,126,0,0" VerticalAlignment="Top" Width="84" FontFamily="Trajan Pro"/>
+            <Label x:Name="lblNicknameP2" Content="Your name" Margin="0,126,193,0" VerticalAlignment="Top" HorizontalAlignment="Right" Width="84" FontFamily="Trajan Pro"/>
+            <RadioButton IsChecked="{Binding Path=FactionP1, Converter={StaticResource EnumToBooleanConverter}, ConverterParameter={x:Static Units:Faction.Dwarves},UpdateSourceTrigger=PropertyChanged}" x:Name="rbDwarvesP1" Content="Dwarves" HorizontalAlignment="Left" Margin="138,164,0,0" VerticalAlignment="Top" GroupName="TribeP1" Checked="rbDwarvesP1_Checked" FontFamily="Trajan Pro"/>
+            <Label x:Name="lblTribeP1" Content="your tribe" HorizontalAlignment="Left" Margin="50,159,0,0" VerticalAlignment="Top" FontFamily="Trajan Pro"/>
+            <Label x:Name="lblTribeP2" Content="your tribe" Margin="0,159,193,0" VerticalAlignment="Top" HorizontalAlignment="Right" Width="84" FontFamily="Trajan Pro"/>
+            <RadioButton IsChecked="{Binding Path=FactionP1, Converter={StaticResource EnumToBooleanConverter}, ConverterParameter={x:Static Units:Faction.Orcs},UpdateSourceTrigger=PropertyChanged}" x:Name="rbOrcsP1" HorizontalAlignment="Left" Margin="140,188,0,0" VerticalAlignment="Top" GroupName="TribeP1" Checked="rbOrcsP1_Checked" Content="Orcs" FontFamily="Trajan Pro">
             </RadioButton>
-            <RadioButton IsChecked="{Binding Path=FactionP1, Converter={StaticResource EnumToBooleanConverter}, ConverterParameter={x:Static Units:Faction.Elves},UpdateSourceTrigger=PropertyChanged}" x:Name="rbElvesP1" Content="Elves" HorizontalAlignment="Left" Margin="158,191,0,0" VerticalAlignment="Top" GroupName="TribeP1" Checked="rbElvesP1_Checked"/>
-            <RadioButton  IsChecked="{Binding Path=FactionP2, Converter={StaticResource EnumToBooleanConverter}, ConverterParameter={x:Static Units:Faction.Dwarves},UpdateSourceTrigger=PropertyChanged}" x:Name="rbDwarvesP2" Content="Dwarves" HorizontalAlignment="Left" Margin="748,152,0,0" VerticalAlignment="Top" GroupName="TribeP2" Checked="rbDwarvesP2_Checked"/>
-            <RadioButton  IsChecked="{Binding Path=FactionP2, Converter={StaticResource EnumToBooleanConverter}, ConverterParameter={x:Static Units:Faction.Orcs},UpdateSourceTrigger=PropertyChanged}" x:Name="rbOrcsP2" Content="Orcs" HorizontalAlignment="Left" Margin="748,173,0,0" VerticalAlignment="Top" GroupName="TribeP2" Checked="rbOrcsP2_Checked"/>
-            <RadioButton  IsChecked="{Binding Path=FactionP2, Converter={StaticResource EnumToBooleanConverter}, ConverterParameter={x:Static Units:Faction.Elves},UpdateSourceTrigger=PropertyChanged}" x:Name="rbElvesP2" Content="Elves" HorizontalAlignment="Left" Margin="748,194,0,0" VerticalAlignment="Top" GroupName="TribeP2" Checked="rbElvesP2_Checked"/>
-            <TextBlock x:Name="tbkTribeDescriptionP1" HorizontalAlignment="Left" Margin="60,230,0,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top" Height="78" Width="236"/>
-            <TextBlock x:Name="tbkTribeDescriptionP2" HorizontalAlignment="Left" Margin="630,230,0,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top" Height="78" Width="236"/>
-            <RadioButton IsChecked="{Binding Path=SizeOfMap, Converter={StaticResource EnumToBooleanConverter}, ConverterParameter={x:Static Map:MapSize.small},UpdateSourceTrigger=PropertyChanged}" x:Name="rbMapSizeSmall" Content="Small" HorizontalAlignment="Left" Margin="459,608,0,0" VerticalAlignment="Top" GroupName="MapSize"/>
-            <RadioButton IsChecked="{Binding Path=SizeOfMap, Converter={StaticResource EnumToBooleanConverter}, ConverterParameter={x:Static Map:MapSize.demo},UpdateSourceTrigger=PropertyChanged}" x:Name="rbMapSizeDemo" Content="Demo" HorizontalAlignment="Left" Margin="255,608,0,0" VerticalAlignment="Top" GroupName="MapSize"/>
-            <RadioButton IsChecked="{Binding Path=SizeOfMap, Converter={StaticResource EnumToBooleanConverter}, ConverterParameter={x:Static Map:MapSize.medium},UpdateSourceTrigger=PropertyChanged}" x:Name="rbMapSizeMedium" Content="Medium" HorizontalAlignment="Left" Margin="674,608,0,0" VerticalAlignment="Top" GroupName="MapSize"/>
-            <Label x:Name="lblMapSize" Content="Size of the map" HorizontalAlignment="Left" Margin="459,556,0,0" VerticalAlignment="Top"/>
-            <Button x:Name="btnStartGame" Content="Start Game" HorizontalAlignment="Left" Margin="822,661,0,0" VerticalAlignment="Top" Width="83" IsDefault="True" Height="28" Click="btnStartGame_Click"/>
-            <Button x:Name="btnBack" Content="Back" HorizontalAlignment="Left" Margin="116,661,0,0" VerticalAlignment="Top" Width="75" IsCancel="True" Height="28" Click="btnBack_Click"/>
+            <RadioButton IsChecked="{Binding Path=FactionP1, Converter={StaticResource EnumToBooleanConverter}, ConverterParameter={x:Static Units:Faction.Elves},UpdateSourceTrigger=PropertyChanged}" x:Name="rbElvesP1" Content="Elves" HorizontalAlignment="Left" Margin="140,212,0,0" VerticalAlignment="Top" GroupName="TribeP1" Checked="rbElvesP1_Checked" FontFamily="Trajan Pro"/>
+            <RadioButton  IsChecked="{Binding Path=FactionP2, Converter={StaticResource EnumToBooleanConverter}, ConverterParameter={x:Static Units:Faction.Dwarves},UpdateSourceTrigger=PropertyChanged}" x:Name="rbDwarvesP2" Content="Dwarves" HorizontalAlignment="Left" Margin="686,164,0,0" VerticalAlignment="Top" GroupName="TribeP2" Checked="rbDwarvesP2_Checked" FontFamily="Trajan Pro"/>
+            <RadioButton  IsChecked="{Binding Path=FactionP2, Converter={StaticResource EnumToBooleanConverter}, ConverterParameter={x:Static Units:Faction.Orcs},UpdateSourceTrigger=PropertyChanged}" x:Name="rbOrcsP2" Content="Orcs" HorizontalAlignment="Left" Margin="686,188,0,0" VerticalAlignment="Top" GroupName="TribeP2" Checked="rbOrcsP2_Checked" FontFamily="Trajan Pro"/>
+            <RadioButton  IsChecked="{Binding Path=FactionP2, Converter={StaticResource EnumToBooleanConverter}, ConverterParameter={x:Static Units:Faction.Elves},UpdateSourceTrigger=PropertyChanged}" x:Name="rbElvesP2" Content="Elves" HorizontalAlignment="Left" Margin="686,212,0,0" VerticalAlignment="Top" GroupName="TribeP2" Checked="rbElvesP2_Checked" FontFamily="Trajan Pro"/>
+            <TextBlock x:Name="tbkTribeDescriptionP1" HorizontalAlignment="Left" Margin="60,250,0,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top" Height="78" Width="236" FontFamily="Trajan Pro"/>
+            <TextBlock x:Name="tbkTribeDescriptionP2" HorizontalAlignment="Left" Margin="630,250,0,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top" Height="78" Width="236" FontFamily="Trajan Pro"/>
+            <RadioButton IsChecked="{Binding Path=SizeOfMap, Converter={StaticResource EnumToBooleanConverter}, ConverterParameter={x:Static Map:MapSize.small},UpdateSourceTrigger=PropertyChanged}" x:Name="rbMapSizeSmall" Content="Small" HorizontalAlignment="Left" Margin="403,450,0,0" VerticalAlignment="Top" GroupName="MapSize" FontFamily="Trajan Pro"/>
+            <RadioButton IsChecked="{Binding Path=SizeOfMap, Converter={StaticResource EnumToBooleanConverter}, ConverterParameter={x:Static Map:MapSize.demo},UpdateSourceTrigger=PropertyChanged}" x:Name="rbMapSizeDemo" Content="Demo" HorizontalAlignment="Left" Margin="214,450,0,0" VerticalAlignment="Top" GroupName="MapSize" FontFamily="Trajan Pro"/>
+            <RadioButton IsChecked="{Binding Path=SizeOfMap, Converter={StaticResource EnumToBooleanConverter}, ConverterParameter={x:Static Map:MapSize.medium},UpdateSourceTrigger=PropertyChanged}" x:Name="rbMapSizeMedium" Content="Medium" HorizontalAlignment="Left" Margin="576,450,0,0" VerticalAlignment="Top" GroupName="MapSize" FontFamily="Trajan Pro"/>
+            <Label x:Name="lblMapSize" Content="Size of the map" HorizontalAlignment="Center" Margin="0,0,0,150" VerticalAlignment="Bottom" FontFamily="Trajan Pro"/>
+            <Button x:Name="btnStartGame" Content="Start Game" HorizontalAlignment="Right" VerticalAlignment="Bottom" Width="100" IsDefault="True" Height="33" Click="btnStartGame_Click" Margin="0,0,58,20" Foreground="White" FontFamily="Trajan Pro">
+                <Button.Background>
+                    <SolidColorBrush Color="Black" Opacity="0.7"/>
+                </Button.Background>
+            </Button>
+            <Button x:Name="btnBack" Content="Back" HorizontalAlignment="Left" Margin="69,533,0,20" Width="100" IsCancel="True" Click="btnBack_Click" Foreground="White" Height="33" FontFamily="Trajan Pro">
+                <Button.Background>
+                    <SolidColorBrush Color="Black" Opacity="0.7"/>
+                </Button.Background>
+            </Button>
             <Image x:Name="imgFactionP1" HorizontalAlignment="Left" Height="96" Margin="116,281,0,0" VerticalAlignment="Top" Width="96"/>
             <Image x:Name="imgFactionP2" HorizontalAlignment="Left" Height="96" Margin="702,281,0,0" VerticalAlignment="Top" Width="96"/>
         </Grid>

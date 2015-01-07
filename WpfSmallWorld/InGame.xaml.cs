@@ -49,11 +49,11 @@ namespace WpfSmallWorld
                     moveOffsetY = (MapView.Map.Size * 40);
                     break;
                 case 10:
-                    moveOffsetX = (MapView.Map.Size * 60);
+                    moveOffsetX = (MapView.Map.Size * 65);
                     moveOffsetY = (MapView.Map.Size * 40);
                     break;
                 case 14:
-                    moveOffsetX = (MapView.Map.Size * 58);
+                    moveOffsetX = (MapView.Map.Size * 61);
                     moveOffsetY = (MapView.Map.Size * 45);
                     break;
             }
@@ -78,7 +78,7 @@ namespace WpfSmallWorld
 
             this.DataContext = GameImpl.INSTANCE;
 
-            lblCurrentPlayer.Content = GameImpl.INSTANCE.CurrentPlayer.Nickname + "'s turn.";
+            lblCurrentPlayer.Content = GameImpl.INSTANCE.CurrentPlayer.Nickname;
             lblRemainingTurns.Content = GameImpl.INSTANCE.RemainingTurns + " turns left.";
 
             lblVictoryPointsP1.Content = GameImpl.INSTANCE.Player1.Nickname + "'s victory points : 1";
@@ -97,7 +97,7 @@ namespace WpfSmallWorld
             switch (e.PropertyName)
             {
                 case "CurrentPlayer":
-                    lblCurrentPlayer.Content = GameImpl.INSTANCE.CurrentPlayer.Nickname + "'s turn.";
+                    lblCurrentPlayer.Content = GameImpl.INSTANCE.CurrentPlayer.Nickname;
                     break;
                 case "SelectedUnit":
                     
