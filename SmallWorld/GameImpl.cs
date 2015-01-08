@@ -133,6 +133,7 @@ namespace PetitMonde
                     Unit opponentDefensiveUnit = OpponentPlayer.GetBestDefensiveUnit(xTargeted,yTargeted);
                     CurrentPlayer.Fight(unit, opponentDefensiveUnit);
                     OnPropertyChanged();
+                    ClearDeadUnits();
                     if (opponentDefensiveUnit.IsDead && OpponentPlayer.GetUnitsOnCell(xTargeted, yTargeted).Count==0)
                     {
                         // No more enemy unit on targeted cell
@@ -152,7 +153,7 @@ namespace PetitMonde
 
         public void EndTurn() {
             Player tmp = this.CurrentPlayer;
-            CurrentPlayer.clearMovingPoints();
+            CurrentPlayer.ClearMovingPoints();
             CurrentPlayer = OpponentPlayer;
             OpponentPlayer = tmp;
 
@@ -220,5 +221,16 @@ namespace PetitMonde
             
             }
         }
+
+        /// <summary>
+        /// Clears the dead units froms lists of units
+        /// </summary>
+        private void ClearDeadUnits()
+        {
+            Player1.ClearDeadUnits();
+            Player2.ClearDeadUnits();
+        }
+
+
     }
 }

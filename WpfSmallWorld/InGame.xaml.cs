@@ -244,7 +244,7 @@ namespace WpfSmallWorld
             }
             foreach (UIElement uv in listUnitGrid.Children.Cast<UIElement>().ToArray())
             {
-                if (uv is MapUnitView && ((MapUnitView)uv).Unit.IsDead)
+                if (uv is FullUnitView && ((FullUnitView)uv).Unit.IsDead)
                 {
                     mapGrid.Children.Remove(uv);
                 }

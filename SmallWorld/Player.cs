@@ -69,6 +69,11 @@ namespace PetitMonde
         /// <summary>
         /// Sets the moving points of all alive units to their default
         /// </summary>
-        void clearMovingPoints();
+        void ClearMovingPoints();
+
+        /// <summary>
+        /// Clears the dead units of this player
+        /// </summary>
+        void ClearDeadUnits();
     }
 }

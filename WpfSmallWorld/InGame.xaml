@@ -73,15 +73,15 @@
                     </Button.Background>
                 </Button>
                 <Label x:Name="lblGamePaused" Content="Game paused" Panel.ZIndex="5" Margin="0,94,0,756" VerticalAlignment="Center" Foreground="White" FontWeight="Bold" FontSize="24" Height="50" Width="192" HorizontalAlignment="Center" FontFamily="Trajan Pro" Visibility="Collapsed" />
-            </Grid>
-
-            <Grid Grid.ColumnSpan="2" Margin="187,105,370,575" Grid.Row="1">
-                <Label x:Name="lblVictory" Content="Player has won !" HorizontalContentAlignment="Center" Panel.ZIndex="5" Foreground="White" FontWeight="Bold" FontSize="72" FontFamily="Trajan Pro" Visibility="Collapsed" HorizontalAlignment="Center" VerticalAlignment="Center" Height="134" Margin="-190,0,-373,-64" Width="1463"/>
-                <Button x:Name="btnBack" Panel.ZIndex="5" Content="Quit Game" HorizontalAlignment="Center" VerticalAlignment="Top" Width="171" FontSize="25" Foreground="White" Height="60" FontFamily="Trajan Pro" Visibility="Collapsed" Margin="446,222,283,-212" Click="btnBack_Click">
+                <Button x:Name="btnBack" Panel.ZIndex="5" Content="Quit Game" Width="171" FontSize="25" Foreground="White" Height="60" FontFamily="Trajan Pro" Visibility="Collapsed" Margin="645,431,484,429" Click="btnBack_Click">
                     <Button.Background>
                         <SolidColorBrush Color="Black" Opacity="0.7"/>
                     </Button.Background>
                 </Button>
+            </Grid>
+
+            <Grid Grid.ColumnSpan="2" Margin="187,105,370,575" Grid.Row="1">
+                <Label x:Name="lblVictory" Content="Player has won !" HorizontalContentAlignment="Center" Panel.ZIndex="5" Foreground="White" FontWeight="Bold" FontSize="72" FontFamily="Trajan Pro" Visibility="Collapsed" HorizontalAlignment="Center" VerticalAlignment="Center" Height="134" Margin="-190,0,-373,-64" Width="1463"/>
             </Grid>
         </Grid>
 

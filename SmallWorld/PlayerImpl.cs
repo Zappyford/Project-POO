@@ -62,7 +62,7 @@ namespace PetitMonde
 
         bool Player.HasLost
         {
-            get { return Units.Count == 0; }
+            get { return Units.Where(u => !u.IsDead).Count() == 0; }
         }
 
         public int Score
@@ -83,12 +83,18 @@ namespace PetitMonde
         }
 
 
-        public void clearMovingPoints()
+        public void ClearMovingPoints()
         {
             foreach (Unit u in Units)
             {
                 u.clearMovingPoints();
             }
+        }
+
+
+        public void ClearDeadUnits()
+        {
+            Units = Units.Where(u => !u.IsDead).ToList();
         }
     }
 

@@ -24,10 +24,10 @@ namespace WpfSmallWorld
     /// </summary>
     public partial class FullUnitView : UserControl
     {
-        private Unit Unit
+        public Unit Unit
         {
             get;
-            set;
+            private set;
         }
 
         public FullUnitView(Unit u)
