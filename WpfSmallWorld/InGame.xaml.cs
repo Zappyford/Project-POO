@@ -123,7 +123,8 @@ namespace WpfSmallWorld
         private void updateListUnits()
         {
             listUnitGrid.Children.Clear();
-            foreach (Unit u in GameImpl.INSTANCE.CurrentPlayer.Units.Where(u => u.X == GameImpl.INSTANCE.XSelected && u.Y == GameImpl.INSTANCE.YSelected))
+            List<Unit> all = GameImpl.INSTANCE.Player1.Units.Concat(GameImpl.INSTANCE.Player2.Units).ToList();
+            foreach (Unit u in all.Where(u => u.X == GameImpl.INSTANCE.XSelected && u.Y == GameImpl.INSTANCE.YSelected))
             {
                 listUnitGrid.Children.Add(new FullUnitView(u));
             }
@@ -165,8 +166,6 @@ namespace WpfSmallWorld
         /// </summary>
         private void toggleMenu(){
             IsPaused = !IsPaused;
-            MenuRectangle.Height = WindowInGame.ActualHeight;
-            MenuRectangle.Width = WindowInGame.ActualWidth;
             MenuRectangle.IsEnabled = !MenuRectangle.IsEnabled;
             MenuRectangle.Visibility = MenuRectangle.Visibility == Visibility.Visible ? Visibility.Collapsed : Visibility.Visible;
             btnContinue.Visibility = btnContinue.Visibility == Visibility.Visible ? Visibility.Collapsed : Visibility.Visible;
