@@ -78,6 +78,7 @@ namespace WpfSmallWorld
             this.bgPath.Fill = (Brush)grid.Resources[brushResourceNameFromCellType[(int)c.getType()]];
             X = x;
             Y = y;
+            //lblCoords.Content = x + "," + y;
         }
 
         static CellView()
