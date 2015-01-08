@@ -61,10 +61,5 @@ namespace WpfSmallWorld
             update(this, null); 
             this.imgUnit.Source = Util.getImageResourceFromFaction(Unit.Faction);
         }
-
-
-
-
-
     }
 }
