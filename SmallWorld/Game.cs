@@ -110,5 +110,13 @@ namespace PetitMonde
         /// </summary>
         /// <param name="path">The path</param>
         void save(string path);
+
+        /// <summary>
+        /// Gets the player with the most victory points, or null if equality
+        /// </summary>
+        Player Winner
+        {
+            get;
+        }
     }
 }

@@ -97,6 +97,7 @@ namespace WpfSmallWorld
             switch (e.PropertyName)
             {
                 case "CurrentPlayer":
+                    TryEndGame();
                     lblCurrentPlayer.Content = GameImpl.INSTANCE.CurrentPlayer.Nickname;
                     break;
                 case "SelectedUnit":
@@ -108,6 +109,7 @@ namespace WpfSmallWorld
                 case "MoveUnit":
                     deleteDeadUnits();
                     updateListUnits();
+                    TryEndGame();
                     break;
                 case "XSelected":
                 case "YSelected":
@@ -141,6 +143,25 @@ namespace WpfSmallWorld
                 GameImpl.INSTANCE.EndTurn();
                 lblVictoryPointsP1.Content = GameImpl.INSTANCE.Player1.Nickname + "'s victory points : " + GameImpl.INSTANCE.Player1.Score;
                 lblVictoryPointsP2.Content = GameImpl.INSTANCE.Player2.Nickname + "'s victory points : " + GameImpl.INSTANCE.Player2.Score;
+        }
+
+        /// <summary>
+        /// Ends the game if a player has won
+        /// </summary>
+        private void TryEndGame()
+        {
+            if (GameImpl.INSTANCE.GameOver)
+            {
+                IsPaused = true;
+                btnBack.Visibility = System.Windows.Visibility.Visible;
+                Player Winner = GameImpl.INSTANCE.Winner;
+                if (Winner != null)
+                    lblVictory.Content = Winner.Nickname + " won !";
+                else
+                    lblVictory.Content = "It's a tie !";
+                lblVictory.Visibility = System.Windows.Visibility.Visible;
+            }
+
         }
 
         /// <summary>
@@ -229,6 +250,14 @@ namespace WpfSmallWorld
                     mapGrid.Children.Remove(uv);
                 }
             }
+        }
+
+
+        private void btnBack_Click(object sender, RoutedEventArgs e)
+        {
+            MainWindow newWindow = new MainWindow();
+            newWindow.Show();
+            this.Close();
         }
 
     }

@@ -148,10 +148,6 @@ namespace PetitMonde
                     unit.Move(xTargeted, yTargeted);
                 }
             }
-            else
-            {
-                /// On tente de déplacer l'unité de l'ennemi
-            }
         }
 
         public void EndTurn() {
@@ -203,6 +199,26 @@ namespace PetitMonde
             GameImpl.INSTANCE.CurrentPlayer = g.CurrentPlayer;
             GameImpl.INSTANCE.XSelected = g.XSelected;
             GameImpl.INSTANCE.YSelected = g.YSelected;
+        }
+
+
+        public Player Winner
+        {
+            get {
+                if (Player1.Score > Player2.Score)
+                {
+                    return Player1;
+                }
+                else if (Player1.Score < Player2.Score)
+                {
+                    return Player2;
+                }
+                else
+                {
+                    return null;
+                }
+            
+            }
         }
     }
 }

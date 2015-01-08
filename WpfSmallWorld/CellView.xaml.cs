@@ -1,7 +1,9 @@
 ﻿using PetitMonde;
+using PetitMonde.Map;
 using PetitMonde.Map.Cells;
 using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -32,10 +34,21 @@ namespace WpfSmallWorld
             {
                 if (value)
                 {
+                    CellView selectedCell;
+                    try
+                    {
+                        if (MapView.cellViews.TryGetValue(GameImpl.INSTANCE.Map.getIndexFromCoodinates(GameImpl.INSTANCE.XSelected, GameImpl.INSTANCE.YSelected), out  selectedCell))
+                            selectedCell.IsSelected = false;
+                    }
+                    catch(InvalidCellException e)
+                    {
+                        // No Cell previously selected
+                    }
                     GameImpl.INSTANCE.XSelected = X;
                     GameImpl.INSTANCE.YSelected = Y;
                     this.bgPath.Opacity = 0.4;
                     GameImpl.INSTANCE.SelectedUnit = GameImpl.INSTANCE.CurrentPlayer.Units.Where(u => u.X == this.X && u.Y == this.Y).FirstOrDefault();
+                    
                 }
                 else
                 {
@@ -51,6 +64,7 @@ namespace WpfSmallWorld
             get;
             private set;
         }
+
         public int Y
         {
             get;
@@ -64,7 +78,6 @@ namespace WpfSmallWorld
             this.bgPath.Fill = (Brush)grid.Resources[brushResourceNameFromCellType[(int)c.getType()]];
             X = x;
             Y = y;
-            
         }
 
         static CellView()
@@ -74,7 +87,9 @@ namespace WpfSmallWorld
             brushResourceNameFromCellType[(int)CellType.Plains] = "BrushPlainCell"; 
             brushResourceNameFromCellType[(int)CellType.Forest] = "BrushForestCell";
             brushResourceNameFromCellType[(int)CellType.Mountain] = "BrushMountainCell";
+           
         }
+
 
         private void OnCellViewLoaded(object sender, RoutedEventArgs e)
         {
@@ -85,9 +100,6 @@ namespace WpfSmallWorld
             trGrp.Children.Add(trTns);
 
             grid.RenderTransform = trGrp;
-
-     //       currentState = TileViewState.Idle;
-       //     SetGround();
         }
 
         private void hexagonPath_MouseEnter(object sender, MouseEventArgs e)
@@ -111,7 +123,7 @@ namespace WpfSmallWorld
             if (GameImpl.INSTANCE.SelectedUnit != null)
             {
                 GameImpl.INSTANCE.MoveUnit(GameImpl.INSTANCE.SelectedUnit, this.X, this.Y);
-                //this.IsSelected = true;
+                this.IsSelected = true;
             }
         }
     }
