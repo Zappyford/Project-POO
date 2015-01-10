@@ -1,7 +1,9 @@
 ﻿<Application x:Class="WpfSmallWorld.App"
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="clr-namespace:WpfSmallWorld"
              StartupUri="MainWindow.xaml">
+    
     <Application.Resources>
 
         <BitmapImage x:Key="backgroundImage" CreateOptions="IgnoreImageCache" CacheOption="OnLoad" UriSource="Resources/smallworld_boxfront.jpg"/>
@@ -13,5 +15,8 @@
         <BitmapImage x:Key="Boot"  CreateOptions="IgnoreImageCache" CacheOption="OnLoad" UriSource="Resources/boot.png" />
         <BitmapImage x:Key="Sword"  CreateOptions="IgnoreImageCache" CacheOption="OnLoad" UriSource="Resources/sword.png" />
         <BitmapImage x:Key="Shield"  CreateOptions="IgnoreImageCache" CacheOption="OnLoad" UriSource="Resources/shield.png" />
+        <local:BoolVisibilityConverter x:Key="BoolVisibilityConverter" />
+        <local:EnumBooleanConverter x:Key="EnumToBooleanConverter" />
+
     </Application.Resources>
 </Application>

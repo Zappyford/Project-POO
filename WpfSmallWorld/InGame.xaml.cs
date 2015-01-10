@@ -5,6 +5,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Linq;
+using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
@@ -26,10 +27,17 @@ namespace WpfSmallWorld
         List<MapUnitView> unitViews = new List<MapUnitView>();
         MapView mapView;
 
+
+
         /// <summary>
         /// Gets or sets the IsPaused field
         /// </summary>
-        bool IsPaused { get; set; }
+        bool IsPaused
+        {
+            get;
+            set;
+        }
+
         private float moveOffsetX, moveOffsetY;
 
         /// <summary>
@@ -57,7 +65,7 @@ namespace WpfSmallWorld
                     moveOffsetY = (MapView.Map.Size * 45);
                     break;
             }
-            
+
 
             mapGrid.Margin = new Thickness(-moveOffsetX, -moveOffsetY, 0, 0);
 
@@ -76,7 +84,7 @@ namespace WpfSmallWorld
             }
 
 
-            this.DataContext = GameImpl.INSTANCE;
+            this.DataContext = this;
 
             lblCurrentPlayer.Content = GameImpl.INSTANCE.CurrentPlayer.Nickname;
             lblRemainingTurns.Content = GameImpl.INSTANCE.RemainingTurns + " turns left.";
@@ -101,7 +109,7 @@ namespace WpfSmallWorld
                     lblCurrentPlayer.Content = GameImpl.INSTANCE.CurrentPlayer.Nickname;
                     break;
                 case "SelectedUnit":
-                    
+
                     break;
                 case "RemainingTurns":
                     lblRemainingTurns.Content = GameImpl.INSTANCE.RemainingTurns + " turns left.";
@@ -140,10 +148,10 @@ namespace WpfSmallWorld
         /// <param name="e"></param>
         private void btnEndTurn_Click(object sender, RoutedEventArgs e)
         {
-            if(!IsPaused)
+            if (!IsPaused)
                 GameImpl.INSTANCE.EndTurn();
-                lblVictoryPointsP1.Content = GameImpl.INSTANCE.Player1.Nickname + "'s victory points : " + GameImpl.INSTANCE.Player1.Score;
-                lblVictoryPointsP2.Content = GameImpl.INSTANCE.Player2.Nickname + "'s victory points : " + GameImpl.INSTANCE.Player2.Score;
+            lblVictoryPointsP1.Content = GameImpl.INSTANCE.Player1.Nickname + "'s victory points : " + GameImpl.INSTANCE.Player1.Score;
+            lblVictoryPointsP2.Content = GameImpl.INSTANCE.Player2.Nickname + "'s victory points : " + GameImpl.INSTANCE.Player2.Score;
         }
 
         /// <summary>
@@ -185,7 +193,8 @@ namespace WpfSmallWorld
         /// <summary>
         /// Toggles the menu
         /// </summary>
-        private void toggleMenu(){
+        private void toggleMenu()
+        {
             IsPaused = !IsPaused;
             MenuRectangle.IsEnabled = !MenuRectangle.IsEnabled;
             MenuRectangle.Visibility = MenuRectangle.Visibility == Visibility.Visible ? Visibility.Collapsed : Visibility.Visible;
@@ -236,7 +245,7 @@ namespace WpfSmallWorld
         public void deleteDeadUnits()
         {
             foreach (UIElement uv in mapGrid.Children.Cast<UIElement>().ToArray())
-            { 
+            {
                 if (uv is MapUnitView && ((MapUnitView)uv).Unit.IsDead)
                 {
                     mapGrid.Children.Remove(uv);
@@ -258,6 +267,7 @@ namespace WpfSmallWorld
             newWindow.Show();
             this.Close();
         }
+
 
     }
 }

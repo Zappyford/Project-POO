@@ -10,6 +10,9 @@
     </Window.Background>
     <Viewbox>
         <Grid x:Name="mainGrid">
+            <Grid.Resources>
+                <local:BoolVisibilityConverter x:Key="BoolVisibilityConverter" />
+            </Grid.Resources>
             <Grid.RowDefinitions>
                 <RowDefinition Height="70px"/>
                 <RowDefinition Height="750px"/>
