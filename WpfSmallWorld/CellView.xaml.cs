@@ -40,7 +40,7 @@ namespace WpfSmallWorld
                         if (MapView.cellViews.TryGetValue(GameImpl.INSTANCE.Map.getIndexFromCoodinates(GameImpl.INSTANCE.XSelected, GameImpl.INSTANCE.YSelected), out  selectedCell))
                             selectedCell.IsSelected = false;
                     }
-                    catch(InvalidCellException e)
+                    catch(InvalidCellException)
                     {
                         // No Cell previously selected
                     }

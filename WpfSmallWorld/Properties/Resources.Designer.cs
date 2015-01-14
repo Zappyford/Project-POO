@@ -138,6 +138,15 @@ namespace WpfSmallWorld.Properties {
         }
         
         /// <summary>
+        ///   Recherche une chaîne localisée semblable à Trajan_Pro_Regular.ttf.
+        /// </summary>
+        public static string FontName {
+            get {
+                return ResourceManager.GetString("FontName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
         /// </summary>
         public static System.Drawing.Bitmap foret {

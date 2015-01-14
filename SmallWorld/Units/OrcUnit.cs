@@ -22,5 +22,10 @@ namespace PetitMonde.Units
                     return 0;
             }
         }
+
+        public override float ChanceOfRetreat
+        {
+            get { return 0; }
+        }
     }
 }

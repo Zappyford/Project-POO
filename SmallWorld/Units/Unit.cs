@@ -145,5 +145,13 @@ namespace PetitMonde.Units
         /// Sets the unit's moving points to their default
         /// </summary>
         void clearMovingPoints();
+
+        /// <summary>
+        /// Gets the chance of retreat of this unit
+        /// </summary>
+        float ChanceOfRetreat
+        {
+            get;
+        }
     }
 }

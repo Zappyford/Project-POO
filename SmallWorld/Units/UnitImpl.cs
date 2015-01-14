@@ -218,9 +218,27 @@ namespace PetitMonde.Units
             }
 
             if (this.IsDead)
-                ((UnitImpl)unit).UnitsKilled++;
+            {
+                if (rand.NextDouble() <= this.ChanceOfRetreat)
+                {
+                    this.Health = 1;
+                }
+                else
+                {
+                    ((UnitImpl)unit).UnitsKilled++;
+                }
+            }
             else if (unit.IsDead)
-                this.UnitsKilled++;
+            {
+                if (rand.NextDouble() <= unit.ChanceOfRetreat)
+                {
+                    unit.Health = 1;
+                }
+                else
+                {
+                    this.UnitsKilled++;
+                }
+            }
 
 
         }
@@ -247,6 +265,12 @@ namespace PetitMonde.Units
 
         #endregion
 
- 
+
+
+
+        public abstract float ChanceOfRetreat
+        {
+            get;
+        }
     }
 }

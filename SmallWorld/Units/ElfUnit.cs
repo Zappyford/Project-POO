@@ -13,5 +13,10 @@ namespace PetitMonde
         {
             Faction = Units.Faction.Elves;
         }
+
+        public override float ChanceOfRetreat
+        {
+            get { return .5f; }
+        }
     }
 }

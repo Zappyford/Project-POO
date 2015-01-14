@@ -20,5 +20,10 @@ namespace PetitMonde.Units
 
             return base.CanMove(x,y) || (targetedCell.getType() == CellType.Mountain && cell.getType() == CellType.Mountain);
         }
+
+        public override float ChanceOfRetreat
+        {
+            get { return 0; }
+        }
     }
 }
