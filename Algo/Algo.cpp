@@ -2,7 +2,7 @@
 #include <stdlib.h> 
 #include <time.h> 
 
-int* MapBuilderC::BuildMap(const int size, const int numberOfCellTypes) { 
+int* MapBuilderC::BuildMap(const int size, const int numberOfCellTypes) const { 
 	int numberOfCells = size*size;
 	int* cells = new int[numberOfCells];
 
@@ -34,6 +34,16 @@ int* MapBuilderC::BuildMap(const int size, const int numberOfCellTypes) {
 	}
 
 	return cells;
+}
+
+void MapBuilderC::placePlayer1(const int sizeOfMap, int &x, int &y) const{
+	x = (int)(sizeOfMap*0.5);
+	y = (int)(sizeOfMap*0.2);
+}
+
+void MapBuilderC::placePlayer2(const int sizeOfMap, int &x, int &y) const{
+	x = (int)(sizeOfMap*0.5);
+	y = (int)(sizeOfMap*0.81);
 }
 
 MapBuilderC* MapBuilderC_new() { return new MapBuilderC(); }

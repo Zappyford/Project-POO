@@ -179,6 +179,14 @@ namespace PetitMonde
 
         public void save(string path)
         {
+            // Create folder if not exists
+            string directory = Path.GetDirectoryName(path);
+            if (!System.IO.Directory.Exists(directory))
+            {
+                Directory.CreateDirectory(directory);
+            }
+
+            // Save file
             using (Stream FileStream = File.Create(path)) { 
                 BinaryFormatter serializer = new BinaryFormatter();
                 serializer.Serialize(FileStream, this);
