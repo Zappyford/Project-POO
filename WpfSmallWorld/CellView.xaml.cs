@@ -24,6 +24,14 @@ namespace WpfSmallWorld
     /// </summary>
     public partial class CellView : UserControl
     {
+        public bool SelectedUnitCanMoveTo
+        {
+            get
+            {
+               return GameImpl.INSTANCE.SelectedUnit != null ? GameImpl.INSTANCE.SelectedUnit.CanMove(this.X, this.Y) : false;
+            }
+        }
+
         public bool IsSelected
         {
             get
@@ -78,7 +86,25 @@ namespace WpfSmallWorld
             this.bgPath.Fill = (Brush)grid.Resources[brushResourceNameFromCellType[(int)c.getType()]];
             X = x;
             Y = y;
+            GameImpl.INSTANCE.PropertyChanged += new PropertyChangedEventHandler(update);
             //lblCoords.Content = x + "," + y;
+        }
+
+        private void update(object sender, PropertyChangedEventArgs e)
+        {
+            if (e.PropertyName == "SelectedUnit")
+            {
+                if (this.SelectedUnitCanMoveTo)
+                {
+                    // show green
+                    canMovePath.Visibility = System.Windows.Visibility.Visible;
+                }
+                else
+                {
+                    // don't show green
+                    canMovePath.Visibility = System.Windows.Visibility.Collapsed;
+                }
+            }
         }
 
         static CellView()

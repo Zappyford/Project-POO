@@ -1,5 +1,6 @@
 ﻿using PetitMonde.Map.Cells;
 using System;
+using System.Collections.Generic;
 using System.ComponentModel;
 using System.Runtime.CompilerServices;
 
@@ -271,6 +272,28 @@ namespace PetitMonde.Units
         public abstract float ChanceOfRetreat
         {
             get;
+        }
+
+
+        public List<Coords> CanMoveTo
+        {
+            get {
+                List<Coords> res = new List<Coords>();
+                for (int x = 0; x < GameImpl.INSTANCE.Map.Size; x++)
+                {
+                    for (int y = 0; x < GameImpl.INSTANCE.Map.Size; y++)
+                    {
+                        if (this.CanMove(x, y))
+                        {
+                            Coords c;
+                            c.X=x;
+                            c.Y=y;
+                            res.Add(c);
+                        }
+                    }
+                }
+                return res;
+            }
         }
     }
 }

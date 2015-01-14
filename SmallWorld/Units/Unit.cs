@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.ComponentModel;
 namespace PetitMonde.Units
 {
@@ -150,6 +151,14 @@ namespace PetitMonde.Units
         /// Gets the chance of retreat of this unit
         /// </summary>
         float ChanceOfRetreat
+        {
+            get;
+        }
+
+        /// <summary>
+        /// Gets the list of cells the unit can move to
+        /// </summary>
+        List<Coords> CanMoveTo
         {
             get;
         }

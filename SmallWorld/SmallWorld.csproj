@@ -40,6 +40,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Coords.cs" />
     <Compile Include="Map\MapSize.cs" />
     <Compile Include="Map\Cells\CellFactory.cs" />
     <Compile Include="Game.cs" />
