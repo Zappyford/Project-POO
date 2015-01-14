@@ -34,7 +34,7 @@
                 <Label x:Name="lblVictoryPointsP2" Content="Player2's Victory Points :" FontSize="25" Foreground="White" HorizontalAlignment="Right" Margin="0,21,57,0" FontFamily="/WpfSmallWorld;component/Resources/#Trajan Pro" Height="46" VerticalAlignment="Top" FontWeight="Bold"/>
             </Grid>
             <!--list of unit Grid-->
-            <ScrollViewer Grid.Row="1" Grid.Column="1" IsHitTestVisible="True">
+            <ScrollViewer Grid.Row="1" Grid.Column="1" IsHitTestVisible="True" ScrollViewer.HorizontalScrollBarVisibility="Hidden" ScrollViewer.VerticalScrollBarVisibility="Visible" >
                 <StackPanel x:Name="listUnitGrid" CanHorizontallyScroll="True" IsHitTestVisible="True" CanVerticallyScroll="True" Margin="0,0,10,0"/>
             </ScrollViewer>
             <!-- Map Grid -->
@@ -46,11 +46,11 @@
                 <Grid.Background>
                     <SolidColorBrush Color="Black" Opacity="0.7"/>
                 </Grid.Background>
-                <Grid x:Name="mapGrid" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Column="1" Margin="392.664,375,437,375" />
+                <Grid x:Name="mapGrid" HorizontalAlignment="Center" Grid.Column="1" Margin="392.664,375,437,375" />
             </Grid>
             <!-- Button turn grid-->
             <Grid Grid.Row="3" Grid.Column="2">
-                <Button x:Name="btnEndTurn" Content="End turn" HorizontalAlignment="Center" Margin="0" VerticalAlignment="Center" Width="160" Click="btnEndTurn_Click" FontSize="25" Foreground="White" FontFamily="/WpfSmallWorld;component/Resources/#Trajan Pro" Height="44">
+                <Button x:Name="btnEndTurn" Content="End turn" Margin="0" Width="160" Click="btnEndTurn_Click" FontSize="25" VerticalAlignment="Center">
                     <Button.Background>
                         <SolidColorBrush Color="Black" Opacity="0.7"/>
                     </Button.Background>

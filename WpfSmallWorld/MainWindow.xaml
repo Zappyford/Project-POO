@@ -10,17 +10,17 @@
     </Window.Background>
     <Viewbox>
         <Grid x:Name="gridMainWindow" HorizontalAlignment="Center" VerticalAlignment="Center">
-            <Button x:Name="btnNewGame" Content="Start Game" HorizontalAlignment="Center" Margin="462,140,462,0" VerticalAlignment="Top" Width="100" RenderTransformOrigin="0.5,0.5" IsDefault="True" Height="40" Click="btnNewGame_Click" Foreground="White" FontFamily="/WpfSmallWorld;component/Resources/#Trajan Pro">
+            <Button x:Name="btnNewGame" Content="Start Game" HorizontalAlignment="Center" Margin="462,140,462,0" VerticalAlignment="Top"  RenderTransformOrigin="0.5,0.5" IsDefault="True" Click="btnNewGame_Click" >
                 <Button.Background>
                     <SolidColorBrush Color="Black" Opacity="0.7"/>
                 </Button.Background>
             </Button>
-            <Button x:Name="btnLoadGame" Content="Load Game" HorizontalAlignment="Center" Margin="462,240,462,0" VerticalAlignment="Top" Width="100" Height="40" Click="btnLoadGame_Click" Foreground="White" FontFamily="/WpfSmallWorld;component/Resources/#Trajan Pro">
+            <Button x:Name="btnLoadGame" Content="Load Game"  Margin="462,240,462,0"  Click="btnLoadGame_Click"  >
                 <Button.Background>
                     <SolidColorBrush Color="Black" Opacity="0.7"/>
                 </Button.Background>
             </Button>
-            <Button x:Name="btnQuit" Content="Quit" Margin="462,340,462,0" VerticalAlignment="Top" Click="btnQuit_Click" Height="40" HorizontalAlignment="Center" Width="100" Foreground="White" FontFamily="/WpfSmallWorld;component/Resources/#Trajan Pro">
+            <Button x:Name="btnQuit" Content="Quit" Margin="462,340,462,0" Click="btnQuit_Click">
                 <Button.Background>
                     <SolidColorBrush Color="Black" Opacity="0.7"/>
                 </Button.Background>
