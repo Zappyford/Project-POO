@@ -196,6 +196,7 @@ namespace WpfSmallWorld
         private void toggleMenu()
         {
             IsPaused = !IsPaused;
+            main.Stretch = main.Stretch == Stretch.Uniform ? Stretch.UniformToFill : Stretch.Uniform;
             MenuRectangle.IsEnabled = !MenuRectangle.IsEnabled;
             MenuRectangle.Visibility = MenuRectangle.Visibility == Visibility.Visible ? Visibility.Collapsed : Visibility.Visible;
             btnContinue.Visibility = btnContinue.Visibility == Visibility.Visible ? Visibility.Collapsed : Visibility.Visible;
@@ -212,6 +213,7 @@ namespace WpfSmallWorld
         private void btnContinue_Click(object sender, RoutedEventArgs e)
         {
             toggleMenu();
+            main.Stretch = Stretch.Uniform;
         }
 
         /// <summary>

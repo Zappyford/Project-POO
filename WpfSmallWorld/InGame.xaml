@@ -8,7 +8,7 @@
     <Window.Background>
         <ImageBrush ImageSource="Resources/parchemin5.jpg"/>
     </Window.Background>
-    <Viewbox>
+    <Viewbox x:Name="main">
         <Grid x:Name="mainGrid">
             <Grid.Resources>
                 <local:BoolVisibilityConverter x:Key="BoolVisibilityConverter" />
@@ -59,7 +59,7 @@
             </Grid>
             <!-- Pause Menu -->
             <Grid x:Name="pauseMenu" Grid.RowSpan="3" Grid.ColumnSpan="2">
-                <Rectangle x:Name="MenuRectangle" Panel.ZIndex="4" Fill="Black" Stroke="Black" Margin="0,0,0,0" IsEnabled="False" Opacity="0.9" Width="1457" Height="920" HorizontalAlignment="Center" VerticalAlignment="Center" Visibility="Collapsed"/>
+                <Rectangle x:Name="MenuRectangle" Panel.ZIndex="4" Fill="Black" Stroke="Black" Margin="0,0,0,0" IsEnabled="False" Opacity="0.95" Width="1457" Height="920" HorizontalAlignment="Center" VerticalAlignment="Center" Visibility="Collapsed"/>
                 <Button x:Name="btnContinue" Panel.ZIndex="5" Content="Continue" Click="btnContinue_Click" HorizontalAlignment="Center"  Margin="0,259,0,0" VerticalAlignment="Top" Width="171" FontSize="25" Foreground="White" Height="60" FontFamily="/WpfSmallWorld;component/Resources/#Trajan Pro" Visibility="Collapsed">
                     <Button.Background>
                         <SolidColorBrush Color="Black" Opacity="0.7"/>
