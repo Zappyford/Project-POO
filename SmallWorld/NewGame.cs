@@ -4,6 +4,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using Wrapper;
 
 namespace PetitMonde
 {
@@ -81,11 +82,23 @@ namespace PetitMonde
             }
 
             int sizeOfMap = (int)Math.Sqrt(GameImpl.INSTANCE.Map.mapCells.Length);
-            int defaultXP1 = (int) (sizeOfMap*0.5);
-            int defaultYP1 = (int) (sizeOfMap*0.2);
 
-            int defaultXP2 = (int) (sizeOfMap*0.5);
-            int defaultYP2 = (int) (sizeOfMap*0.9);
+            WrapperMapBuilder mBuilder = new WrapperMapBuilder();
+            int defaultXP1;
+            int defaultYP1;
+            int defaultXP2;
+            int defaultYP2;
+            unsafe
+            {
+                mBuilder.placePlayer1(sizeOfMap, &defaultXP1, &defaultYP1);
+                mBuilder.placePlayer2(sizeOfMap, &defaultXP2, &defaultYP2);
+            }
+
+            //int defaultXP1 = (int) (sizeOfMap*0.5);
+            //int defaultYP1 = (int) (sizeOfMap*0.2);
+
+            //int defaultXP2 = (int) (sizeOfMap*0.5);
+            //int defaultYP2 = (int) (sizeOfMap*0.9);
 
             GameImpl.INSTANCE.Player1 = new PlayerImpl(tribeP1, defaultXP1, defaultYP1, mapbuilder.NumberOfUnits, dataContext.NicknameP1 != null && dataContext.NicknameP1.Length > 1 ? dataContext.NicknameP1 : "Player 1");
             GameImpl.INSTANCE.Player2 = new PlayerImpl(tribeP2, defaultXP1, defaultYP2, mapbuilder.NumberOfUnits, dataContext.NicknameP2 != null && dataContext.NicknameP2.Length > 1 ? dataContext.NicknameP2 : "Player 2");
