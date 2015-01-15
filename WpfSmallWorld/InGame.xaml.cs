@@ -89,8 +89,12 @@ namespace WpfSmallWorld
             lblCurrentPlayer.Content = GameImpl.INSTANCE.CurrentPlayer.Nickname;
             lblRemainingTurns.Content = GameImpl.INSTANCE.RemainingTurns + " turns left.";
 
-            lblVictoryPointsP1.Content = GameImpl.INSTANCE.Player1.Nickname + "'s victory points : 1";
-            lblVictoryPointsP2.Content = GameImpl.INSTANCE.Player2.Nickname + "'s victory points : 1";
+            lblP1.Content = GameImpl.INSTANCE.Player1.Nickname;
+            lblP2.Content = GameImpl.INSTANCE.Player2.Nickname;
+            lblTribeP1.Content = GameImpl.INSTANCE.Player1.Tribe.FactionName;
+            lblTribeP2.Content = GameImpl.INSTANCE.Player2.Tribe.FactionName;
+            lblVictoryPointsP1.Content = "Victory points : 1";
+            lblVictoryPointsP2.Content = "Victory points : 1";
 
             GameImpl.INSTANCE.PropertyChanged += new PropertyChangedEventHandler(update); // Souscription au OnPropertyChanged
         }
@@ -147,8 +151,8 @@ namespace WpfSmallWorld
         {
             if (!IsPaused)
                 GameImpl.INSTANCE.EndTurn();
-            lblVictoryPointsP1.Content = GameImpl.INSTANCE.Player1.Nickname + "'s victory points : " + GameImpl.INSTANCE.Player1.Score;
-            lblVictoryPointsP2.Content = GameImpl.INSTANCE.Player2.Nickname + "'s victory points : " + GameImpl.INSTANCE.Player2.Score;
+            lblVictoryPointsP1.Content = "Victory points : " + GameImpl.INSTANCE.Player1.Score;
+            lblVictoryPointsP2.Content = "Victory points : " + GameImpl.INSTANCE.Player2.Score;
         }
 
         /// <summary>

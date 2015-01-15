@@ -75,5 +75,13 @@ namespace PetitMonde
         /// Clears the dead units of this player
         /// </summary>
         void ClearDeadUnits();
+
+        /// <summary>
+        /// Gets the Tribe Property
+        /// </summary>
+        Tribe Tribe
+        {
+            get;
+        }
     }
 }

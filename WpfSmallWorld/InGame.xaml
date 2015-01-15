@@ -19,26 +19,37 @@
                 <RowDefinition Height="100px"/>
             </Grid.RowDefinitions>
             <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="400px" />
                 <ColumnDefinition Width="900px" />
                 <ColumnDefinition Width="400px"/>
             </Grid.ColumnDefinitions>
 
-            <Grid>
-                <Label x:Name="lblYourTurn" Content="It's your turn :" HorizontalAlignment="Left" VerticalAlignment="Top" FontFamily="/WpfSmallWorld;component/Resources/#Trajan Pro" FontSize="30" Foreground="White" Margin="10,10,0,0" FontWeight="Bold" />
-                <Label x:Name="lblCurrentPlayer" Content="Player1" HorizontalAlignment="Left" Margin="287,10,0,0" VerticalAlignment="Top" Height="48" Width="458" FontSize="30" Foreground="White" FontFamily="/WpfSmallWorld;component/Resources/#Trajan Pro" FontWeight="Bold"/>
-            </Grid>
-            <Label x:Name="lblRemainingTurns" Content="Number of turns left" HorizontalAlignment="Left" Margin="37,14,0,0" VerticalAlignment="Top" Foreground="#FF910000" FontSize="25" FontFamily="/WpfSmallWorld;component/Resources/#Trajan Pro" FontWeight="Bold" Grid.Column="1"/>
+
             <!-- Victory Points Grid-->
-            <Grid Grid.Row="2" Grid.Column="0">
-                <Label x:Name="lblVictoryPointsP1" Content="Player1's Victory Points :" FontSize="25" Foreground="White" HorizontalAlignment="Left" FontFamily="/WpfSmallWorld;component/Resources/#Trajan Pro" Margin="10,21,0,33" FontWeight="Bold"/>
-                <Label x:Name="lblVictoryPointsP2" Content="Player2's Victory Points :" FontSize="25" Foreground="White" HorizontalAlignment="Right" Margin="0,21,57,0" FontFamily="/WpfSmallWorld;component/Resources/#Trajan Pro" Height="46" VerticalAlignment="Top" FontWeight="Bold"/>
+            <Grid Grid.Row="1" Grid.Column="0" >
+                <Rectangle Height="217" VerticalAlignment="Top" Margin="0" Width="400" HorizontalAlignment="Left" >
+                    <Rectangle.Fill>
+                        <ImageBrush ImageSource="Resources/menu_pattern.jpg" Stretch="Uniform"/>
+                    </Rectangle.Fill>
+                </Rectangle>
+                <Label x:Name="lblP1" Content="Player 1" FontSize="25" Foreground="#FF910000" HorizontalAlignment="Left" FontFamily="/WpfSmallWorld;component/Resources/#Trajan Pro" FontWeight="Bold" Margin="95,41,0,0" VerticalAlignment="Top"/>
+                <Label x:Name="lblVictoryPointsP1" Content="Victory Points :" FontSize="20" Foreground="#FF910000" HorizontalAlignment="Left" FontFamily="/WpfSmallWorld;component/Resources/#Trajan Pro" Margin="95,136,0,569" FontWeight="Bold"/>
+                <Label x:Name="lblTribeP1" Content="Tribe :" FontSize="25" Foreground="#FF910000" HorizontalAlignment="Left" FontFamily="/WpfSmallWorld;component/Resources/#Trajan Pro" Margin="95,86,0,619" FontWeight="Bold"/>
+                <Rectangle Height="217" VerticalAlignment="Top" Margin="0,222,0,0" Width="400" HorizontalAlignment="Left" >
+                    <Rectangle.Fill>
+                        <ImageBrush ImageSource="Resources/menu_pattern.jpg" Stretch="Uniform"/>
+                    </Rectangle.Fill>
+                </Rectangle>
+                <Label x:Name="lblP2" Content="Player 2" FontSize="25" Foreground="#FF910000" HorizontalAlignment="Left" FontFamily="/WpfSmallWorld;component/Resources/#Trajan Pro" FontWeight="Bold" Margin="95,277,0,0" VerticalAlignment="Top"/>
+                <Label x:Name="lblTribeP2" Content="Tribe :" FontSize="25" Foreground="#FF910000" HorizontalAlignment="Left" FontFamily="/WpfSmallWorld;component/Resources/#Trajan Pro" Margin="95,322,0,387" FontWeight="Bold"/>
+                <Label x:Name="lblVictoryPointsP2" Content="Victory Points :" FontSize="20" Foreground="#FF910000" Margin="95,368,0,0" FontFamily="/WpfSmallWorld;component/Resources/#Trajan Pro" Height="32" VerticalAlignment="Top" FontWeight="Bold" HorizontalAlignment="Left" Width="217"/>
             </Grid>
             <!--list of unit Grid-->
-            <ScrollViewer Grid.Row="1" Grid.Column="1" IsHitTestVisible="True" ScrollViewer.HorizontalScrollBarVisibility="Hidden" ScrollViewer.VerticalScrollBarVisibility="Visible" >
+            <ScrollViewer Grid.Row="1" Grid.Column="2" IsHitTestVisible="True" ScrollViewer.HorizontalScrollBarVisibility="Hidden" ScrollViewer.VerticalScrollBarVisibility="Visible" >
                 <StackPanel x:Name="listUnitGrid" CanHorizontallyScroll="True" IsHitTestVisible="True" CanVerticallyScroll="True" Margin="0,0,10,0"/>
             </ScrollViewer>
             <!-- Map Grid -->
-            <Grid x:Name="bgmapGrid" Grid.Row="1" Width="875px" Margin="10,5,15,95" Grid.RowSpan="2">
+            <Grid x:Name="bgmapGrid" Grid.Row="1" Width="875px" Margin="10,5,15,95" Grid.Column="1" Grid.RowSpan="2">
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="9*"/>
                     <ColumnDefinition Width="166*"/>
@@ -49,17 +60,20 @@
                 <Grid x:Name="mapGrid" HorizontalAlignment="Center" Grid.Column="1" Margin="392.664,375,437,375" />
             </Grid>
             <!-- Button turn grid-->
-            <Grid Grid.Row="3" Grid.Column="2">
-                <Button x:Name="btnEndTurn" Content="End turn" Margin="0" Width="160" Click="btnEndTurn_Click" FontSize="25" VerticalAlignment="Center">
+            <Grid Grid.Row="0" Grid.Column="1">
+                <Label x:Name="lblYourTurn" Content="It's your turn :" HorizontalAlignment="Left" VerticalAlignment="Top" FontFamily="/WpfSmallWorld;component/Resources/#Trajan Pro" FontSize="30" Foreground="#FF910000" Margin="10,10,0,0" FontWeight="Bold" />
+                <Label x:Name="lblCurrentPlayer" Content="Player1" HorizontalAlignment="Left" Margin="287,10,0,0" VerticalAlignment="Top" Height="48" Width="458" FontSize="30" Foreground="#FF910000" FontFamily="/WpfSmallWorld;component/Resources/#Trajan Pro" FontWeight="Bold"/>
+                <Button x:Name="btnEndTurn" Content="End turn" Margin="671,10,69,20" Width="160" Click="btnEndTurn_Click" FontSize="25" VerticalAlignment="Center">
                     <Button.Background>
                         <SolidColorBrush Color="Black" Opacity="0.7"/>
                     </Button.Background>
                 </Button>
-
             </Grid>
+            <!-- Label numbers of turn-->
+            <Label x:Name="lblRemainingTurns" Content="Number of turns left" HorizontalAlignment="Left" Margin="37,14,0,0" VerticalAlignment="Top" Foreground="#FF910000" FontSize="25" FontFamily="/WpfSmallWorld;component/Resources/#Trajan Pro" FontWeight="Bold" Grid.Column="2"/>
             <!-- Pause Menu -->
-            <Grid x:Name="pauseMenu" Grid.RowSpan="3" Grid.ColumnSpan="2">
-                <Rectangle x:Name="MenuRectangle" Panel.ZIndex="4" Fill="Black" Stroke="Black" Margin="0,0,0,0" IsEnabled="False" Opacity="0.95" Width="1457" Height="920" HorizontalAlignment="Center" VerticalAlignment="Center" Visibility="Collapsed"/>
+            <Grid x:Name="pauseMenu" Grid.RowSpan="3" Grid.ColumnSpan="3">
+                <Rectangle x:Name="MenuRectangle" Panel.ZIndex="4" Fill="Black" Stroke="Black" Margin="0,0,0,0" IsEnabled="False" Opacity="0.95" Width="1700" Height="920" HorizontalAlignment="Center" VerticalAlignment="Center" Visibility="Collapsed"/>
                 <Button x:Name="btnContinue" Panel.ZIndex="5" Content="Continue" Click="btnContinue_Click" HorizontalAlignment="Center"  Margin="0,259,0,0" VerticalAlignment="Top" Width="171" FontSize="25" Foreground="White" Height="60" FontFamily="/WpfSmallWorld;component/Resources/#Trajan Pro" Visibility="Collapsed">
                     <Button.Background>
                         <SolidColorBrush Color="Black" Opacity="0.7"/>
@@ -76,15 +90,16 @@
                     </Button.Background>
                 </Button>
                 <Label x:Name="lblGamePaused" Content="Game paused" Panel.ZIndex="5" Margin="0,94,0,756" VerticalAlignment="Center" Foreground="White" FontWeight="Bold" FontSize="24" Height="50" Width="192" HorizontalAlignment="Center" FontFamily="/WpfSmallWorld;component/Resources/#Trajan Pro" Visibility="Collapsed" />
-                <Button x:Name="btnBack" Panel.ZIndex="5" Content="Quit Game" Width="171" FontSize="25" Foreground="White" Height="60" FontFamily="/WpfSmallWorld;component/Resources/#Trajan Pro" Visibility="Collapsed" Margin="645,431,484,429" Click="btnBack_Click">
+                
+            </Grid>
+            <!-- End Game-->
+            <Grid Grid.ColumnSpan="3" Grid.RowSpan="3">
+                <Label x:Name="lblVictory" Content="Player has won !" HorizontalContentAlignment="Center" Panel.ZIndex="5" Foreground="White" FontWeight="Bold" FontSize="72" FontFamily="/WpfSmallWorld;component/Resources/#Trajan Pro" Visibility="Collapsed" Height="134" Margin="0,200,0,0" Width="1463" VerticalAlignment="Top"/>
+                <Button x:Name="btnBack" Panel.ZIndex="5" Content="Quit Game" Width="171" FontSize="25" Foreground="White" Height="60" FontFamily="/WpfSmallWorld;component/Resources/#Trajan Pro" Visibility="Collapsed" Margin="0" Click="btnBack_Click" VerticalAlignment="Center">
                     <Button.Background>
                         <SolidColorBrush Color="Black" Opacity="0.7"/>
                     </Button.Background>
                 </Button>
-            </Grid>
-
-            <Grid Grid.ColumnSpan="2" Margin="187,105,370,575" Grid.Row="1">
-                <Label x:Name="lblVictory" Content="Player has won !" HorizontalContentAlignment="Center" Panel.ZIndex="5" Foreground="White" FontWeight="Bold" FontSize="72" FontFamily="/WpfSmallWorld;component/Resources/#Trajan Pro" Visibility="Collapsed" HorizontalAlignment="Center" VerticalAlignment="Center" Height="134" Margin="-190,0,-373,-64" Width="1463"/>
             </Grid>
         </Grid>
 
