@@ -48,5 +48,12 @@ namespace PetitMonde.Map
         /// <returns>The index</returns>
         int getIndexFromCoodinates(int x, int y);
 
+        /// <summary>
+        /// Check if the coordinates are valid on this map
+        /// </summary>
+        /// <param name="x">X coordinate</param>
+        /// <param name="y">Y coordinate</param>
+        /// <returns>True if the given coordinates are correct</returns>
+        bool ValidCoordinates(int x, int y);
     }
 }

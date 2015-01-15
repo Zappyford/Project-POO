@@ -87,7 +87,7 @@ namespace WpfSmallWorld
             X = x;
             Y = y;
             GameImpl.INSTANCE.PropertyChanged += new PropertyChangedEventHandler(update);
-            //lblCoords.Content = x + "," + y;
+            lblCoords.Content = x + "," + y;
         }
 
         private void update(object sender, PropertyChangedEventArgs e)

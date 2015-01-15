@@ -124,7 +124,7 @@ namespace PetitMonde
 
         public void MoveUnit(Unit unit, int xTargeted, int yTargeted)
         {
-            if (unit.CanMove(xTargeted,yTargeted) && CurrentPlayer.Units.Contains(unit))
+            if (Map.ValidCoordinates(xTargeted,yTargeted) && unit.CanMove(xTargeted,yTargeted) && CurrentPlayer.Units.Contains(unit))
             {
                 List<Unit> opponentPlayerUnits = OpponentPlayer.GetUnitsOnCell(xTargeted,yTargeted);
                 if (opponentPlayerUnits.Count > 0)

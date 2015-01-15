@@ -25,13 +25,7 @@ namespace PetitMonde.Map
             set;
         }
 
-        /// <summary>
-        /// Check if the coordinates are valid on this map
-        /// </summary>
-        /// <param name="x">X coordinate</param>
-        /// <param name="y">Y coordinate</param>
-        /// <returns>True if the given coordinates are correct</returns>
-        private bool ValidCoordinates(int x, int y)
+        public bool ValidCoordinates(int x, int y)
         {
             return x >= 0 && y >= 0 && x <= size && y <= size;
         }

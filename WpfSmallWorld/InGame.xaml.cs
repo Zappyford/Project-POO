@@ -108,9 +108,6 @@ namespace WpfSmallWorld
                     TryEndGame();
                     lblCurrentPlayer.Content = GameImpl.INSTANCE.CurrentPlayer.Nickname;
                     break;
-                case "SelectedUnit":
-
-                    break;
                 case "RemainingTurns":
                     lblRemainingTurns.Content = GameImpl.INSTANCE.RemainingTurns + " turns left.";
                     break;
@@ -180,13 +177,35 @@ namespace WpfSmallWorld
         /// <param name="e"></param>
         private void WindowInGame_KeyUp(object sender, KeyEventArgs e)
         {
-            if (e.Key == Key.Enter)
+            int x = GameImpl.INSTANCE.SelectedUnit.X;
+            int y = GameImpl.INSTANCE.SelectedUnit.Y;
+            Unit u = GameImpl.INSTANCE.SelectedUnit;
+            switch (e.Key)
             {
-                btnEndTurn_Click(sender, e);
-            }
-            else if (e.Key == Key.Escape)
-            {
-                toggleMenu();
+                case Key.Enter:
+                    btnEndTurn_Click(sender, e);
+                    break;
+                case Key.Escape:
+                    toggleMenu();
+                    break;
+                case Key.NumPad1:
+                    GameImpl.INSTANCE.MoveUnit(u, y % 2 == 0 ? x + 1 : x, y % 2 == 0 ? y : y + 1);
+                    break;
+                case Key.NumPad3:
+                    GameImpl.INSTANCE.MoveUnit(u, y % 2 == 0 ? x : x+1, y+1);
+                    break;
+                case Key.NumPad4:
+                    GameImpl.INSTANCE.MoveUnit(u, x - 1, y);
+                    break;
+                case Key.NumPad6:
+                    GameImpl.INSTANCE.MoveUnit(u, x + 1, y);
+                    break;
+                case Key.NumPad7:
+                    GameImpl.INSTANCE.MoveUnit(u, y % 2 == 0 ? x-1 : x, y - 1);
+                    break;
+                case Key.NumPad9:
+                    GameImpl.INSTANCE.MoveUnit(u, y % 2 == 0 ? x : x + 1, y-1);
+                    break;
             }
         }
 
