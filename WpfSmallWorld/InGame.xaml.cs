@@ -177,9 +177,11 @@ namespace WpfSmallWorld
         /// <param name="e"></param>
         private void WindowInGame_KeyUp(object sender, KeyEventArgs e)
         {
-            int x = GameImpl.INSTANCE.SelectedUnit.X;
-            int y = GameImpl.INSTANCE.SelectedUnit.Y;
             Unit u = GameImpl.INSTANCE.SelectedUnit;
+            int x = u != null ? u.X : 0;
+            int y = u != null ? u.Y : 0;
+
+
             switch (e.Key)
             {
                 case Key.Enter:

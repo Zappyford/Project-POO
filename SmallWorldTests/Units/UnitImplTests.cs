@@ -48,7 +48,10 @@ namespace PetitMonde.Units.Tests
         [TestMethod()]
         public void AttackUnitTest()
         {
-
+            CombatReport cr;
+            cr = u.AttackUnit(opponentUnit);
+            Assert.AreEqual(cr.AttackingUnitRetreat ? 1 : u.DefaultHealth + cr.AttackingUnitLostHealth, u.Health);
+            Assert.AreEqual(cr.DefensingUnitRetreat ? 1 : opponentUnit.DefaultHealth + cr.DefensingUnitLostHealth, opponentUnit.Health);
         }
     }
 }

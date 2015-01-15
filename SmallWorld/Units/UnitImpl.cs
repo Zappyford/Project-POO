@@ -212,12 +212,12 @@ namespace PetitMonde.Units
                 {
                     // The attacking unit wins this attack
                     unit.Health--;
-                    cr.AttackingUnitLostHealth--;
+                    cr.DefensingUnitLostHealth--;
                 }
                 else
                 {
                     this.Health--;
-                    cr.DefensingUnitLostHealth--;
+                    cr.AttackingUnitLostHealth--;
                 }
                 numberOfAttacks--;
             }
