@@ -11,6 +11,7 @@ namespace PetitMonde.Units
         {
             get;
         }
+
         Unit createUnit(int defaultX, int defaultY);
     }
 }
