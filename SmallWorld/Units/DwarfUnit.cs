@@ -18,7 +18,7 @@ namespace PetitMonde.Units
             Cell targetedCell =  GameImpl.INSTANCE.Map.GetCell(x, y);
             Cell cell = GameImpl.INSTANCE.Map.GetCell(X,Y);
 
-            return base.CanMove(x,y) || (targetedCell.getType() == CellType.Mountain && cell.getType() == CellType.Mountain);
+            return base.CanMove(x,y) || (targetedCell.getType() == CellType.Mountain && cell.getType() == CellType.Mountain && GameImpl.INSTANCE.Map.GetCell(x,y).GetMovingCost(Faction) <= this.MovingPoints);
         }
 
         public override float ChanceOfRetreat
