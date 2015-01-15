@@ -58,7 +58,7 @@ namespace PetitMonde
 
         public Unit GetBestDefensiveUnit(int x, int y)
         {
-            return Units.OrderByDescending(u => u.Health).First();
+            return Units.Where(u=>u.X==x && u.Y==y).OrderByDescending(u => u.Health).First();
         }
 
         bool Player.HasLost
