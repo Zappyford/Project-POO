@@ -239,8 +239,10 @@ namespace PetitMonde
             Player2.ClearDeadUnits();
         }
 
-
+        [field: NonSerialized()]
         private CombatReport LastCombatReportField;
+
+
         public CombatReport LastCombatReport
         {
             get

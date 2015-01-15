@@ -26,7 +26,7 @@ namespace WpfSmallWorld
     {
         List<MapUnitView> unitViews = new List<MapUnitView>();
         MapView mapView;
-
+        private CombatReportView lastCombatReportView;
 
 
         /// <summary>
@@ -116,6 +116,7 @@ namespace WpfSmallWorld
                     lblRemainingTurns.Content = GameImpl.INSTANCE.RemainingTurns + " turns left.";
                     break;
                 case "LastCombatReport":
+                    ShowCombatReport();
                     deleteDeadUnits();
                     updateListUnits();
                     TryEndGame();
@@ -127,6 +128,16 @@ namespace WpfSmallWorld
             }
         }
 
+        private void ShowCombatReport()
+        {
+            VictoryPointsGrid.Children.Remove(this.lastCombatReportView);
+            CombatReportView cr = new CombatReportView(GameImpl.INSTANCE.LastCombatReport);
+            cr.HorizontalAlignment = System.Windows.HorizontalAlignment.Center;
+            cr.VerticalAlignment = System.Windows.VerticalAlignment.Top;
+            cr.Margin = new Thickness(0, 2*217, 0, 0);
+            lastCombatReportView = cr;
+            VictoryPointsGrid.Children.Add(cr);
+        }
 
         /// <summary>
         /// Clears and updates the list of units of the selected cell

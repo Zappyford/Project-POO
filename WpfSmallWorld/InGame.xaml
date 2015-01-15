@@ -26,8 +26,8 @@
 
 
             <!-- Victory Points Grid-->
-            <Grid Grid.Row="1" Grid.Column="0" >
-                <Rectangle Height="217" VerticalAlignment="Top" Margin="0" Width="400" HorizontalAlignment="Left" >
+            <Grid x:Name="VictoryPointsGrid" Grid.Row="1" Grid.RowSpan="2" Grid.Column="0" >
+                <Rectangle Width="400" HorizontalAlignment="Left" Height="217" VerticalAlignment="Top" >
                     <Rectangle.Fill>
                         <ImageBrush ImageSource="Resources/menu_pattern.jpg" Stretch="Uniform"/>
                     </Rectangle.Fill>
@@ -90,7 +90,7 @@
                     </Button.Background>
                 </Button>
                 <Label x:Name="lblGamePaused" Content="Game paused" Panel.ZIndex="5" Margin="0,94,0,756" VerticalAlignment="Center" Foreground="White" FontWeight="Bold" FontSize="24" Height="50" Width="192" HorizontalAlignment="Center" FontFamily="/WpfSmallWorld;component/Resources/#Trajan Pro" Visibility="Collapsed" />
-                
+
             </Grid>
             <!-- End Game-->
             <Grid Grid.ColumnSpan="3" Grid.RowSpan="3">
@@ -101,6 +101,7 @@
                     </Button.Background>
                 </Button>
             </Grid>
+
         </Grid>
 
     </Viewbox>

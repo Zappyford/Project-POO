@@ -6,7 +6,7 @@
         <ListBox x:Name="listSavedGames" HorizontalAlignment="Center" Height="233" Margin="0,46,0,0" VerticalAlignment="Top" Width="291" SelectionChanged="listSavedGames_SelectionChanged"/>
         <Button x:Name="btnLoadGame" Content="Load Game &gt;" Foreground="Black" HorizontalAlignment="Left" Margin="313,286,0,0" VerticalAlignment="Top" Width="83" Click="btnLoadGame_Click"/>
         <Button x:Name="btnBack" Content="&lt; Back" Foreground="Black" HorizontalAlignment="Left" Margin="10,286,0,0" VerticalAlignment="Top" Width="81" Click="btnBack_Click"/>
-        <Label Content="Load Game" HorizontalAlignment="Center" Margin="0,10,0,0" VerticalAlignment="Top" FontSize="22" FontFamily="/WpfSmallWorld;component/Resources/#Trajan Pro"/>
+        <Label x:Name="lblLoadGame" Content="Load Game" HorizontalAlignment="Center" Margin="0,10,0,0" VerticalAlignment="Top" FontSize="22" FontFamily="/WpfSmallWorld;component/Resources/#Trajan Pro"/>
 
     </Grid>
 </Window>
