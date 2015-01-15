@@ -93,8 +93,8 @@ namespace WpfSmallWorld
             lblP2.Content = GameImpl.INSTANCE.Player2.Nickname;
             lblTribeP1.Content = GameImpl.INSTANCE.Player1.Tribe.FactionName;
             lblTribeP2.Content = GameImpl.INSTANCE.Player2.Tribe.FactionName;
-            lblVictoryPointsP1.Content = "Victory points : 1";
-            lblVictoryPointsP2.Content = "Victory points : 1";
+            lblVictoryPointsP1.Content = "Victory points : " + GameImpl.INSTANCE.Player1.Score;
+            lblVictoryPointsP2.Content = "Victory points : " + GameImpl.INSTANCE.Player2.Score;
 
             GameImpl.INSTANCE.PropertyChanged += new PropertyChangedEventHandler(update); // Souscription au OnPropertyChanged
         }
@@ -232,7 +232,7 @@ namespace WpfSmallWorld
         private void toggleMenu()
         {
             IsPaused = !IsPaused;
-            main.Stretch = main.Stretch == Stretch.Uniform ? Stretch.UniformToFill : Stretch.Uniform;
+            main.Stretch = main.Stretch == Stretch.Uniform ? Stretch.Fill : Stretch.Uniform;
             MenuRectangle.IsEnabled = !MenuRectangle.IsEnabled;
             MenuRectangle.Visibility = MenuRectangle.Visibility == Visibility.Visible ? Visibility.Collapsed : Visibility.Visible;
             btnContinue.Visibility = btnContinue.Visibility == Visibility.Visible ? Visibility.Collapsed : Visibility.Visible;
