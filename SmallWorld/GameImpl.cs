@@ -131,8 +131,8 @@ namespace PetitMonde
                 {
                     /// Il y a un combat
                     Unit opponentDefensiveUnit = OpponentPlayer.GetBestDefensiveUnit(xTargeted,yTargeted);
-                    CurrentPlayer.Fight(unit, opponentDefensiveUnit);
-                    OnPropertyChanged();
+                    this.LastCombatReport = unit.AttackUnit(opponentDefensiveUnit);
+                    //OnPropertyChanged();
                     ClearDeadUnits();
                     if (opponentDefensiveUnit.IsDead && OpponentPlayer.GetUnitsOnCell(xTargeted, yTargeted).Count==0)
                     {
@@ -239,6 +239,20 @@ namespace PetitMonde
             Player2.ClearDeadUnits();
         }
 
+
+        private CombatReport LastCombatReportField;
+        public CombatReport LastCombatReport
+        {
+            get
+            {
+                return LastCombatReportField;
+            }
+            private set
+            {
+                LastCombatReportField = value;
+                OnPropertyChanged();
+            }
+        }
 
     }
 }

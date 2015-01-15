@@ -119,7 +119,7 @@ namespace PetitMonde.Units
         /// Attack the given unit
         /// </summary>
         /// <param name="unit">The unit to attack</param>
-        void AttackUnit(Unit unit);
+        CombatReport AttackUnit(Unit unit);
 
         /// <summary>
         /// Move this unit to the given location, if possible
@@ -151,14 +151,6 @@ namespace PetitMonde.Units
         /// Gets the chance of retreat of this unit
         /// </summary>
         float ChanceOfRetreat
-        {
-            get;
-        }
-
-        /// <summary>
-        /// Gets the list of cells the unit can move to
-        /// </summary>
-        List<Coords> CanMoveTo
         {
             get;
         }

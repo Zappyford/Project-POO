@@ -26,7 +26,7 @@ namespace PetitMonde
             private set;
         }
 
-        public System.Collections.Generic.List<PetitMonde.Units.Unit> Units
+        public List<PetitMonde.Units.Unit> Units
         {
             get;
             set;

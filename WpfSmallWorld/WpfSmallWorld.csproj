@@ -60,6 +60,9 @@
       <SubType>Designer</SubType>
     </ApplicationDefinition>
     <Compile Include="BoolVisibilityConverter.cs" />
+    <Compile Include="CombatReportView.xaml.cs">
+      <DependentUpon>CombatReportView.xaml</DependentUpon>
+    </Compile>
     <Compile Include="FullUnitView.xaml.cs">
       <DependentUpon>FullUnitView.xaml</DependentUpon>
     </Compile>
@@ -71,6 +74,10 @@
     </Compile>
     <Compile Include="Util.cs" />
     <Page Include="CellView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="CombatReportView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -196,6 +203,9 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Resources\parchemin5.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\versus.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
