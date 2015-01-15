@@ -119,5 +119,13 @@ namespace PetitMonde
             get;
         }
 
+        /// <summary>
+        /// Gets the combat report of the last combat
+        /// </summary>
+        CombatReport LastCombatReport
+        {
+            get;
+        }
+
     }
 }

@@ -7,7 +7,7 @@
              >
 
     <Application.Resources>
-
+        <BitmapImage x:Key="versusImage" CreateOptions="IgnoreImageCache" CacheOption="OnLoad" UriSource="Resources/versus.png"/>
         <BitmapImage x:Key="backgroundImage" CreateOptions="IgnoreImageCache" CacheOption="OnLoad" UriSource="Resources/smallworld_boxfront.jpg"/>
         <BitmapImage x:Key="PlainsCell" CreateOptions="IgnoreImageCache" CacheOption="OnLoad" UriSource="Resources/plaine.png"/>
         <BitmapImage x:Key="MountainCell" CreateOptions="IgnoreImageCache" CacheOption="OnLoad" UriSource="Resources/montagne.png"/>

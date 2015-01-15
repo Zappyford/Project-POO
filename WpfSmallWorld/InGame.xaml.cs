@@ -114,7 +114,7 @@ namespace WpfSmallWorld
                 case "RemainingTurns":
                     lblRemainingTurns.Content = GameImpl.INSTANCE.RemainingTurns + " turns left.";
                     break;
-                case "MoveUnit":
+                case "LastCombatReport":
                     deleteDeadUnits();
                     updateListUnits();
                     TryEndGame();

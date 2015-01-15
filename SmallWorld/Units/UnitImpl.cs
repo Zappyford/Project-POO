@@ -192,8 +192,10 @@ namespace PetitMonde.Units
             return cell.GetMovingCost(this.Faction) <= MovingPoints && GameImpl.INSTANCE.Map.CellIsAdjacentTo(X,Y,x,y);
         }
 
-        public void AttackUnit(Unit unit)
+        public CombatReport AttackUnit(Unit unit)
         {
+            CombatReport cr = new CombatReport(this, unit);
+
             int numberOfAttacks = rand.Next(3, Math.Max(this.Health, unit.Health)+2);
             while (numberOfAttacks > 0 && !IsDead && !unit.IsDead)
             {
@@ -210,10 +212,12 @@ namespace PetitMonde.Units
                 {
                     // The attacking unit wins this attack
                     unit.Health--;
+                    cr.AttackingUnitLostHealth--;
                 }
                 else
                 {
                     this.Health--;
+                    cr.DefensingUnitLostHealth--;
                 }
                 numberOfAttacks--;
             }
@@ -223,6 +227,7 @@ namespace PetitMonde.Units
                 if (rand.NextDouble() <= this.ChanceOfRetreat)
                 {
                     this.Health = 1;
+                    cr.AttackingUnitRetreat = true;
                 }
                 else
                 {
@@ -234,14 +239,14 @@ namespace PetitMonde.Units
                 if (rand.NextDouble() <= unit.ChanceOfRetreat)
                 {
                     unit.Health = 1;
+                    cr.DefensingUnitRetreat = true;
                 }
                 else
                 {
                     this.UnitsKilled++;
                 }
             }
-
-
+            return cr;
         }
 
 
@@ -272,28 +277,6 @@ namespace PetitMonde.Units
         public abstract float ChanceOfRetreat
         {
             get;
-        }
-
-
-        public List<Coords> CanMoveTo
-        {
-            get {
-                List<Coords> res = new List<Coords>();
-                for (int x = 0; x < GameImpl.INSTANCE.Map.Size; x++)
-                {
-                    for (int y = 0; x < GameImpl.INSTANCE.Map.Size; y++)
-                    {
-                        if (this.CanMove(x, y))
-                        {
-                            Coords c;
-                            c.X=x;
-                            c.Y=y;
-                            res.Add(c);
-                        }
-                    }
-                }
-                return res;
-            }
         }
     }
 }
