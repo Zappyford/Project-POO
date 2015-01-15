@@ -32,7 +32,7 @@
                 </TransformGroup>
             </Label.RenderTransform>
         </Label>
-        <Label x:Name="lblAttackingUnitLostHealth" Content="{Binding Path=AttackingUnitLostHealth}" Panel.ZIndex="1" HorizontalAlignment="Left" Margin="211,34,0,0" VerticalAlignment="Top" FontFamily="/WpfSmallWorld;component/Resources/#Trajan Pro" FontSize="26" FontWeight="Bold" >
+        <Label x:Name="lblAttackingUnitLostHealth" Content="{Binding Path=AttackingUnitLostHealth}" Panel.ZIndex="1" HorizontalAlignment="Left" Margin="220,24,0,0" VerticalAlignment="Top" FontFamily="/WpfSmallWorld;component/Resources/#Trajan Pro" FontSize="26" FontWeight="Bold" >
      
         </Label>
         <Label x:Name="lblDefensingUnitLostHealth" Content="{Binding Path=DefensingUnitLostHealth}" Panel.ZIndex="1" HorizontalAlignment="Right" VerticalAlignment="Bottom" Margin="0,0,55,137" FontFamily="/WpfSmallWorld;component/Resources/#Trajan Pro" FontSize="26" FontWeight="Bold" >

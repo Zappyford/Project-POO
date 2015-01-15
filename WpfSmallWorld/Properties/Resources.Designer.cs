@@ -71,7 +71,9 @@ namespace WpfSmallWorld.Properties {
         }
         
         /// <summary>
-        ///   Recherche une chaîne localisée semblable à Easy Win.
+        ///   Recherche une chaîne localisée semblable à - the moving cost on a plain cell is halved 
+        ///- No point earned on plain cell 
+        ///- dwarfs have the opportunity to move anywhere on a mountain cell.
         /// </summary>
         public static string DescriptionDwarves {
             get {
@@ -80,7 +82,9 @@ namespace WpfSmallWorld.Properties {
         }
         
         /// <summary>
-        ///   Recherche une chaîne localisée semblable à Tanche style.
+        ///   Recherche une chaîne localisée semblable à - the moving cost on a forest cell is halved
+        ///- the moving cost on a desert cell is doubled
+        ///- Elves have 50% of chance to withdraw if they lost the battle.
         /// </summary>
         public static string DescriptionElves {
             get {
@@ -89,7 +93,9 @@ namespace WpfSmallWorld.Properties {
         }
         
         /// <summary>
-        ///   Recherche une chaîne localisée semblable à Barbar.
+        ///   Recherche une chaîne localisée semblable à - the moving cost on a plain cell is halved
+        ///- No point earned on a forest cell
+        ///- if an orc kills a unit, it gains 1 bonus victory point. If it dies the point is loosed.
         /// </summary>
         public static string DescriptionOrcs {
             get {

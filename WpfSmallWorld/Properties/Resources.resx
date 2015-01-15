@@ -118,13 +118,19 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="DescriptionDwarves" xml:space="preserve">
-    <value>Easy Win</value>
+    <value>- the moving cost on a plain cell is halved 
+- No point earned on plain cell 
+- dwarfs have the opportunity to move anywhere on a mountain cell</value>
   </data>
   <data name="DescriptionElves" xml:space="preserve">
-    <value>Tanche style</value>
+    <value>- the moving cost on a forest cell is halved
+- the moving cost on a desert cell is doubled
+- Elves have 50% of chance to withdraw if they lost the battle</value>
   </data>
   <data name="DescriptionOrcs" xml:space="preserve">
-    <value>Barbar</value>
+    <value>- the moving cost on a plain cell is halved
+- No point earned on a forest cell
+- if an orc kills a unit, it gains 1 bonus victory point. If it dies the point is loosed</value>
   </data>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="desert" type="System.Resources.ResXFileRef, System.Windows.Forms">
