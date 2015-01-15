@@ -14,8 +14,8 @@
     <Grid Name="grid" IsHitTestVisible="True" Background="Transparent" Width="290" Height="150" >
         <Border x:Name="border"  BorderBrush="Black" BorderThickness="2" Visibility="Hidden" Margin="0,0,0,30"/>
         <Image  x:Name="imgUnit" HorizontalAlignment="Left" Height="96" Margin="10,10,0,0" VerticalAlignment="Top" Width="96"/>
-        <ProgressBar x:Name="pbHealth" Foreground="Green" Background="Red" HorizontalAlignment="Left" Height="10" Margin="138,12,0,0" VerticalAlignment="Top" Width="100" Maximum="5" Value="2"/>
-        <ProgressBar x:Name="pbMovingPoints" Foreground="Green" Background="Red" HorizontalAlignment="Left" Height="10" Margin="138,36,0,0" VerticalAlignment="Top" Width="100" Maximum="1" Value="0.6"/>
+        <ProgressBar x:Name="pbHealth"  HorizontalAlignment="Left"  Margin="138,12,0,0" VerticalAlignment="Top" />
+        <ProgressBar x:Name="pbMovingPoints" HorizontalAlignment="Left"  Margin="138,36,0,0" VerticalAlignment="Top"  />
         <Image x:Name="imgHeart" HorizontalAlignment="Left" Height="16" Margin="118,8,0,0" VerticalAlignment="Top" Width="16" Source="{StaticResource Heart}"/>
         <Image x:Name="imgBoots" HorizontalAlignment="Left" Height="16" Margin="118,32,0,0" VerticalAlignment="Top" Width="16" Source="{StaticResource Boot}"/>
         <Image x:Name="imgSword" HorizontalAlignment="Left" Height="16" Margin="118,62,0,0" VerticalAlignment="Top" Width="16" Source="{StaticResource Sword}"/>
