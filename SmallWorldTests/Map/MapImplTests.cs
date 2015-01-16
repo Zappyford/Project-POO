@@ -18,11 +18,7 @@ namespace PetitMonde.Map.Tests
             m = mb.BuildMap();
         }
 
-        [TestMethod()]
-        public void GetCellTest()
-        {
 
-        }
 
         [TestMethod()]
         public void CellIsAdjacentToTest()
@@ -53,10 +49,5 @@ namespace PetitMonde.Map.Tests
 
         }
 
-        [TestMethod()]
-        public void getIndexFromCoodinatesTest()
-        {
-
-        }
     }
 }

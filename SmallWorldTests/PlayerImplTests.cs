@@ -24,9 +24,10 @@ namespace PetitMonde.Tests
         [TestMethod()]
         public void EndTurnTest()
         {
-           // Assert.Fail();
+            p.EndTurn();
+            Assert.ReferenceEquals(p2, GameImpl.INSTANCE.CurrentPlayer);
+            Assert.ReferenceEquals(p, GameImpl.INSTANCE.OpponentPlayer);
         }
-
         [TestMethod()]
         public void FightTest()
         {
@@ -50,7 +51,7 @@ namespace PetitMonde.Tests
             ((PlayerImpl)p).Units.ElementAt(2).Health += 2;
             Unit u = p.GetBestDefensiveUnit(0, 1);
 
-            Assert.AreEqual(7, u.Health); 
+            Assert.ReferenceEquals(p.Units.ElementAt(2), u); 
         }
     }
 }

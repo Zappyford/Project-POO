@@ -39,11 +39,6 @@ namespace PetitMonde.Units.Tests
             Assert.IsTrue(u.IsDead);
         }
 
-        [TestMethod()]
-        public void CanMoveTest()
-        {
-
-        }
 
         [TestMethod()]
         public void AttackUnitTest()

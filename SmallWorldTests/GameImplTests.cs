@@ -37,11 +37,6 @@ namespace PetitMonde.Tests
 
         }
 
-        [TestMethod()]
-        public void OnPropertyChangedTest()
-        {
-
-        }
 
         [TestMethod()]
         public void saveTest()
